@@ -303,6 +303,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake bytesatwork-minimal-image
 
    The output is found in:
@@ -335,6 +336,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake devbase-image-bytesatwork
 
    The output is found in:
@@ -369,6 +371,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake bytesatwork-minimal-image
 
    The output is found in:
@@ -401,6 +404,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake devbase-image-bytesatwork
 
    The output is found in:
@@ -482,6 +486,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake bytesatwork-minimal-image -c populate_sdk
       
    The toolchain is located under:
@@ -510,6 +515,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake devbase-image-bytesatwork -c populate_sdk
 
    The toolchain is located under:
@@ -542,6 +548,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake bytesatwork-minimal-image -c populate_sdk
 
    The toolchain is located under:
@@ -570,6 +577,7 @@ The output that is shown in prompt afterwards:
 
    ::
 
+      $ cd $BUILDDIR
       $ bitbake devbase-image-bytesatwork -c populate_sdk
 
    The toolchain is located under:
