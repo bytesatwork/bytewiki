@@ -151,7 +151,7 @@ The output that is shown in prompt afterwards:
    :scale: 100%
    :align: center
    
-3. scp your binary, e.g. hello world to the target by :guilabel:`scp helloworld root@<ip address of target>:/tmp`
+3. scp your binary, e.g. helloworld to the target by :guilabel:`scp helloworld root@<ip address of target>:/tmp`
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/scp2.png
    :scale: 100%
@@ -287,27 +287,29 @@ The output that is shown in prompt afterwards:
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b zeus
-      repo sync
+      $ mkdir -p ~/workdir/bytedevkit/3.0; cd ~/workdir/bytedevkit/3.0
+      $ repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b zeus
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for byteDEVKIT:
 
    ::
 
-      MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ cd ~/workdir/bytedevkit/3.0
+      $ MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    The final command builds the development image:
 
    ::
 
-      bitbake bytesatwork-minimal-image
+      $ bitbake bytesatwork-minimal-image
 
    The output is found in:
 
    ::
 
-      tmp/deploy/images/bytedevkit
+      ~/workdir/bytedevkit/3.0/build/tmp/deploy/images/bytedevkit
 
 .. Hint:: For additional information about yocto images and howto build them, please visit: https://www.yoctoproject.org/docs/3.0/mega-manual/mega-manual.html#brief-building-your-image
 
@@ -317,27 +319,29 @@ The output that is shown in prompt afterwards:
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b warrior
-      repo sync
+      $ mkdir -p ~/workdir/bytedevkit/2.7; cd ~/workdir/bytedevkit/2.7
+      $ repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b warrior
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for byteDEVKIT:
 
    ::
 
-      MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ cd ~/workdir/bytedevkit/2.7
+      $ MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    The final command builds the development image:
 
    ::
 
-      bitbake devbase-image-bytesatwork
+      $ bitbake devbase-image-bytesatwork
 
    The output is found in:
 
    ::
 
-      tmp/deploy/images/bytedevkit
+      ~/workdir/bytedevkit/2.7/build/tmp/deploy/images/bytedevkit
 	
 
 7.2 bytePANEL
@@ -349,27 +353,29 @@ The output that is shown in prompt afterwards:
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform-ti.git -b zeus
-      repo sync
+      $ mkdir -p ~/workdir/bytepanel/3.0; cd ~/workdir/bytepanel/3.0
+      $ repo init -u https://github.com/bytesatwork/bsp-platform-ti.git -b zeus
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for bytePANEL:
 
    ::
 
-      MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ cd ~/workdir/bytepanel/3.0
+      $ MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    the final command builds the development image:
 
    ::
 
-      bitbake bytesatwork-minimal-image
+      $ bitbake bytesatwork-minimal-image
 
    The output is found in:
 
    ::
 
-      tmp/deploy/images/bytepanel
+      ~/workdir/bytepanel/3.0/build/tmp/deploy/images/bytepanel
 
 .. Hint:: For additional information about yocto images and howto build them, please visit: https://www.yoctoproject.org/docs/3.0/mega-manual/mega-manual.html#brief-building-your-image
 
@@ -379,27 +385,29 @@ The output that is shown in prompt afterwards:
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform.git -b warrior
-      repo sync
+      $ mkdir -p ~/workdir/bytepanel/2.7; cd ~/workdir/bytepanel/2.7
+      $ repo init -u https://github.com/bytesatwork/bsp-platform.git -b warrior
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for bytePANEL:
 
    ::
 
-      MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ cd ~/workdir/bytepanel/2.7
+      $ MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    the final command builds the development image:
 
    ::
 
-      bitbake devbase-image-bytesatwork
+      $ bitbake devbase-image-bytesatwork
 
    The output is found in:
 
    ::
 
-      tmp/deploy/images/bytepanel
+      ~/workdir/bytepanel/2.7/build/tmp/deploy/images/bytepanel
       
       
 7.3 How to modify the image
@@ -407,7 +415,7 @@ The output that is shown in prompt afterwards:
 
 -  **bytesatwork delivers tips for customizing an image**
 
-  The image recipes can be found in :guilabel:`sources/meta-bytesatwork/recipes-core/images`
+  The image recipes can be found in :guilabel:`~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images`
      
   This is relative to where you started you repo command to check out all the sources.
 
@@ -419,7 +427,9 @@ The output that is shown in prompt afterwards:
   
   ::
 
-    bitbake bytesatwork-minimal-image
+    $ cd ~/workdir/<machine name>/<yocto version>
+    $ MACHINE=<machine name> DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+    $ bitbake bytesatwork-minimal-image
 
 
 7.4 How to rename the image
@@ -429,7 +439,8 @@ The output that is shown in prompt afterwards:
    
    ::
    
-      cp bytesatwork-minimal-image.bb customer-example-image.bb
+    $ cd ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/images/<machine name>
+    $ cp bytesatwork-minimal-image.bb customer-example-image.bb
 
 
 7.5 Troubleshooting
@@ -439,7 +450,7 @@ The output that is shown in prompt afterwards:
 
    If you encounter that your image size is to small to install additional software, 
    please have a look at the :guilabel:`IMAGE_ROOTFS_SIZE` variable under 
-   :guilabel:`meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb`. 
+   :guilabel:`~/workdir/<machine-name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb`. 
    Increase the size if necessary.
 
 ---------------
@@ -455,41 +466,57 @@ The output that is shown in prompt afterwards:
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b zeus
-      repo sync
+      $ cd ~/workdir/bytedevkit/3.0
+      $ repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b zeus
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for byteDEVKIT:
 
    ::
 
-      MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ cd ~/workdir/bytedevkit/3.0
+      $ MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    The final command builds an installable toolchain:
 
    ::
 
-      bitbake bytesatwork-minimal-image -c populate_sdk
+      $ bitbake bytesatwork-minimal-image -c populate_sdk
+      
+   The toolchain is located under:
+
+   ::
+
+      ~/workdir/bytedevkit/3.0/build/tmp/deploy/sdk
 
 -  **Yocto 2.7**
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b warrior
-      repo sync
+      $ cd ~/workdir/bytedevkit/2.7
+      $ repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b warrior
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for byteDEVKIT:
 
    ::
 
-      MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ ~/workdir/bytedevkit/2.7
+      $ MACHINE=bytedevkit DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    The final command builds an installable toolchain:
 
    ::
 
-      bitbake devbase-image-bytesatwork -c populate_sdk
+      $ bitbake devbase-image-bytesatwork -c populate_sdk
+
+   The toolchain is located under:
+
+   ::
+
+      ~/workdir/bytedevkit/2.7/build/tmp/deploy/sdk
 
 
 8.2 bytePANEL
@@ -499,46 +526,62 @@ The output that is shown in prompt afterwards:
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform-ti.git -b zeus
-      repo sync
+      $ cd ~/workdir/bytepanel/3.0
+      $ repo init -u https://github.com/bytesatwork/bsp-platform-ti.git -b zeus
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for bytePANEL:
 
    ::
 
-      MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ cd ~/workdir/bytepanel/3.0
+      $ MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    The final command builds an installable toolchain:
 
    ::
 
-      bitbake bytesatwork-minimal-image -c populate_sdk
+      $ bitbake bytesatwork-minimal-image -c populate_sdk
+
+   The toolchain is located under:
+
+   ::
+
+      ~/workdir/bytepanel/3.0/build/tmp/deploy/sdk
 
 -  **Yocto 2.7**
 
    ::
 
-      repo init -u https://github.com/bytesatwork/bsp-platform.git -b warrior
-      repo sync
+      $ cd ~/workdir/bytepanel/2.7
+      $ repo init -u https://github.com/bytesatwork/bsp-platform.git -b warrior
+      $ repo sync
 
    If those commands are completed successfully, the following command
    will setup a Yocto Project environment for bytePANEL:
 
    ::
 
-      MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ cd ~/workdir/bytepanel/2.7
+      $ MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
    The final command builds an installable toolchain:
 
    ::
 
-      bitbake devbase-image-bytesatwork -c populate_sdk
+      $ bitbake devbase-image-bytesatwork -c populate_sdk
+
+   The toolchain is located under:
+
+   ::
+
+      ~/workdir/bytepanel/2.7/build/tmp/deploy/sdk
 
 8.3 How to modify your toolchain
 --------------------------------
 
-   Currently the bytesatwork toolchain is generated out of the bytesatwork-minimal-image recipe. If you want to add additional libraries and development headers to customize the toolchain, you need to modify the bytesatwork-minimal-image recipe. It can be found under :guilabel:`sources/meta-bytesatwork/recipes-core/images`
+   Currently the bytesatwork toolchain is generated out of the bytesatwork-minimal-image recipe. If you want to add additional libraries and development headers to customize the toolchain, you need to modify the bytesatwork-minimal-image recipe. It can be found under :guilabel:`~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images`
 
    For example if you want to develop your own ftp client and you need libftp and the corresponding header files, edit the recipe :guilabel:`bytesatwork-minimal-image.bb` and add `ftplib` to the `IMAGE_INSTALL` variable.
 
@@ -546,13 +589,15 @@ The output that is shown in prompt afterwards:
 
    ::
 
-      bitbake bytesatwork-minimal-image -c populate_sdk
+      $ cd ~/workdir/<machine name>/<yocto version>
+      $ MACHINE=<machine> DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+      $ bitbake bytesatwork-minimal-image -c populate_sdk
 
    The newely generated toolchain will be available under:
 
    ::
 
-      tmp/deploy/sdk
+      ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/sdk
 
    For additional information, please visit: https://www.yoctoproject.org/docs/3.0.2/overview-manual/overview-manual.html#cross-development-toolchain-generation
 
