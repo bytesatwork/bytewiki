@@ -1,7 +1,7 @@
 ********************
 Software Development
 ********************
-The entire development lifecycle is done in-house with transparent project management and customer involvement. We have proven experience in a wide range of industries, including industrial automation and custom solutions for consumer electronics. This section helps you step by step initiating the software development process: 
+The entire development lifecycle is done in-house with transparent project management and customer involvement. We have proven experience in a wide range of industries, including industrial automation and custom solutions for consumer electronics. This section helps you step by step initiating the software development process:
 
 ==================================
 Where do you get the toolchain?
@@ -21,7 +21,7 @@ bytePANEL
 
 -  **Yocto 3.0**
    Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
-  
+
 
 -  **Yocto 2.7**
    Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-armv7at2hf-neon-bytepanel-toolchain-2.7.3.sh
@@ -40,7 +40,7 @@ Download the Toolchain and install it
    ::
 
       ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
-      
+
 
 byteENGINE AM335x
 ---------------------
@@ -59,7 +59,7 @@ Download the Toolchain and install it
 How do you use the toolchain?
 ================================
 
-   
+
 byteENGINE STM32MP1x
 ------------------------
 
@@ -150,7 +150,7 @@ How to bring your binary to the target?
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/ip_addr_show_28.png
    :scale: 100%
    :align: center
-   
+
 3. scp your binary, e.g. helloworld to the target by :guilabel:`scp helloworld root@<ip address of target>:/tmp`
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/scp2.png
@@ -201,15 +201,15 @@ byteDEVKIT
 
 -  **Yocto 3.0**
 
-   WINDOWS
+   Windows
 
    ::
 
       Unzip the <file.wic.gz> (e.g. with 7-zip)
       Write the resulting <file.wic> to the uSD-card with a tool like Roadkils Disk Image: https://www.roadkil.net/program.php?ProgramID=12
 
-   
-   LINUX
+
+   Linux
 
    ::
 
@@ -221,17 +221,17 @@ byteDEVKIT
 
 -  **Yocto 2.7**
 
-   WINDOWS
-   
+   Windows
+
    ::
-   
+
      Unzip the <file.raw.gz> (e.g. with 7-zip)
      Write the resulting <file.raw> to the uSD-card with a tool like Roadkils Disk Image: https://www.roadkil.net/program.php?ProgramID=12
 
-   LINUX
-   
+   Linux
+
    ::
-   
+
      gunzip -c <file.raw.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
 bytePANEL
@@ -239,37 +239,37 @@ bytePANEL
 
 -  **Yocto 3.0**
 
-   WINDOWS
-     
+   Windows
+
    ::
-     
+
      Unzip the <file.wic.gz> (e.g. with 7-zip)
      Write the resulting <file.wic> to the uSD-card with a tool like Roadkils Disk Image: https://www.roadkil.net/program.php?ProgramID=12
 
 
-   LINUX
-  
+   Linux
+
    ::
-  
+
      gunzip -c <file.wic.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
-  
+
 .. Hint:: To improve write performance, you could use bmap-tools under Linux: 
-  
+
   bmaptool copy <file.wic.gz> /dev/mmcblk<X>
-  
+
 -  **Yocto 2.7**
 
-   WINDOWS
-  
+   Windows
+
    ::
-  
+
      Unzip the <file.sdimg.gz> (e.g. with 7-zip)
      Write the resulting <file.sdimg> to the uSD-card with a tool like Roadkils Disk Image[https://www.roadkil.net/program.php?ProgramID=12]
 
-   LINUX
-  
+   Linux
+
    ::
-  
+
      gunzip -c <file.sdimg.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
 ---------------
@@ -344,7 +344,7 @@ byteDEVKIT
    ::
 
       ~/workdir/bytedevkit/2.7/build/tmp/deploy/images/bytedevkit
-	
+
 
 bytePANEL
 -------------
@@ -412,23 +412,23 @@ bytePANEL
    ::
 
       ~/workdir/bytepanel/2.7/build/tmp/deploy/images/bytepanel
-      
-      
+
+
 How to modify the image
 ---------------------------
 
 -  **bytesatwork delivers tips for customizing an image**
 
   The image recipes can be found in :guilabel:`~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images`
-     
+
   This is relative to where you started you repo command to check out all the sources.
 
-  Edit the minimal-image recipe :guilabel:`bytesatwork-minimal-image.bb` 
+  Edit the minimal-image recipe :guilabel:`bytesatwork-minimal-image.bb`
 
   Add the desired software-package to :guilabel:`IMAGE_INSTALL` variable, for example add :guilabel:`net-tools` to :guilabel:`bytesatwork-minimal-image.bb`
 
-  Rebuild the image by: 
-  
+  Rebuild the image by:
+
   ::
 
     $ cd ~/workdir/<machine name>/<yocto version>
@@ -440,9 +440,9 @@ How to rename the image
 ---------------------------
 
 -  **If you want to rename or copy an image, simple rename or copy the image recipe by:**
-   
+
    ::
-   
+
     $ cd ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/images/<machine name>
     $ cp bytesatwork-minimal-image.bb customer-example-image.bb
 
@@ -452,9 +452,9 @@ Troubleshooting
 
 -  **Image size is to small**
 
-   If you encounter that your image size is to small to install additional software, 
-   please have a look at the :guilabel:`IMAGE_ROOTFS_SIZE` variable under 
-   :guilabel:`~/workdir/<machine-name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb`. 
+   If you encounter that your image size is to small to install additional software,
+   please have a look at the :guilabel:`IMAGE_ROOTFS_SIZE` variable under
+   :guilabel:`~/workdir/<machine-name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb`.
    Increase the size if necessary.
 
 ---------------
@@ -488,7 +488,7 @@ byteDEVKIT
 
       $ cd $BUILDDIR
       $ bitbake bytesatwork-minimal-image -c populate_sdk
-      
+
    The toolchain is located under:
 
    ::
@@ -638,4 +638,3 @@ Troubleshooting
    :scale: 100%
    :align: center
 
----------------
