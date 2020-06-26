@@ -11,24 +11,29 @@ Image
 Where do you get the SD card image?
 ===============================================
 
-byteDEVKIT
----------------
+.. list-table::
+    :header-rows: 1
 
--  **Yocto 3.0**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/bytesatwork-minimal-image-bytedevkit.wic.gz
-
--  **Yocto 2.7**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/2.7/flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw.gz
-
-
-bytePANEL
--------------
-
--  **Yocto 3.0**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/bytesatwork-minimal-image-bytepanel-emmc.wic.gz
-
--  **Yocto 2.7**
-   Downlad LINK: https://download.bytesatwork.io/transfer/bytesatwork/m2/2.7/devbase-image-bytesatwork-bytepanel-emmc-20190729194430.sdimg.gz
+    * - Device
+      - Yocto Version
+      - Download
+      - Checksum
+    * - byteDEVKIT
+      - Yocto 3.0
+      - `bytesatwork-minimal-image-bytedevkit.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/bytesatwork-minimal-image-bytedevkit.wic.gz>`_
+      - 4ce5b056a78a0bfecae46ad6777a8b7bcfa0e5a679d4f53654969234c9a19282
+    * - byteDEVKIT
+      - Yocto 2.7
+      - `flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/2.7/flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw.gz>`_
+      - 7e62644473c21d200603b52d0080894a0ccfd950dd4a2f3c7df2b14753566de8
+    * - bytePANEL
+      - Yocto 3.0
+      - `bytesatwork-minimal-image-bytepanel-emmc.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/bytesatwork-minimal-image-bytepanel-emmc.wic.gz>`_
+      - e3e166f28fb815b09c6372bbcae4b4c8fcd00f93e57e96084bdee90c255764d9
+    * - bytePANEL
+      - Yocto 2.7
+      - `devbase-image-bytesatwork-bytepanel-emmc-20190729194430.sdimg.gz <https://download.bytesatwork.io/transfer/bytesatwork/m2/2.7/devbase-image-bytesatwork-bytepanel-emmc-20190729194430.sdimg.gz>`_
+      - 3b3e51d83c68f68d6ebbc2983d6b41b9e21d4878c1c9570804e6949624d7a41e
 
 ---------------
 
@@ -307,24 +312,29 @@ Toolchain
 Where do you get the toolchain?
 ===============================
 
-byteDEVKIT
---------------
+.. list-table::
+    :header-rows: 1
 
--  **Yocto 3.0**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
-
--  **Yocto 2.7**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-2.7.1.sh
-
-bytePANEL
--------------
-
--  **Yocto 3.0**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
-
-
--  **Yocto 2.7**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-armv7at2hf-neon-bytepanel-toolchain-2.7.3.sh
+    * - Device
+      - Yocto Version
+      - Download
+      - Checksum
+    * - byteDEVKIT
+      - Yocto 3.0
+      - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh>`_
+      - 50ac1ed18dcbbf8ff37854f6752af52e1e01aed1a26815f41b3d9b965dcb5806
+    * - byteDEVKIT
+      - Yocto 2.7
+      - `poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-2.7.1.sh <https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-2.7.1.sh>`_
+      - 61896873ac7c75ac711a0b8e439ded6721d1a794deec26b4903178efbf51d307
+    * - bytePANEL
+      - Yocto 3.0
+      - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh <https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh>`_
+      - a90763d7ff408e9e5f0556b051eccd3ea85c43406099c9a61d98a32e6a04e078
+    * - bytePANEL
+      - Yocto 2.7
+      - `poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-armv7at2hf-neon-bytepanel-toolchain-2.7.3.sh <https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-armv7at2hf-neon-bytepanel-toolchain-2.7.3.sh>`_
+      - b25e4a3f764eaf583ad0e6a3e0edcac9a1a9314ab6d1f4aad290c415afdbe0e7
 
 ---------------
 
