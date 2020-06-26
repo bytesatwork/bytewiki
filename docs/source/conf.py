@@ -64,3 +64,7 @@ html_logo = "../images/bytes.png"
 
 # needed by read the docs
 master_doc = 'index'
+
+html_css_files = [
+    'custom.css',
+]
