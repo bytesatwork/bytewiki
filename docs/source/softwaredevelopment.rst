@@ -333,24 +333,8 @@ Where do you get the toolchain?
 How do you install the toolchain?
 ====================================
 
-byteENGINE STM32MP1x
-------------------------
-
-Download the toolchain and install it
-
-   ::
-
-      ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
-
-
-byteENGINE AM335x
----------------------
-
-Download the toolchain and install it
-
-   ::
-
-      ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
+Simply download the toolchain and execute the downloaded file, which is
+a self-extracting shell script.
 
 .. Hint:: If you encounter problems when trying to install the toolchain, make sure the downloaded toolchain is executable. Run ``chmod +x /<path>/<toolchain-file>.sh`` to make it executable.
 
