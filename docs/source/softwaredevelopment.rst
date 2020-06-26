@@ -260,13 +260,13 @@ bytePANEL
 How to modify the image
 ---------------------------
 
-  The image recipes can be found in :guilabel:`~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images`
+  The image recipes can be found in ``~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images``
 
-  This is relative to where you started the :guilabel:`repo` command to fetch all the sources.
+  This is relative to where you started the ``repo`` command to fetch all the sources.
 
-  Edit the minimal-image recipe :guilabel:`bytesatwork-minimal-image.bb`
+  Edit the minimal-image recipe ``bytesatwork-minimal-image.bb``
 
-  Add the desired software-package to :guilabel:`IMAGE_INSTALL` variable, for example add :guilabel:`net-tools` to :guilabel:`bytesatwork-minimal-image.bb`
+  Add the desired software-package to ``IMAGE_INSTALL`` variable, for example add ``net-tools`` to ``bytesatwork-minimal-image.bb``
 
   Rebuild the image by:
 
@@ -294,8 +294,8 @@ Troubleshooting
 -  **Image size is to small**
 
    If you encounter that your image size is to small to install additional software,
-   please have a look at the :guilabel:`IMAGE_ROOTFS_SIZE` variable under
-   :guilabel:`~/workdir/<machine-name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb`.
+   please have a look at the ``IMAGE_ROOTFS_SIZE`` variable under
+   ``~/workdir/<machine-name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb``.
    Increase the size if necessary.
 
 ---------------
@@ -350,7 +350,7 @@ Download the toolchain and install it
 
       ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
 
-.. Hint:: If you encounter problems when trying to install the toolchain, make sure the downloaded toolchain is executable. Run :guilabel:`chmod +x /<path>/<toolchain-file>.sh` to make it executable.
+.. Hint:: If you encounter problems when trying to install the toolchain, make sure the downloaded toolchain is executable. Run ``chmod +x /<path>/<toolchain-file>.sh`` to make it executable.
 
 ---------------
 
@@ -442,20 +442,20 @@ How to bring your binary to the target?
 ==========================================
 
 1. Connect the embedded device's ethernet to your LAN
-2. determine the embedded target ip address by :guilabel:`ip addr show`
+2. determine the embedded target ip address by ``ip addr show``
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/ip_addr_show_28.png
    :scale: 100%
    :align: center
 
-3. scp your binary, e.g. helloworld to the target by :guilabel:`scp helloworld root@<ip address of target>:/tmp`
+3. scp your binary, e.g. helloworld to the target by ``scp helloworld root@<ip address of target>:/tmp``
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/scp2.png
    :scale: 100%
    :align: center
 
-4. run `chmod +x` on the target to make your binary executable: :guilabel:`chmod +x /<path>/<binary name>`
-5. run your binary on the target: :guilabel:`/<path>/<binary name>`
+4. run `chmod +x` on the target to make your binary executable: ``chmod +x /<path>/<binary name>``
+5. run your binary on the target: ``/<path>/<binary name>``
 
 ---------------
 
@@ -588,9 +588,9 @@ bytePANEL
 How to modify your toolchain
 --------------------------------
 
-   Currently the bytesatwork toolchain is generated out of the bytesatwork-minimal-image recipe. If you want to add additional libraries and development headers to customize the toolchain, you need to modify the bytesatwork-minimal-image recipe. It can be found under :guilabel:`~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images`
+   Currently the bytesatwork toolchain is generated out of the bytesatwork-minimal-image recipe. If you want to add additional libraries and development headers to customize the toolchain, you need to modify the bytesatwork-minimal-image recipe. It can be found under ``~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images``
 
-   For example if you want to develop your own ftp client and you need libftp and the corresponding header files, edit the recipe :guilabel:`bytesatwork-minimal-image.bb` and add `ftplib` to the `IMAGE_INSTALL` variable.
+   For example if you want to develop your own ftp client and you need libftp and the corresponding header files, edit the recipe ``bytesatwork-minimal-image.bb`` and add ``ftplib`` to the ``IMAGE_INSTALL`` variable.
 
    This will provide the ftplib libraries and development headers in the toolchain. After adding additional software components, the toolchain needs to be rebuilt by:
 
@@ -614,7 +614,7 @@ Troubleshooting
 
 -  **Errors when building the toolchain**
 
-   If you get the error below, please revert commit: :guilabel:`179c5cb7fd0f06970135187f1203507aa55d6bde` in the poky repository (sources/poky). See also Bug 13338 https://bugzilla.yoctoproject.org/show_bug.cgi?id=13338.
+   If you get the error below, please revert commit: ``179c5cb7fd0f06970135187f1203507aa55d6bde`` in the poky repository (sources/poky). See also Bug 13338 https://bugzilla.yoctoproject.org/show_bug.cgi?id=13338.
 
 .. code-block:: none
    :emphasize-lines: 11,12
