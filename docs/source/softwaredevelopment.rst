@@ -123,7 +123,7 @@ byteDEVKIT
 
 -  **Yocto 3.0**
 
-   Use repo to download all necessary repositories:
+   Use ``repo`` to download all necessary repositories:
 
    ::
 
@@ -156,7 +156,7 @@ byteDEVKIT
 
 -  **Yocto 2.7**
 
-   Use repo to download all necessary repositories:
+   Use ``repo`` to download all necessary repositories:
 
    ::
 
@@ -191,7 +191,7 @@ bytePANEL
 
 -  **Yocto 3.0**
 
-   Use repo to download all necessary repositories:
+   Use ``repo`` to download all necessary repositories:
 
    ::
 
@@ -224,7 +224,7 @@ bytePANEL
 
 -  **Yocto 2.7**
 
-   Use repo to download all necessary repositories:
+   Use ``repo`` to download all necessary repositories:
 
    ::
 
@@ -277,7 +277,7 @@ How to modify the image
 How to rename the image
 ---------------------------
 
--  **If you want to rename or copy an image, simple rename or copy the image recipe by:**
+If you want to rename or copy an image, simply rename or copy the image recipe by:
 
    ::
 
@@ -428,20 +428,20 @@ How to bring your binary to the target?
 ==========================================
 
 1. Connect the embedded device's ethernet to your LAN
-2. determine the embedded target ip address by ``ip addr show``
+2. Determine the embedded target IP address by ``ip addr show``
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/ip_addr_show_28.png
    :scale: 100%
    :align: center
 
-3. scp your binary, e.g. helloworld to the target by ``scp helloworld root@<ip address of target>:/tmp``
+3. Copy your binary, e.g. ``helloworld`` to the target by ``scp helloworld root@<ip address of target>:/tmp``
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/scp2.png
    :scale: 100%
    :align: center
 
-4. run `chmod +x` on the target to make your binary executable: ``chmod +x /<path>/<binary name>``
-5. run your binary on the target: ``/<path>/<binary name>``
+4. Run ``chmod +x`` on the target to make your binary executable: ``chmod +x /<path>/<binary name>``
+5. Run your binary on the target: ``/<path>/<binary name>``
 
 ---------------
 
