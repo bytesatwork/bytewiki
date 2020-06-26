@@ -4,10 +4,10 @@ Software Development
 The entire development lifecycle is done in-house with transparent project management and customer involvement. We have proven experience in a wide range of industries, including industrial automation and custom solutions for consumer electronics. This section helps you step by step initiating the software development process: 
 
 ==================================
-1. Where do you get the toolchain?
+Where do you get the toolchain?
 ==================================
 
-1.1 byteDEVKIT
+byteDEVKIT
 --------------
 
 -  **Yocto 3.0**
@@ -16,7 +16,7 @@ The entire development lifecycle is done in-house with transparent project manag
 -  **Yocto 2.7**
    Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-2.7.1.sh
 
-1.2 bytePANEL
+bytePANEL
 -------------
 
 -  **Yocto 3.0**
@@ -29,10 +29,10 @@ The entire development lifecycle is done in-house with transparent project manag
 ---------------
 
 ====================================
-2. How do you install the toolchain?
+How do you install the toolchain?
 ====================================
 
-2.1 byteENGINE STM32MP1x
+byteENGINE STM32MP1x
 ------------------------
 
 Download the Toolchain and install it
@@ -42,7 +42,7 @@ Download the Toolchain and install it
       ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
       
 
-2.2 byteENGINE AM335x
+byteENGINE AM335x
 ---------------------
 
 Download the Toolchain and install it
@@ -56,11 +56,11 @@ Download the Toolchain and install it
 ---------------
 
 ================================
-3. How do you use the toolchain?
+How do you use the toolchain?
 ================================
 
    
-3.1 byteENGINE STM32MP1x
+byteENGINE STM32MP1x
 ------------------------
 
 Source the installed Toolchain:
@@ -99,7 +99,7 @@ The output that is shown in prompt afterwards:
 
    helloworld: ELF 32-bit LSB pie executable, ARM, EABI5 version 1
 
-3.2 byteENGINE AM335x
+byteENGINE AM335x
 ---------------------
 Source the Toolchain
 
@@ -141,7 +141,7 @@ The output that is shown in prompt afterwards:
 ---------------
 
 ==========================================
-4. How to bring your binary to the target?
+How to bring your binary to the target?
 ==========================================
 
 1. Connect the embedded device's ethernet to your LAN
@@ -163,10 +163,10 @@ The output that is shown in prompt afterwards:
 ---------------
 
 ===============================================
-5. Where do you get the Image for your SD-Card?
+Where do you get the Image for your SD-Card?
 ===============================================
 
-5.1 byteDEVKIT
+byteDEVKIT
 ---------------
 
 -  **Yocto 3.0**
@@ -176,7 +176,7 @@ The output that is shown in prompt afterwards:
    Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/2.7/flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw.gz
 
 
-5.2 bytePANEL
+bytePANEL
 -------------
 
 -  **Yocto 3.0**
@@ -188,7 +188,7 @@ The output that is shown in prompt afterwards:
 ---------------
 
 ==============================
-6. How do you flash the Image?
+How do you flash the Image?
 ==============================
 
 .. Attention::
@@ -196,7 +196,7 @@ The output that is shown in prompt afterwards:
   - **All existing data** on the micro-SD card will be lost.
   - **Do not format** the micro-SD card before flashing.
 
-6.1 byteDEVKIT
+byteDEVKIT
 --------------
 
 -  **Yocto 3.0**
@@ -234,7 +234,7 @@ The output that is shown in prompt afterwards:
    
      gunzip -c <file.raw.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
-6.2 bytePANEL
+bytePANEL
 -------------
 
 -  **Yocto 3.0**
@@ -275,10 +275,10 @@ The output that is shown in prompt afterwards:
 ---------------
 
 =============================
-7. How do you build an image?
+How do you build an image?
 =============================
 
-7.1 byteDEVKIT
+byteDEVKIT
 --------------
 
 -  **Yocto 3.0**
@@ -346,7 +346,7 @@ The output that is shown in prompt afterwards:
       ~/workdir/bytedevkit/2.7/build/tmp/deploy/images/bytedevkit
 	
 
-7.2 bytePANEL
+bytePANEL
 -------------
 
 -  **Yocto 3.0**
@@ -414,7 +414,7 @@ The output that is shown in prompt afterwards:
       ~/workdir/bytepanel/2.7/build/tmp/deploy/images/bytepanel
       
       
-7.3 How to modify the image
+How to modify the image
 ---------------------------
 
 -  **bytesatwork delivers tips for customizing an image**
@@ -436,7 +436,7 @@ The output that is shown in prompt afterwards:
     $ bitbake bytesatwork-minimal-image
 
 
-7.4 How to rename the image
+How to rename the image
 ---------------------------
 
 -  **If you want to rename or copy an image, simple rename or copy the image recipe by:**
@@ -447,7 +447,7 @@ The output that is shown in prompt afterwards:
     $ cp bytesatwork-minimal-image.bb customer-example-image.bb
 
 
-7.5 Troubleshooting
+Troubleshooting
 -------------------
 
 -  **Image size is to small**
@@ -460,10 +460,10 @@ The output that is shown in prompt afterwards:
 ---------------
 
 ================================
-8. How do you build a toolchain?
+How do you build a toolchain?
 ================================
 
-8.1 byteDEVKIT
+byteDEVKIT
 --------------
 
 -  **Yocto 3.0**
@@ -525,7 +525,7 @@ The output that is shown in prompt afterwards:
       ~/workdir/bytedevkit/2.7/build/tmp/deploy/sdk
 
 
-8.2 bytePANEL
+bytePANEL
 -------------
 
 -  **Yocto 3.0**
@@ -586,7 +586,7 @@ The output that is shown in prompt afterwards:
 
       ~/workdir/bytepanel/2.7/build/tmp/deploy/sdk
 
-8.3 How to modify your toolchain
+How to modify your toolchain
 --------------------------------
 
    Currently the bytesatwork toolchain is generated out of the bytesatwork-minimal-image recipe. If you want to add additional libraries and development headers to customize the toolchain, you need to modify the bytesatwork-minimal-image recipe. It can be found under :guilabel:`~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images`
@@ -610,7 +610,7 @@ The output that is shown in prompt afterwards:
    For additional information, please visit: https://www.yoctoproject.org/docs/3.0.2/overview-manual/overview-manual.html#cross-development-toolchain-generation
 
 
-8.4 Troubleshooting
+Troubleshooting
 -------------------
 
 -  **Errors when building the toolchain**
