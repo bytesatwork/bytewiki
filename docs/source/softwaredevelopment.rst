@@ -52,36 +52,31 @@ byteDEVKIT
 
    Windows
 
-   ::
-
-      Unzip the <file.wic.gz> (e.g. with 7-zip)
-      Write the resulting <file.wic> to the uSD-card with a tool like Roadkils Disk Image: https://www.roadkil.net/program.php?ProgramID=12
-
+      #. Unzip the file ``bytesatwork-minimal-image-bytedevkit.wic.gz`` (e.g. with 7-zip)
+      #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
    Linux
 
    ::
 
-     gunzip -c <file.wic.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
+     gunzip -c bytesatwork-minimal-image-bytedevkit.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  bmaptool copy <file.wic.gz> /dev/mmcblk<X>
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit.wic.gz /dev/mmcblk<X>``
 
 -  **Yocto 2.7**
 
    Windows
 
-   ::
-
-     Unzip the <file.raw.gz> (e.g. with 7-zip)
-     Write the resulting <file.raw> to the uSD-card with a tool like Roadkils Disk Image: https://www.roadkil.net/program.php?ProgramID=12
+      #. Unzip the file ``flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw.gz`` (e.g. with 7-zip)
+      #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
    Linux
 
    ::
 
-     gunzip -c <file.raw.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
+     gunzip -c flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw.gz | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
 bytePANEL
 -------------
@@ -90,36 +85,33 @@ bytePANEL
 
    Windows
 
-   ::
-
-     Unzip the <file.wic.gz> (e.g. with 7-zip)
-     Write the resulting <file.wic> to the uSD-card with a tool like Roadkils Disk Image: https://www.roadkil.net/program.php?ProgramID=12
+      #. Unzip the file ``bytesatwork-minimal-image-bytepanel-emmc.wic.gz`` (e.g. with 7-zip)
+      #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 
    Linux
 
    ::
 
-     gunzip -c <file.wic.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
+     gunzip -c bytesatwork-minimal-image-bytepanel-emmc.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  bmaptool copy <file.wic.gz> /dev/mmcblk<X>
+  bmaptool copy bytesatwork-minimal-image-bytepanel-emmc.wic.gz /dev/mmcblk<X>
 
 -  **Yocto 2.7**
 
    Windows
 
-   ::
+      #. Unzip the file ``devbase-image-bytesatwork-bytepanel-emmc-20190729194430.sdimg.gz`` (e.g. with 7-zip)
+      #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
-     Unzip the <file.sdimg.gz> (e.g. with 7-zip)
-     Write the resulting <file.sdimg> to the uSD-card with a tool like Roadkils Disk Image[https://www.roadkil.net/program.php?ProgramID=12]
 
    Linux
 
    ::
 
-     gunzip -c <file.sdimg.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
+     gunzip -c devbase-image-bytesatwork-bytepanel-emmc-20190729194430.sdimg.gz | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
 ---------------
 
