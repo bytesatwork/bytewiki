@@ -1,14 +1,14 @@
 ####################
 Software Development
 ####################
-The entire development lifecycle is done in-house with transparent project management and customer involvement. We have proven experience in a wide range of industries, including industrial automation and custom solutions for consumer electronics. This section helps you step by step initiating the software development process:
+The entire development life cycle is done in-house with transparent project management and customer involvement. We have proven experience in a wide range of industries, including industrial automation and custom solutions for consumer electronics. This section helps you step by step initiating the software development process:
 
 
 *****
 Image
 *****
 
-Where do you get the Image for your SD-Card?
+Where do you get the SD card image?
 ===============================================
 
 byteDEVKIT
@@ -32,13 +32,13 @@ bytePANEL
 
 ---------------
 
-How do you flash the Image?
+How do you flash the image?
 ==============================
 
 .. Attention::
-  - You need is a micro-SD card with **minimal 8GB** capacity.
-  - **All existing data** on the micro-SD card will be lost.
-  - **Do not format** the micro-SD card before flashing.
+  - You need a microSD card with **at least 8GB** capacity.
+  - **All existing data** on the microSD card will be lost.
+  - **Do not format** the microSD card before flashing.
 
 byteDEVKIT
 --------------
@@ -135,7 +135,7 @@ byteDEVKIT
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for byteDEVKIT:
+   will set up a Yocto Project environment for byteDEVKIT:
 
    ::
 
@@ -155,7 +155,7 @@ byteDEVKIT
 
       ~/workdir/bytedevkit/3.0/build/tmp/deploy/images/bytedevkit
 
-.. Hint:: For additional information about yocto images and howto build them, please visit: https://www.yoctoproject.org/docs/3.0/mega-manual/mega-manual.html#brief-building-your-image
+.. Hint:: For additional information about yocto images and how to build them, please visit: https://www.yoctoproject.org/docs/3.0/mega-manual/mega-manual.html#brief-building-your-image
 
 -  **Yocto 2.7**
 
@@ -168,7 +168,7 @@ byteDEVKIT
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for byteDEVKIT:
+   will set up a Yocto Project environment for byteDEVKIT:
 
    ::
 
@@ -203,14 +203,14 @@ bytePANEL
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for bytePANEL:
+   will set up a Yocto Project environment for bytePANEL:
 
    ::
 
       $ cd ~/workdir/bytepanel/3.0
       $ MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
-   the final command builds the development image:
+   The final command builds the development image:
 
    ::
 
@@ -223,7 +223,7 @@ bytePANEL
 
       ~/workdir/bytepanel/3.0/build/tmp/deploy/images/bytepanel
 
-.. Hint:: For additional information about yocto images and howto build them, please visit: https://www.yoctoproject.org/docs/3.0/mega-manual/mega-manual.html#brief-building-your-image
+.. Hint:: For additional information about yocto images and how to build them, please visit: https://www.yoctoproject.org/docs/3.0/mega-manual/mega-manual.html#brief-building-your-image
 
 -  **Yocto 2.7**
 
@@ -236,14 +236,14 @@ bytePANEL
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for bytePANEL:
+   will set up a Yocto Project environment for bytePANEL:
 
    ::
 
       $ cd ~/workdir/bytepanel/2.7
       $ MACHINE=bytepanel DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
-   the final command builds the development image:
+   The final command builds the development image:
 
    ::
 
@@ -260,11 +260,9 @@ bytePANEL
 How to modify the image
 ---------------------------
 
--  **bytesatwork delivers tips for customizing an image**
-
   The image recipes can be found in :guilabel:`~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images`
 
-  This is relative to where you started you repo command to check out all the sources.
+  This is relative to where you started the :guilabel:`repo` command to fetch all the sources.
 
   Edit the minimal-image recipe :guilabel:`bytesatwork-minimal-image.bb`
 
@@ -336,7 +334,7 @@ How do you install the toolchain?
 byteENGINE STM32MP1x
 ------------------------
 
-Download the Toolchain and install it
+Download the toolchain and install it
 
    ::
 
@@ -346,7 +344,7 @@ Download the Toolchain and install it
 byteENGINE AM335x
 ---------------------
 
-Download the Toolchain and install it
+Download the toolchain and install it
 
    ::
 
@@ -363,7 +361,7 @@ How do you use the toolchain?
 byteENGINE STM32MP1x
 ------------------------
 
-Source the installed Toolchain:
+Source the installed toolchain:
 
 ::
 
@@ -401,7 +399,7 @@ The output that is shown in prompt afterwards:
 
 byteENGINE AM335x
 ---------------------
-Source the Toolchain
+Source the installed toolchain:
 
 ::
 
@@ -476,7 +474,7 @@ byteDEVKIT
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for byteDEVKIT:
+   will set up a Yocto Project environment for byteDEVKIT:
 
    ::
 
@@ -505,7 +503,7 @@ byteDEVKIT
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for byteDEVKIT:
+   will set up a Yocto Project environment for byteDEVKIT:
 
    ::
 
@@ -538,7 +536,7 @@ bytePANEL
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for bytePANEL:
+   will set up a Yocto Project environment for bytePANEL:
 
    ::
 
@@ -567,7 +565,7 @@ bytePANEL
       $ repo sync
 
    If those commands are completed successfully, the following command
-   will setup a Yocto Project environment for bytePANEL:
+   will set up a Yocto Project environment for bytePANEL:
 
    ::
 
