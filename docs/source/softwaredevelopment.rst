@@ -1,168 +1,13 @@
-********************
+####################
 Software Development
-********************
+####################
 The entire development lifecycle is done in-house with transparent project management and customer involvement. We have proven experience in a wide range of industries, including industrial automation and custom solutions for consumer electronics. This section helps you step by step initiating the software development process:
 
-==================================
-Where do you get the toolchain?
-==================================
 
-byteDEVKIT
---------------
+*****
+Image
+*****
 
--  **Yocto 3.0**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
-
--  **Yocto 2.7**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-2.7.1.sh
-
-bytePANEL
--------------
-
--  **Yocto 3.0**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
-
-
--  **Yocto 2.7**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-armv7at2hf-neon-bytepanel-toolchain-2.7.3.sh
-
----------------
-
-====================================
-How do you install the toolchain?
-====================================
-
-byteENGINE STM32MP1x
-------------------------
-
-Download the Toolchain and install it
-
-   ::
-
-      ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
-
-
-byteENGINE AM335x
----------------------
-
-Download the Toolchain and install it
-
-   ::
-
-      ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
-
-.. Hint:: If you encounter problems when trying to install the toolchain, make sure the downloaded toolchain is executable. Run :guilabel:`chmod +x /<path>/<toolchain-file>.sh` to make it executable.
-
----------------
-
-================================
-How do you use the toolchain?
-================================
-
-
-byteENGINE STM32MP1x
-------------------------
-
-Source the installed Toolchain:
-
-::
-
-   source /opt/poky-bytesatwork/3.0.2/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
-
-Check if Cross-compiler is available in environment:
-
-::
-
-   echo $CC
-
-You should see the following output:
-
-::
-
-   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/3.0.2/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
-
-Crosscompile the source code, e.g. by:
-
-::
-
-   $CC helloworld.c -o helloworld
-
-Check generated binary:
-
-::
-
-   file helloworld
-
-The output that is shown in prompt afterwards:
-
-::
-
-   helloworld: ELF 32-bit LSB pie executable, ARM, EABI5 version 1
-
-byteENGINE AM335x
----------------------
-Source the Toolchain
-
-::
-
-   source /opt/poky-bytesatwork/3.0.2/environment-setup-armv7at2hf-neon-poky-linux-gnueabi
-
-Check if Cross-compiler is available in environment:
-
-::
-
-   echo $CC
-
-You should see the following output:
-
-::
-
-   arm-poky-linux-gnueabi-gcc -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/poky-bytesatwork/3.0.2/sysroots/armv7at2hf-neon-poky-linux-gnueabi
-
-
-Cross-compile the source code, e.g. by:
-
-::
-
-   $CC helloworld.c -o helloworld
-
-Check generated binary:
-
-::
-
-   file helloworld
-
-The output that is shown in prompt afterwards:
-
-::
-
-   helloworld: ELF 32-bit LSB pie executable, ARM, EABI5 version 1
-
----------------
-
-==========================================
-How to bring your binary to the target?
-==========================================
-
-1. Connect the embedded device's ethernet to your LAN
-2. determine the embedded target ip address by :guilabel:`ip addr show`
-
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/ip_addr_show_28.png
-   :scale: 100%
-   :align: center
-
-3. scp your binary, e.g. helloworld to the target by :guilabel:`scp helloworld root@<ip address of target>:/tmp`
-
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/scp2.png
-   :scale: 100%
-   :align: center
-
-4. run `chmod +x` on the target to make your binary executable: :guilabel:`chmod +x /<path>/<binary name>`
-5. run your binary on the target: :guilabel:`/<path>/<binary name>`
-
----------------
-
-===============================================
 Where do you get the Image for your SD-Card?
 ===============================================
 
@@ -170,7 +15,7 @@ byteDEVKIT
 ---------------
 
 -  **Yocto 3.0**
-   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/bytesatwork-minimal-image-bytedevkit.wic.gz 
+   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/bytesatwork-minimal-image-bytedevkit.wic.gz
 
 -  **Yocto 2.7**
    Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/2.7/flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw.gz
@@ -187,7 +32,6 @@ bytePANEL
 
 ---------------
 
-==============================
 How do you flash the Image?
 ==============================
 
@@ -215,7 +59,7 @@ byteDEVKIT
 
      gunzip -c <file.wic.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
-.. Hint:: To improve write performance, you could use bmap-tools under Linux: 
+.. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
   bmaptool copy <file.wic.gz> /dev/mmcblk<X>
 
@@ -253,7 +97,7 @@ bytePANEL
 
      gunzip -c <file.wic.gz> | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
 
-.. Hint:: To improve write performance, you could use bmap-tools under Linux: 
+.. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
   bmaptool copy <file.wic.gz> /dev/mmcblk<X>
 
@@ -274,7 +118,6 @@ bytePANEL
 
 ---------------
 
-=============================
 How do you build an image?
 =============================
 
@@ -459,7 +302,165 @@ Troubleshooting
 
 ---------------
 
+*********
+Toolchain
+*********
+
+Where do you get the toolchain?
+===============================
+
+byteDEVKIT
+--------------
+
+-  **Yocto 3.0**
+   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
+
+-  **Yocto 2.7**
+   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-2.7.1.sh
+
+bytePANEL
+-------------
+
+-  **Yocto 3.0**
+   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
+
+
+-  **Yocto 2.7**
+   Download LINK: https://download.bytesatwork.io/transfer/bytesatwork/poky-bytesatwork-glibc-x86_64-devbase-image-bytesatwork-armv7at2hf-neon-bytepanel-toolchain-2.7.3.sh
+
+---------------
+
+How do you install the toolchain?
+====================================
+
+byteENGINE STM32MP1x
+------------------------
+
+Download the Toolchain and install it
+
+   ::
+
+      ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh
+
+
+byteENGINE AM335x
+---------------------
+
+Download the Toolchain and install it
+
+   ::
+
+      ./poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-armv7at2hf-neon-bytepanel-emmc-toolchain-3.0.2.sh
+
+.. Hint:: If you encounter problems when trying to install the toolchain, make sure the downloaded toolchain is executable. Run :guilabel:`chmod +x /<path>/<toolchain-file>.sh` to make it executable.
+
+---------------
+
+How do you use the toolchain?
 ================================
+
+
+byteENGINE STM32MP1x
+------------------------
+
+Source the installed Toolchain:
+
+::
+
+   source /opt/poky-bytesatwork/3.0.2/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+
+Check if Cross-compiler is available in environment:
+
+::
+
+   echo $CC
+
+You should see the following output:
+
+::
+
+   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/3.0.2/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+
+Crosscompile the source code, e.g. by:
+
+::
+
+   $CC helloworld.c -o helloworld
+
+Check generated binary:
+
+::
+
+   file helloworld
+
+The output that is shown in prompt afterwards:
+
+::
+
+   helloworld: ELF 32-bit LSB pie executable, ARM, EABI5 version 1
+
+byteENGINE AM335x
+---------------------
+Source the Toolchain
+
+::
+
+   source /opt/poky-bytesatwork/3.0.2/environment-setup-armv7at2hf-neon-poky-linux-gnueabi
+
+Check if Cross-compiler is available in environment:
+
+::
+
+   echo $CC
+
+You should see the following output:
+
+::
+
+   arm-poky-linux-gnueabi-gcc -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/poky-bytesatwork/3.0.2/sysroots/armv7at2hf-neon-poky-linux-gnueabi
+
+
+Cross-compile the source code, e.g. by:
+
+::
+
+   $CC helloworld.c -o helloworld
+
+Check generated binary:
+
+::
+
+   file helloworld
+
+The output that is shown in prompt afterwards:
+
+::
+
+   helloworld: ELF 32-bit LSB pie executable, ARM, EABI5 version 1
+
+---------------
+
+How to bring your binary to the target?
+==========================================
+
+1. Connect the embedded device's ethernet to your LAN
+2. determine the embedded target ip address by :guilabel:`ip addr show`
+
+.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/ip_addr_show_28.png
+   :scale: 100%
+   :align: center
+
+3. scp your binary, e.g. helloworld to the target by :guilabel:`scp helloworld root@<ip address of target>:/tmp`
+
+.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/scp2.png
+   :scale: 100%
+   :align: center
+
+4. run `chmod +x` on the target to make your binary executable: :guilabel:`chmod +x /<path>/<binary name>`
+5. run your binary on the target: :guilabel:`/<path>/<binary name>`
+
+---------------
+
 How do you build a toolchain?
 ================================
 
