@@ -21,6 +21,8 @@ Where do you get the SD card image?
     * - byteDEVKIT
       - Yocto 3.0
       - `bytesatwork-minimal-image-bytedevkit.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/bytesatwork-minimal-image-bytedevkit.wic.gz>`_
+        (`wic.bmap
+        <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/bytesatwork-minimal-image-bytedevkit.wic.bmap>`__)
       - 4ce5b056a78a0bfecae46ad6777a8b7bcfa0e5a679d4f53654969234c9a19282
     * - byteDEVKIT
       - Yocto 2.7
@@ -29,6 +31,8 @@ Where do you get the SD card image?
     * - bytePANEL
       - Yocto 3.0
       - `bytesatwork-minimal-image-bytepanel-emmc.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/bytesatwork-minimal-image-bytepanel-emmc.wic.gz>`_
+        (`wic.bmap
+        <https://download.bytesatwork.io/transfer/bytesatwork/m2/3.0/bytesatwork-minimal-image-bytepanel-emmc.wic.bmap>`__)
       - e3e166f28fb815b09c6372bbcae4b4c8fcd00f93e57e96084bdee90c255764d9
     * - bytePANEL
       - Yocto 2.7
