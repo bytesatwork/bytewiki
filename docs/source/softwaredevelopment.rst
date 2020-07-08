@@ -305,6 +305,8 @@ Troubleshooting
 Toolchain
 *********
 
+.. _get-toolchain:
+
 Where do you get the toolchain?
 ===============================
 
@@ -629,6 +631,180 @@ Troubleshooting
     target-sdk-provides-dummy : Conflicts: coreutils
    E: Unable to correct problems, you have held broken packages.
 
+----
+
+******
+Kernel
+******
+
+.. _download-kernel:
+
+Download the Linux Kernel
+=========================
+
+.. list-table::
+    :header-rows: 1
+
+    * - Device
+      - Branch
+      - git URL
+    * - byteDEVKIT
+      - baw-v4.19-stm32mp
+      - https://github.com/bytesatwork/linux-stm32mp.git
+    * - bytePANEL
+      - baw-ti-linux-4.19.y
+      - https://github.com/bytesatwork/ti-linux-kernel.git
+
+----
+
+Build the Linux Kernel
+======================
+
+For both targets, an ARM toolchain is necessary. You can use the
+provided toolchain from :ref:`get-toolchain` or any compatible toolchain (e.g.
+from your distribution)
+
+.. Important::
+   The following tools need to be installed on your development system:
+      * ``git``
+      * ``make``
+      * ``bc``
+
+.. Note::
+        The following instructions assume, you installed the provided toolchain
+        for the respective target.
+
+byteDEVKIT
+----------
+
+.. Important::
+   The following tools need to be installed on your development system:
+      * OpenSSL headers (Debian package: ``libssl-dev``)
+      * ``depmod`` (Debian package: ``kmod``)
+
+#. Download kernel sources
+
+   Download the appropriate kernel from :ref:`download-kernel`.
+
+#. Source toolchain
+
+   ::
+
+      source /opt/poky-bytesatwork/3.0.2/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+
+#. Create defconfig
+
+   ::
+
+      make multi_v7_defconfig
+      scripts/kconfig/merge_config.sh -m -r .config arch/arm/configs/fragment-*
+      make olddefconfig
+
+#. Build Linux kernel
+
+   ::
+
+      make LOADADDR=0xC2000040 -j `nproc` uImage stm32mp157c-bytedevkit-v1-1.dtb modules
+
+#. Install kernel and device tree
+
+   To use the newly created kernel, device tree and/or module, the necessary
+   files need to be installed on the target. This can be done either via
+   Ethernet (e.g. ``scp``) or by copying the files to the SD card.
+
+   .. Note::
+      For scp installation: Don't forget to mount /boot on the target.
+
+   .. list-table::
+       :header-rows: 1
+
+       * - File
+         - Target path
+         - Target partition
+       * - ``arch/arm/boot/uImage``
+         - ``/boot/uImage``
+         - ``/dev/mmcblk0p4``
+       * - ``arch/arm/boot/dts/stm32mp157c-bytedevkit-v1-1.dtb``
+         - ``/boot/stm32mp157c-bytedevkit.dtb``
+         - ``/dev/mmcblk0p4``
+
+   .. Note::
+      After installing a new kernel, it often fails to load modules, as the
+      _signature_ of the kernel changed and it fails to find its corresponding modules
+      folder. This issue can often be resolved with a symlink:
+
+      ::
+
+        ln -s /lib/modules/<EXISTING FOLDER> /lib/modules/`uname -r`
+
+     Otherwise, please follow the instructions to copy the kernel modules
+
+#.  Install kernel modules
+
+    To copy all available modules to the target, it's best to deploy them
+    locally first and then copy all modules to the target.
+
+    ::
+
+       mkdir /tmp/bytedevkit
+       make INSTALL_MOD_PATH=/tmp/bytedevkit modules_install
+
+   Now you can copy the content of the folder ``/tmp/bytedevkit`` into the
+   target's root folder (``/``) which is partition ``/dev/mmcblk0p5``.
+
+bytePANEL
+---------
+
+.. Important::
+   The following tools need to be installed on your development system:
+      * ``u-boot-tools``
+
+#. Download kernel sources
+
+   Download the appropriate kernel from :ref:`download-kernel`.
+
+#. Source toolchain
+
+   ::
+
+      source /opt/poky-bytesatwork/3.0.2/environment-setup-armv7at2hf-neon-poky-linux-gnueabi
+
+#. Create defconfig
+
+   ::
+
+      make bytepanel_defconfig
+
+#. Build Linux kernel
+
+   ::
+
+      make LOADADDR=0x80008000 -j `nproc` uImage bytepanel.dtb
+
+#. Install kernel and device tree
+
+   To use the newly created kernel and device tree, the necessary
+   files need to be installed on the target. This can be done either via
+   Ethernet (e.g. ``scp``) or in copying the files to the SD card.
+
+   .. Note::
+      For scp installation: Don't forget to mount /boot on the target.
+
+   .. list-table::
+       :header-rows: 1
+
+       * - File
+         - Target path
+         - Target partition
+       * - ``arch/arm/boot/uImage``
+         - ``/boot/uImage``
+         - ``/dev/mmcblk0p1``
+       * - ``arch/arm/boot/dts/bytepanel.dtb``
+         - ``/boot/devtree.dtb``
+         - ``/dev/mmcblk0p1``
+
+
+.. This is the footer, don't edit after this
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
    :scale: 100%
    :align: center
