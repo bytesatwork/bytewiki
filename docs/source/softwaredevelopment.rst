@@ -342,6 +342,12 @@ a self-extracting shell script.
 
 .. Hint:: If you encounter problems when trying to install the toolchain, make sure the downloaded toolchain is executable. Run ``chmod +x /<path>/<toolchain-file>.sh`` to make it executable.
 
+.. Important::
+   The following tools need to be installed on your development system:
+      * ``xz`` (Debian package: ``xz-utils``)
+      * ``python`` (any version)
+      * ``gcc``
+
 ---------------
 
 How do you use the toolchain?
