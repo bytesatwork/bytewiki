@@ -17,7 +17,7 @@ Where do you get the SD card image?
     * - Device
       - Yocto Version
       - Download
-      - Checksum
+      - Checksum (SHA256)
     * - byteDEVKIT
       - Yocto 3.0
       - `bytesatwork-minimal-image-bytedevkit.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/bytesatwork-minimal-image-bytedevkit.wic.gz>`_
@@ -316,7 +316,7 @@ Where do you get the toolchain?
     * - Device
       - Yocto Version
       - Download
-      - Checksum
+      - Checksum (SHA256)
     * - byteDEVKIT
       - Yocto 3.0
       - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.0/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-toolchain-3.0.2.sh>`_
