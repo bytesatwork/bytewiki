@@ -39,6 +39,16 @@ Where do you get the SD card image?
       - `devbase-image-bytesatwork-bytepanel-emmc-20190729194430.sdimg.gz <https://download.bytesatwork.io/transfer/bytesatwork/m2/2.7/devbase-image-bytesatwork-bytepanel-emmc-20190729194430.sdimg.gz>`_
       - 3b3e51d83c68f68d6ebbc2983d6b41b9e21d4878c1c9570804e6949624d7a41e
 
+.. Hint:: Updating from an older image?
+   You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
+
+   #. check for new version in the table above
+   #. edit ``/etc/apt/sources.list`` and point to the new package feed
+   #. run ``apt-get update; apt-get upgrade``
+
+   As the yocto framework is based on several packages from various projects or suppliers, it is not guaranteed that
+   an incremental upgrade by ``apt-get upgrade`` works automatically. Some manual adjustments might be needed.
+
 ---------------
 
 How do you flash the image?
