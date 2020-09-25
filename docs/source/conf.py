@@ -58,7 +58,7 @@ html_static_path = ['_static']
 
 html_theme_options = {
     'logo_only': False,
-    'navigation_depth': 5,
+    'navigation_depth': 4,
 }
 html_logo = "../images/bytes.png"
 
