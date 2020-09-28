@@ -5,8 +5,6 @@ The entire development life cycle is done in-house with transparent project mana
 
 .. toctree::
 
-   yocto/3.0/bytedevkit
-   yocto/3.0/bytepanel
    archive
 
 .. This is the footer, don't edit after this
