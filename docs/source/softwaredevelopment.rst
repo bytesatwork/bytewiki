@@ -5,6 +5,7 @@ The entire development life cycle is done in-house with transparent project mana
 
 .. toctree::
 
+   yocto/3.1/bytedevkit-stm32mp1
    yocto/3.1/bytedevkit-am335x
    archive
 
