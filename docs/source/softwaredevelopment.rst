@@ -9,6 +9,7 @@ Current software platforms and images are available directly under this navigati
 
 .. toctree::
 
+   debian/debian
    yocto/yocto
    archive
 
