@@ -308,7 +308,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-stm32mp1
-      - v5.4-stm32mp
+      - baw-v5.4-stm32mp
       - https://github.com/bytesatwork/linux-stm32mp.git
 
 ----
