@@ -334,6 +334,7 @@ from your distribution)
    The following tools need to be installed on your development system:
       * OpenSSL headers (Debian package: ``libssl-dev``)
       * ``depmod`` (Debian package: ``kmod``)
+      * ``mkimage`` (Debian package: ``u-boot-tools``)
 
 #. Download kernel sources
 
