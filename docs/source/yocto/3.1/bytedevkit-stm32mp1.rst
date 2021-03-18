@@ -405,6 +405,97 @@ from your distribution)
    Now you can copy the content of the folder ``/tmp/bytedevkit-stm32mp1`` into the
    target's root folder (``/``) which is partition ``/dev/mmcblk0p5``.
 
+******
+U-Boot
+******
+
+   .. _download-uboot-bytedevkit-stm32mp1-3.1:
+
+Download U-Boot
+===============
+
+   .. list-table::
+        :header-rows: 1
+
+        * - Device
+          - Branch
+          - git URL
+        * - bytedevkit-stm32mp1
+          - baw-v2020.01-stm32mp-r1
+          - https://github.com/bytesatwork/u-boot-stm32mp
+
+----
+
+Build U-Boot
+============
+
+To compile U-Boot, an ARM toolchain is necessary. You can use the provided
+toolchain from :ref:`get-toolchain-bytedevkit-stm32mp1-3.1` or any compatible
+toolchain (e.g. from your distribution)
+
+   .. Important::
+        The following tools need to be installed on your development system:
+         * ``git``
+         * ``make``
+         * ``bc``
+
+   .. Note::
+        The following instructions assume, you installed the provided toolchain
+        for the respective target.
+
+#. Download U-Boot sources
+
+   Download the appropriate U-Boot from :ref:`download-uboot-bytedevkit-stm32mp1-3.1`.
+
+#. Source toolchain
+
+   ::
+
+        source /opt/poky-bytesatwork/3.1.1/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+
+#. Create defconfig
+
+   ::
+
+        make stm32mp157_bytedevkit_defconfig
+
+   .. Note::
+        For the 1 GB RAM variant, use ``make stm32mp157_bytedevkit_1g_defconfig`` instead.
+
+#. Build U-Boot and SPL
+
+   ::
+
+        make -j `nproc`
+
+#. Install SPL and U-Boot
+
+   To use the newly created U-Boot, the necessary files need to be installed
+   on the SD card. This can be done either on the host or on the target.
+
+   .. list-table::
+        :header-rows: 1
+
+        * - File
+          - Target partition
+        * - ``u-boot-spl.stm32``
+          - ``/dev/mmcblk0p1``
+        * - ``u-boot-spl.stm32``
+          - ``/dev/mmcblk0p2``
+        * - ``u-boot.img``
+          - ``/dev/mmcblk0p3``
+
+   You need to write the to the respective "raw" partition, either on the host
+   system or the target system:
+
+   ::
+
+        dd if=u-boot-spl.stm32 of=/dev/mmcblk0p1
+        dd if=u-boot-spl.stm32 of=/dev/mmcblk0p2
+        dd if=u-boot.img of=/dev/mmcblk0p3
+
+   The next time the target is reset, it will start with the new U-Boot.
+
 .. This is the footer, don't edit after this
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
    :scale: 100%
