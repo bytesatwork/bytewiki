@@ -356,7 +356,7 @@ from your distribution)
 
    ::
 
-      make LOADADDR=0xC2000040 -j `nproc` uImage am335x-bytedevkit.dtb modules
+      make LOADADDR=0x80008000 -j `nproc` uImage am335x-bytedevkit.dtb modules
 
 #. Install kernel and device tree
 
