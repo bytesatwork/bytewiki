@@ -281,7 +281,7 @@ The newely generated toolchain will be available under:
 
 ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/sdk
 
-For additional information, please visit: https://www.yoctoproject.org/docs/3.0.3/overview-manual/overview-manual.html#cross-development-toolchain-generation
+For additional information, please visit: https://www.yoctoproject.org/docs/2.7.4/overview-manual/overview-manual.html#cross-development-toolchain-generation
 
 
 ******
