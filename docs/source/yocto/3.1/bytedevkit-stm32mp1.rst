@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
         (`wic.bmap
-        <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`__)
-      - 09e6be6ee480e5699adfac1e231f43e60ccc0f345095e8383c0eaada6df8fe60
+        <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`__)
+      - 93369a1d58a7877eb837d4eabd37f2a15cbbbd3ea86b7d99aba91106fe1c7de3
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -41,8 +41,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.1.sh <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.1.sh>`_
-      - 58f74c347a6254fcab5d639c5c59a90ac099282ac92ba2352f0fc50eec1c4172
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.11.sh <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.11.sh>`_
+      - 41e304ec75a26d3bcac7d1f9f2cb72fc07e6002d97f7de45f65ef36baf71f450
 
 
 U-Boot
@@ -63,16 +63,16 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - MLO (512 MB)
-       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-basic <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-spl.stm32-stm32mp157c-bytedevkit-basic>`_
+       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-basic <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/u-boot-spl.stm32-stm32mp157c-bytedevkit-basic>`_
        - ffc3c38e453f7b8760b4edfabd0e6aa0c55fb3e386d8a5a80b90e3a12d0e900d
      * - U-Boot (512 MB)
-       - `u-boot-stm32mp157c-bytedevkit-basic.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-stm32mp157c-bytedevkit-basic.img>`_
+       - `u-boot-stm32mp157c-bytedevkit-basic.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/u-boot-stm32mp157c-bytedevkit-basic.img>`_
        - c0fe5de015ceefa8b3e9a761007523b33fb0e0dddda9ee39d7c3d55382a13ccb
      * - MLO (1 GB)
-       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-1g_ram <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-spl.stm32-stm32mp157c-bytedevkit-1g_ram>`_
+       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-1g_ram <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/u-boot-spl.stm32-stm32mp157c-bytedevkit-1g_ram>`_
        - 99b88a246879e704f92a4f934a9641db8cf64262033e81dbc69b73b6bdba1d20
      * - U-Boot (1 GB)
-       - `u-boot-stm32mp157c-bytedevkit-1g_ram.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-stm32mp157c-bytedevkit-1g_ram.img>`_
+       - `u-boot-stm32mp157c-bytedevkit-1g_ram.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/u-boot-stm32mp157c-bytedevkit-1g_ram.img>`_
        - 8fa044532a61bfe82621bafad4b640710cb5406bc280f43e026a4709d269cb45
 
 
@@ -212,7 +212,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/3.1.1/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   source /opt/poky-bytesatwork/3.1.11/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 Check if Cross-compiler is available in environment:
 
@@ -224,7 +224,7 @@ You should see the following output:
 
 ::
 
-   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/3.1.1/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/3.1.11/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 Crosscompile the source code, e.g. by:
 
@@ -337,7 +337,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-stm32mp1
-      - baw-v5.4-stm32mp
+      - baw-v5.10-stm32mp-r1
       - https://github.com/bytesatwork/linux-stm32mp.git
 
 ----
@@ -372,7 +372,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/3.1.1/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+      source /opt/poky-bytesatwork/3.1.11/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 #. Create defconfig
 
@@ -480,7 +480,7 @@ toolchain (e.g. from your distribution)
 
    ::
 
-        source /opt/poky-bytesatwork/3.1.1/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+        source /opt/poky-bytesatwork/3.1.11/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 #. Create defconfig
 
