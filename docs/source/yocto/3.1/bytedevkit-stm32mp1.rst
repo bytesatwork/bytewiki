@@ -2,23 +2,20 @@
 byteDEVKIT-stm32mp1 (Yocto 3.1)
 ###############################
 
-*****
-Image
-*****
+*********
+Downloads
+*********
 
-Where do you get the SD card image?
-===================================
+
+SD card image
+=============
 
 .. list-table::
     :header-rows: 1
 
-    * - Device
-      - Yocto Version
-      - Download
+    * - Download
       - Checksum (SHA256)
-    * - bytedevkit-stm32mp1
-      - Yocto 3.1.1
-      - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
         (`wic.bmap
         <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`__)
       - 09e6be6ee480e5699adfac1e231f43e60ccc0f345095e8383c0eaada6df8fe60
@@ -33,7 +30,57 @@ Where do you get the SD card image?
    As the yocto framework is based on several packages from various projects or suppliers, it is not guaranteed that
    an incremental upgrade by ``apt-get upgrade`` works automatically. Some manual adjustments might be needed.
 
-----
+
+.. _get-toolchain-bytedevkit-stm32mp1-3.1:
+
+Toolchain
+=========
+
+.. list-table::
+    :header-rows: 1
+
+    * - Download
+      - Checksum (SHA256)
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.1.sh <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.1.sh>`_
+      - 58f74c347a6254fcab5d639c5c59a90ac099282ac92ba2352f0fc50eec1c4172
+
+
+U-Boot
+======
+
+.. Note::
+        The images come with a preinstalled U-Boot that supports 512 MB of RAM.
+        If you have a module with 1 GB of RAM, you will have to
+        :ref:`install-spl-uboot-bytedevkit-stm32mp1-3.1` to unlock the full
+        1 GB of RAM.
+
+
+
+.. list-table::
+     :header-rows: 1
+
+     * - Description
+       - Download
+       - Checksum (SHA256)
+     * - MLO (512 MB)
+       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-basic <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-spl.stm32-stm32mp157c-bytedevkit-basic>`_
+       - ffc3c38e453f7b8760b4edfabd0e6aa0c55fb3e386d8a5a80b90e3a12d0e900d
+     * - U-Boot (512 MB)
+       - `u-boot-stm32mp157c-bytedevkit-basic.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-stm32mp157c-bytedevkit-basic.img>`_
+       - c0fe5de015ceefa8b3e9a761007523b33fb0e0dddda9ee39d7c3d55382a13ccb
+     * - MLO (1 GB)
+       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-1g_ram <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-spl.stm32-stm32mp157c-bytedevkit-1g_ram>`_
+       - 99b88a246879e704f92a4f934a9641db8cf64262033e81dbc69b73b6bdba1d20
+     * - U-Boot (1 GB)
+       - `u-boot-stm32mp157c-bytedevkit-1g_ram.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/u-boot-stm32mp157c-bytedevkit-1g_ram.img>`_
+       - 8fa044532a61bfe82621bafad4b640710cb5406bc280f43e026a4709d269cb45
+
+
+
+*****
+Image
+*****
+
 
 How do you flash the image?
 ===========================
@@ -141,24 +188,6 @@ Troubleshooting
 Toolchain
 *********
 
-.. _get-toolchain-bytedevkit-stm32mp1-3.1:
-
-Where do you get the toolchain?
-===============================
-
-.. list-table::
-    :header-rows: 1
-
-    * - Device
-      - Yocto Version
-      - Download
-      - Checksum (SHA256)
-    * - bytedevkit-stm32mp1
-      - Yocto 3.1.1
-      - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.1.sh <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.1/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-3.1.1.sh>`_
-      - 58f74c347a6254fcab5d639c5c59a90ac099282ac92ba2352f0fc50eec1c4172
-
-----
 
 How do you install the toolchain?
 =================================
@@ -468,7 +497,11 @@ toolchain (e.g. from your distribution)
 
         make -j `nproc`
 
-#. Install SPL and U-Boot
+
+.. _install-spl-uboot-bytedevkit-stm32mp1-3.1:
+
+Install SPL and U-Boot
+======================
 
    To use the newly created U-Boot, the necessary files need to be installed
    on the SD card. This can be done either on the host or on the target.
