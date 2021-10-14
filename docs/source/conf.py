@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'byteWIKI'
-copyright = '2020, bytes at work AG'
-author = 'Janek Filus, Johannes Böhm and others'
+copyright = '2021, bytes at work AG'
+author = 'Johannes Böhm and others'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
