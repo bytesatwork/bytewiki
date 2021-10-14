@@ -139,7 +139,8 @@ The output is found in:
 
    ~/workdir/bytedevkit-stm32mp1/3.1/build/tmp/deploy/images/bytedevkit-stm32mp1
 
-.. Hint:: For additional information about yocto images and how to build them, please visit: https://docs.yoctoproject.org/3.1.1/mega-manual/mega-manual.html#brief-building-your-image
+.. Hint:: For additional information about yocto images and how to build them, please visit:
+          https://docs.yoctoproject.org/3.1.11/brief-yoctoprojectqs/brief-yoctoprojectqs.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -318,7 +319,8 @@ The newely generated toolchain will be available under:
 
 ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/sdk
 
-For additional information, please visit: https://www.yoctoproject.org/docs/3.1.1/overview-manual/overview-manual.html#cross-development-toolchain-generation
+For additional information, please visit:
+https://docs.yoctoproject.org/3.1.11/overview-manual/overview-manual-concepts.html#cross-development-toolchain-generation.
 
 
 ******
