@@ -172,7 +172,7 @@ WINDOWS
    :scale: 100%
    :align: center
 
-.. Note::  You are now succesfully connected to the byteDEVKIT STM32MP1
+.. Note::  You are now successfully connected to the byteDEVKIT STM32MP1
 
 ------------  
 
@@ -183,6 +183,7 @@ How to install additional software using apt
 
 .. Hint::  Follow the link for additional information about "apt": https://help.ubuntu.com/community/AptGet/Howto
 
+.. Note:: byteDEVKIT < V1.2: If you are using a LAN switch (hub) with no 1 GbE support see :ref:`stm32mp1-ethernet`.
 
 1. Connect the embedded device's ethernet to your LAN
 2. Run: :guilabel:`apt-get update`

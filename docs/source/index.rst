@@ -26,6 +26,7 @@ byteWIKI
    firststart
    softwaredevelopment
    hardwaredevelopment
+   errata
 
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
