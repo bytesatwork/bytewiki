@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'byteWIKI'
-copyright = '2021, bytes at work AG'
+copyright = '2022, bytes at work AG'
 author = 'Johannes Böhm and others'
 
 # The full version, including alpha/beta/rc tags
