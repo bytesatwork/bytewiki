@@ -18,7 +18,7 @@ SD card image
     * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
         (`wic.bmap
         <https://download.bytesatwork.io/transfer/bytesatwork/m5/3.1.11/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`__)
-      - 93369a1d58a7877eb837d4eabd37f2a15cbbbd3ea86b7d99aba91106fe1c7de3
+      - 6fa368ff5df6967480f3704c1a9e987f284fa0f8b78ec679c57be9f74e4520f7
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
