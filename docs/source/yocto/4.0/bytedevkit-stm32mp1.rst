@@ -169,7 +169,7 @@ If you want to rename or copy an image, simply rename or copy the image recipe b
 
    ::
 
-    $ cd ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/images/<machine name>
+    $ cd ~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images
     $ cp bytesatwork-minimal-image.bb customer-example-image.bb
 
 
