@@ -369,7 +369,7 @@ from your distribution)
 
    ::
 
-      make LOADADDR=0x20008000 -j `nproc` Image dtbs modules
+      make -j `nproc` Image dtbs modules
 
 #. Install kernel and device tree
 
