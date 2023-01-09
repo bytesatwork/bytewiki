@@ -443,10 +443,10 @@ from your distribution)
 U-Boot
 ******
 
-   .. _download-uboot-bytedevkit-stm32mp1-4.0:
+   .. _download-uboot-source-bytedevkit-stm32mp1-4.0:
 
-Download U-Boot
-===============
+Download U-Boot Source Code
+===========================
 
    .. list-table::
         :header-rows: 1
@@ -479,7 +479,7 @@ toolchain (e.g. from your distribution)
 
 #. Download U-Boot sources
 
-   Download the appropriate U-Boot from :ref:`download-uboot-bytedevkit-stm32mp1-4.0`.
+   Download the appropriate U-Boot from :ref:`download-uboot-source-bytedevkit-stm32mp1-4.0`.
 
 #. Source toolchain
 
