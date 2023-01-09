@@ -386,7 +386,7 @@ from your distribution)
        * - File
          - Target path
          - Target partition
-       * - ``arch/arm/boot/Image``
+       * - ``arch/arm64/boot/Image``
          - ``/boot/Image``
          - ``/dev/mmcblk1p1``
        * - ``arch/arm64/boot/dts/freescale/imx8mm-bytedevkit.dtb``
