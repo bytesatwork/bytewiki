@@ -424,10 +424,10 @@ U-Boot
    .. Note::
       On i.MX 8M Mini, SPL and U-Boot are combined in a container file called ``imx-boot``.
 
-   .. _download-uboot-bytedevkit-imx8mm-4.0:
+   .. _download-uboot-source-bytedevkit-imx8mm-4.0:
 
-Download U-Boot
-===============
+Download U-Boot Source Code
+===========================
 
    .. list-table::
         :header-rows: 1
