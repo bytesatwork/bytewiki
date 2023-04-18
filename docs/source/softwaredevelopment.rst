@@ -12,7 +12,6 @@ Current software platforms and images are available directly under this navigati
    yocto/4.0/bytedevkit-am62x
    yocto/4.0/bytedevkit-imx8mm
    yocto/4.0/bytedevkit-stm32mp1
-   yocto/3.1/bytedevkit-am335x
    archive
 
 .. This is the footer, don't edit after this
