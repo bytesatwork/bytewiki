@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-am62x.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.5/bytesatwork-minimal-image-bytedevkit-am62x.wic.gz>`_
+    * - `bytesatwork-minimal-image-bytedevkit-am62x.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/bytesatwork-minimal-image-bytedevkit-am62x.wic.gz>`_
         (`wic.bmap
-        <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.5/bytesatwork-minimal-image-bytedevkit-am62x.wic.bmap>`__)
-      - b3883532fcf23c2bed20ef4db38d539f238a9080d4fcd74175b22c15702b9e3d
+        <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/bytesatwork-minimal-image-bytedevkit-am62x.wic.bmap>`__)
+      - 28eaae6bad4657ea3b9b9da199408e736778b103fc0d88f6e19e7881a52eae7e
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -41,8 +41,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.5.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.5/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.5.sh>`_
-      - c76a4c7854d52f708dad93969646e46d2d969acbf853e7bcc731b6d77dba366a
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.9.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.9.sh>`_
+      - 053bc96bfe0761ed428d0f735680d05a4c62e9a3932bd131adfd9fca54513d5e
 
 
 U-Boot
@@ -55,14 +55,14 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - SPL R5F
-       - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.5/tiboot3.bin>`_
-       - d109308d37f080b566f5749b9c62487fcfb1a1ed63679c25f91728898488477d
+       - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/tiboot3.bin>`_
+       - 86f291c4f7467ea529ee1c41e52f580ce125906afc6fdcc12a445e679b081acd
      * - SPL A53
-       - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.5/tispl.bin>`_
-       - 0c40d86c39fae45c262e6e47f114564a0da2d81de21f82e7c65840ec886d0614
+       - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/tispl.bin>`_
+       - c4b6dcce9af2ae3ece30106c952e3b6d676642f4db4fc120162418d591e22ce1
      * - U-Boot A53
-       - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.5/u-boot.img>`_
-       - 46fea6ab64dbbb43b654e9a9b4f90134bde28f8a7b89c34e6b047589a04eeaba
+       - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/u-boot.img>`_
+       - 007e3d8710c38972b9f1cb6a6057ba498543cfe80279b20c05ca4dc9ae933557
 
 
 
@@ -129,7 +129,7 @@ The output is found in:
    ~/workdir/bytedevkit-am62x/4.0/build/tmp/deploy/images/bytedevkit-am62x
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/4.0.5/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/4.0.9/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -202,7 +202,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/4.0.5/environment-setup-aarch64-poky-linux
+   source /opt/poky-bytesatwork/4.0.9/environment-setup-aarch64-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -214,7 +214,7 @@ You should see the following output:
 
 ::
 
-   aarch64-poky-linux-gcc -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/4.0.5_bytedevkit-am62x/sysroots/aarch64-poky-linux
+   aarch64-poky-linux-gcc -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/4.0.9_bytedevkit-am62x/sysroots/aarch64-poky-linux
 
 Crosscompile the source code, e.g. by:
 
@@ -309,7 +309,7 @@ The newly generated toolchain will be available under:
 ~/workdir/bytedevkit-am62x/4.0/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/4.0.5/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/4.0.9/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -363,7 +363,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/4.0.5/environment-setup-aarch64-poky-linux
+      source /opt/poky-bytesatwork/4.0.9/environment-setup-aarch64-poky-linux
 
 #. Create defconfig
 
