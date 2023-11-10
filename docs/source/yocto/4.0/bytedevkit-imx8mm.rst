@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-imx8mm.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m6/4.0.2/bytesatwork-minimal-image-bytedevkit-imx8mm.wic.gz>`_
+    * - `bytesatwork-minimal-image-bytedevkit-imx8mm.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/4.0.9/bytesatwork-minimal-image-bytedevkit-imx8mm.wic.gz>`_
         (`wic.bmap
-        <https://download.bytesatwork.io/transfer/bytesatwork/m6/4.0.2/bytesatwork-minimal-image-bytedevkit-imx8mm.wic.bmap>`__)
-      - 4c24fe6deb51d10a5a9256c101925f29a750962cae02f76d2ea909f1b604be39
+        <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/4.0.9/bytesatwork-minimal-image-bytedevkit-imx8mm.wic.bmap>`__)
+      - 99ce54bf379fc97c11157bc48fa0a4fb91ac5f1776968e3bfe2a45471b878427
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -41,8 +41,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-4.0.2.sh <https://download.bytesatwork.io/transfer/bytesatwork/m6/4.0.2/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-4.0.2.sh>`_
-      - 6892635d040611aa7a0914c14207224768ff7b1bc90c4d75d06b6a7702819c17
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-4.0.9.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/4.0.9/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-4.0.9.sh>`_
+      - b558c84d3030628daa4d227ba122a3a4f5deccf476d291bd3584222b38c8427f
 
 
 U-Boot
@@ -55,8 +55,8 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - U-Boot (SD-card)
-       - `imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk <https://download.bytesatwork.io/transfer/bytesatwork/m6/4.0.2/imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk>`_
-       - 189287239d549cf6ffdfd92b01d5c5ad36086f077fa0fae8d04e25a9429e2929
+       - `imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/4.0.9/imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk>`_
+       - ee2bddafa023d6c84b59474cd783b46fa3bfac7301ba8765d37486dd833b3d0a
 
 
 
@@ -123,7 +123,7 @@ The output is found in:
    ~/workdir/bytedevkit-imx8mm/4.0/build/tmp/deploy/images/bytedevkit-imx8mm
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/4.0.2/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/4.0.9/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -196,7 +196,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/4.0.2/environment-setup-cortexa53-crypto-poky-linux
+   source /opt/poky-bytesatwork/4.0.9/environment-setup-cortexa53-crypto-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -208,7 +208,7 @@ You should see the following output:
 
 ::
 
-   aarch64-poky-linux-gcc -mcpu=cortex-a53 -march=armv8-a+crc+crypto -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/4.0.2_bytedevkit-imx8mm/sysroots/cortexa53-crypto-poky-linux
+   aarch64-poky-linux-gcc -mcpu=cortex-a53 -march=armv8-a+crc+crypto -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/4.0.9_bytedevkit-imx8mm/sysroots/cortexa53-crypto-poky-linux
 
 Crosscompile the source code, e.g. by:
 
@@ -303,7 +303,7 @@ The newly generated toolchain will be available under:
 ~/workdir/bytedevkit-imx8mm/4.0/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/4.0.2/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/4.0.9/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -357,7 +357,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/4.0.2/environment-setup-cortexa53-crypto-poky-linux
+      source /opt/poky-bytesatwork/4.0.9/environment-setup-cortexa53-crypto-poky-linux
 
 #. Create defconfig
 
