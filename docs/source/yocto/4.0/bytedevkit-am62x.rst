@@ -16,9 +16,9 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `bytesatwork-minimal-image-bytedevkit-am62x.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/bytesatwork-minimal-image-bytedevkit-am62x.wic.gz>`_
-        (`wic.bmap
-        <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/bytesatwork-minimal-image-bytedevkit-am62x.wic.bmap>`__)
-      - 28eaae6bad4657ea3b9b9da199408e736778b103fc0d88f6e19e7881a52eae7e
+      - e1d7d335103235535166dbd50d28534cbed59959be23ab7927622a1885ec9059
+    * - `bytesatwork-minimal-image-bytedevkit-am62x.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/bytesatwork-minimal-image-bytedevkit-am62x.wic.bmap>`_
+      - ef05f2b356b1d44d887ad292f7ae476bb8021dc6a6988b249ba42613fb5b7cf6
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -42,7 +42,7 @@ Toolchain
     * - Download
       - Checksum (SHA256)
     * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.9.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.9.sh>`_
-      - 053bc96bfe0761ed428d0f735680d05a4c62e9a3932bd131adfd9fca54513d5e
+      - ce87d4698e76976550bbe81b3032c51b5eb11053ebb8782689766151f311d47c
 
 
 U-Boot
@@ -56,13 +56,13 @@ U-Boot
        - Checksum (SHA256)
      * - SPL R5F
        - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/tiboot3.bin>`_
-       - 86f291c4f7467ea529ee1c41e52f580ce125906afc6fdcc12a445e679b081acd
+       - 41c4695adc031244390610f1c51c7657dadff9633c36b6bb12a36e7add6440a2
      * - SPL A53
        - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/tispl.bin>`_
-       - c4b6dcce9af2ae3ece30106c952e3b6d676642f4db4fc120162418d591e22ce1
+       - 2d27f91d9bdf6d014d0eb69d6451fb00efbdca89488c72b648fdda8696026b4b
      * - U-Boot A53
        - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/u-boot.img>`_
-       - 007e3d8710c38972b9f1cb6a6057ba498543cfe80279b20c05ca4dc9ae933557
+       - 57a2314b2c009bb08c891ea14c0c816e57f705ec485e95a488a4f1b4c439caea
 
 
 
