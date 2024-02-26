@@ -16,9 +16,9 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `bytesatwork-minimal-image-bytedevkit-am62x.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/bytesatwork-minimal-image-bytedevkit-am62x.wic.gz>`_
-      - e1d7d335103235535166dbd50d28534cbed59959be23ab7927622a1885ec9059
+      - 0747dfb463edad01cd3bf7985bed602e717b1dfa2f09258ed6860c37b57c67cb
     * - `bytesatwork-minimal-image-bytedevkit-am62x.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/bytesatwork-minimal-image-bytedevkit-am62x.wic.bmap>`_
-      - ef05f2b356b1d44d887ad292f7ae476bb8021dc6a6988b249ba42613fb5b7cf6
+      - 3577b6bc71600903fcba120629a50f5595e25f9ceb63d6301efb3f46d3848115
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -42,7 +42,7 @@ Toolchain
     * - Download
       - Checksum (SHA256)
     * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.9.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-4.0.9.sh>`_
-      - ce87d4698e76976550bbe81b3032c51b5eb11053ebb8782689766151f311d47c
+      - a5e9e6706cbff94fb3e31b41e948cbe1665cabca457e1bf337c59d45d6616c82
 
 
 U-Boot
@@ -56,13 +56,13 @@ U-Boot
        - Checksum (SHA256)
      * - SPL R5F
        - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/tiboot3.bin>`_
-       - 41c4695adc031244390610f1c51c7657dadff9633c36b6bb12a36e7add6440a2
+       - 53481b110634d711c43c47db40b2cfbce8b993cc6b63892d204d6563f35ea690
      * - SPL A53
        - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/tispl.bin>`_
-       - 2d27f91d9bdf6d014d0eb69d6451fb00efbdca89488c72b648fdda8696026b4b
+       - ee581879fba5a58dc872395eda734e5fe4d5bfdc4a4eb48b7e09b21991827908
      * - U-Boot A53
        - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/4.0.9/u-boot.img>`_
-       - 57a2314b2c009bb08c891ea14c0c816e57f705ec485e95a488a4f1b4c439caea
+       - 7c14d88c61772c3bb36d4d1441eee46f3d64f4d5d5abbb1b0ba2a264247a20aa
 
 
 
@@ -328,7 +328,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-am62x
-      - baw-ti-linux-5.10.y
+      - baw-ti-linux-6.1.y
       - https://github.com/bytesatwork/ti-linux-kernel
 
 ----
@@ -439,7 +439,7 @@ Download U-Boot Source Code
           - Branch
           - git URL
         * - bytedevkit-am62x
-          - baw-ti-u-boot-2021.01
+          - baw-ti-u-boot-2023.04
           - https://github.com/bytesatwork/u-boot-ti
 
 ----
