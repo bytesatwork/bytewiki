@@ -421,8 +421,13 @@ from your distribution)
 U-Boot
 ******
 
+   Additional information can be found under
+   https://www.nxp.com/docs/en/user-guide/IMX_LINUX_USERS_GUIDE.pdf and
+   https://docs.u-boot.org/en/latest/board/nxp/index.html.
+
    .. Note::
-      On i.MX 8M Mini, SPL and U-Boot are combined in a container file called ``imx-boot``.
+      On i.MX 8M Mini, SPL and U-Boot are combined in a container file called
+      ``flash.bin`` (Yocto: ``imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk``).
 
    .. _download-uboot-source-bytedevkit-imx8mm-4.0:
 
@@ -441,6 +446,126 @@ Download U-Boot Source Code
 
 ----
 
+Build U-Boot
+============
+
+To compile U-Boot, an ARM toolchain is necessary. You can use the provided
+toolchain from :ref:`get-toolchain-bytedevkit-imx8mm-4.0` or any compatible
+toolchain (e.g. from your distribution)
+
+   .. Important::
+
+        A list of needed host tools can be found here
+        https://docs.u-boot.org/en/latest/build/gcc.html#building-with-gcc,
+        e.g.
+
+        ::
+
+            sudo apt install bc bison build-essential coccinelle \
+            device-tree-compiler dfu-util efitools flex gdisk graphviz imagemagick \
+            liblz4-tool libgnutls28-dev libguestfs-tools libncurses-dev \
+            libpython3-dev libsdl2-dev libssl-dev lz4 lzma lzma-alone openssl \
+            pkg-config python3 python3-asteval python3-coverage python3-filelock \
+            python3-pkg-resources python3-pycryptodome python3-pyelftools \
+            python3-pytest python3-pytest-xdist python3-sphinxcontrib.apidoc \
+            python3-sphinx-rtd-theme python3-subunit python3-testtools \
+            python3-virtualenv swig uuid-dev
+
+        ``fspi_packer.sh`` additionally needs the package ``xxd`` to be
+        installed on your host:
+
+        ::
+
+            sudo apt install xxd
+
+   .. Note::
+        The following instructions assume, you installed the provided toolchain
+        for the respective target.
+
+#. Download ARM-Trusted-Firmware sources
+
+   .. list-table::
+        :header-rows: 1
+
+        * - Device
+          - Branch
+          - git URL
+        * - bytedevkit-imx8mm
+          - imx_5.4.24_2.1.0
+          - https://github.com/nxp-imx/imx-atf
+
+#. Build ARM-Trusted-Firmware
+
+   ::
+
+      cd imx-atf
+      export CROSS_COMPILE=/opt/poky-bytesatwork/4.0.9/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-
+      make PLAT=imx8mm bl31
+      cd ..
+
+#. Download IMX Firmware
+
+   ::
+
+      wget https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-8.15.bin
+      chmod +x firmware-imx-8.15.bin
+      ./firmware-imx-8.15.bin
+
+#. Download U-Boot sources
+
+   Download the appropriate U-Boot from :ref:`download-uboot-source-bytedevkit-imx8mm-4.0`.
+
+#. Source toolchain
+
+   ::
+
+        source /opt/poky-bytesatwork/4.0.9/environment-setup-cortexa53-crypto-poky-linux
+
+#. Copy necessary files into U-Boot folder
+
+   ::
+
+      cp -pv ./firmware-imx-8.15/firmware/ddr/synopsys/lpddr4_pmu_train_* ./u-boot-imx/
+      cp -pv ./imx-atf/build/imx8mm/release/bl31.bin ./u-boot-imx/
+
+#. Build ``flash.bin``
+
+   * SD Card
+
+      ::
+
+         cd u-boot-imx
+         make distclean
+         make bytedevkit_defconfig
+         export ATF_LOAD_ADDR=0x920000
+         make -j `nproc`
+         make -j `nproc` flash.bin
+         cd ..
+
+   * SPI
+
+      Building for SPI requires IMX mkimage tool
+
+      ::
+
+         git clone -b lf-5.15.5_1.0.0 https://github.com/nxp-imx/imx-mkimage.git
+
+      ::
+
+         cd u-boot-imx
+         make distclean
+         make bytedevkit_fspi_defconfig
+         export ATF_LOAD_ADDR=0x920000
+         make -j `nproc`
+         make -j `nproc` flash.bin
+         ../imx-mkimage/scripts/fspi_packer.sh ../imx-mkimage/scripts/fspi_header 0
+         cd ..
+
+   .. Important::
+
+      The build command will overwrite the generated ``flash.bin``, so you
+      can not build a binary for the SD Card and the SPI at the same time.
+
 Install SPL and U-Boot
 ======================
 
@@ -453,8 +578,10 @@ Install SPL and U-Boot
         * - File
           - Target partition
           - Offset
-        * - ``imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk``
-          - ``/dev/mmcblk1``
+        * - ``flash.bin``
+
+            Yocto: ``imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk``
+          - ``/dev/mmcblk1`` (or ``/dev/sdX``)
           - 33 KiB
 
    You need to write the files to the respective "raw" partition, either on the host
@@ -462,9 +589,26 @@ Install SPL and U-Boot
 
    ::
 
-        dd if=imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk of=/dev/mmcblk1 bs=1K seek=33
+      dd if=./u-boot-imx/flash.bin of=/dev/mmcblk1 bs=1K seek=33
 
    The next time the target is reset, it will start with the new U-Boot.
+
+   .. Note::
+
+      Flash to SPI
+
+      #. Copy flash.bin to first SD card partition (root partition)
+
+      #. You need to boot into u-boot.
+
+      #. In the u-boot shell: ``run update-spi``
+
+      #. Or do it manually by
+
+         ::
+
+            sf probe; sf erase 0 0x200000; load mmc 1:1 ${loadaddr} flash.bin; sf write $loadaddr 0 $filesize
+
 
 .. This is the footer, don't edit after this
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
