@@ -444,33 +444,133 @@ Download U-Boot Source Code
 
 ----
 
+Build U-Boot
+======================
+
+#. Install and get Dependencies
+
+   - `Cross toolchain <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/linux/Overview/GCC_ToolChain.html#location-in-sdk>`_
+   - `TI-linux-firmware <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/devices/AM62X/linux/Release_Specific_Release_Notes.html#ti-linux-firmware>`_
+   - `TF-A <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/devices/AM62X/linux/Release_Specific_Release_Notes.html#tf-a>`_
+   - `OP-TEE <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/devices/AM62X/linux/Release_Specific_Release_Notes.html#op-tee>`_
+
+   .. Hint::
+
+      Probably some tools are missing on your host:
+
+         - A list can be found here
+           https://docs.u-boot.org/en/latest/build/gcc.html#building-with-gcc
+
+         - A non-exhaustive list of (additional) necessary tools
+
+           ::
+
+            sudo apt install bison flex swig libssl-dev python3-setuptools \
+            python-dev python3-dev python3-yaml python3-jsonschema
+
+#. Build TF-A
+
+   `TI TF-A build instructions <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/linux/Foundational_Components_ATF.html#arm-trusted-firmware-a>`_
+
+#. Build OP-TEE
+
+   `TI OP-TEE build instructions <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/linux/Foundational_Components_OPTEE.html#op-tee>`_
+
+#. Build u-boot
+
+   You should have downloaded TI-linux-firmware and built TF-A, OP-TEE OS already.
+
+   `TI u-boot build instructions <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/linux/Foundational_Components/U-Boot/UG-General-Info.html#build-u-boot>`_
+
+   .. Important::
+      Use ``am62x_bytedevkit_r5_defconfig`` and ``am62x_bytedevkit_a53_defconfig`` instead of the TI
+      defconfigs.
+
+   .. Note::
+      Clean command: ``make ARCH=arm CROSS_COMPILE=aarch64-linux-gnu- O=<your_dir> distclean``
+
 Install SPL and U-Boot
 ======================
 
-   To use the newly created U-Boot, the necessary files need to be installed
-   on the SD card. This can be done either on the host or on the target.
+SD Card
+-------
+
+   To use the newly created U-Boot, the necessary files need to be installed on
+   the SD card. This can be done either on the host or on the target.
 
    .. list-table::
-        :header-rows: 1
+      :header-rows: 1
 
-        * - File
-          - Target partition
-          - Target partition label
-          - File system
-        * - ``tiboot3.bin`` ``tispl.bin`` ``u-boot.img``
-          - ``/dev/mmcblk1p1``
-          - ``boot``
-          - FAT32
+      * - File
+        - Target partition
+        - Target partition label
+        - File system
+      * - ``tiboot3.bin`` ``tispl.bin`` ``u-boot.img``
+        - ``/dev/mmcblk1p1`` (or ``/dev/sdX``)
+        - ``boot``
+        - FAT32
 
    You need to copy the files to the boot partition. The example assumes that the boot partition is
-   mounted on ``/media/user/boot``:
+   mounted on ``/media/${USER}/boot``:
 
    ::
 
-        cp tiboot3.bin tispl.bin u-boot.img /media/user/boot/
+      cp tiboot3.bin tispl.bin u-boot.img /media/${USER}/boot/
 
 
    The next time the target is reset, it will start with the new U-Boot.
+
+   .. Hint::
+      Copy the related files to SD card, see end of section
+      `TI u-boot build instructions <https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/linux/Foundational_Components/U-Boot/UG-General-Info.html#build-u-boot>`_
+
+eMMC via SD Card
+----------------
+
+   #. Copy the ``tiboot3.bin``, ``tispl.bin`` and ``u-boot.img`` to the SD Card rootfs partition.
+
+   #. Program the ``tiboot3.bin``, ``tispl.bin`` and ``u-boot.img`` from the SD card to the eMMC.
+
+      In the u-boot shell ``run update_emmc``
+
+      Or manually by following commands
+
+      ::
+
+         mmc dev 0 1
+         load mmc 1:2 ${loadaddr} tiboot3.bin
+         mmc write ${loadaddr} 0x0 0x400
+         load mmc 1:2 ${loadaddr} tispl.bin
+         mmc write ${loadaddr} 0x400 0xC00
+         load mmc 1:2 ${loadaddr} u-boot.img
+         mmc write ${loadaddr} 0x1000 0x1000
+         mmc dev 0 0
+
+   .. Note::
+
+      The bootloader needs to be stored in the boot0 hardware partition of the eMMC.
+      The layout of boot0 is defined so that it fits within 4 MiB, defined in blocks
+      of 512 Bytes:
+
+      .. list-table::
+         :header-rows: 1
+
+         * - File
+           - start
+           - end
+           - size
+         * - ``tiboot3.bin``
+           - 0x0000
+           - 0x0400
+           - 0x0400 512 KiB
+         * - ``tispl.bin``
+           - 0x0400
+           - 0x1000
+           - 0x0C00 1536 KiB
+         * - ``u-boot.img``
+           - 0x1000
+           - 0x2000
+           - 0x1000 2048 KiB
 
 .. This is the footer, don't edit after this
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
