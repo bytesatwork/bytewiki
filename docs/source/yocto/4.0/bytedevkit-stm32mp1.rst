@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
-      - 96fb3204504c09275102ed86231c21cfcbc0c0aa569153035864883bb9cb2e53
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`_
-      - 4781628f736c3219bc1b86a62722d6eaf845c0bf9911f33f95bad433bc8d7352
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/4.0.9/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
+      - 72e629a3361f2f5529e6124a30ecf7637d0dc0e3045b310d7af8ddbcf3f7ca2b
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/4.0.9/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`_
+      - 9548f8d625f40a8e43009da3635cee5223235e4839043e28bb38c6873abc7747
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -41,8 +41,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-4.0.2.sh <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-4.0.2.sh>`_
-      - b6640ee85df263337908faefaea13a279ecc373724989ed1effeeab88d374d7e
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-4.0.9.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/4.0.9/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-4.0.9.sh>`_
+      - 847997ab62d47598aa743b6192b36ba6425feef3e9d77961384d44be3aa00052
 
 
 U-Boot
@@ -63,17 +63,17 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - MLO (512 MB)
-       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-basic <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-basic>`_
-       - f25497038dbe9333e337a5a7f216a45fe4e4f185a846050fd07f164f966acc28
+       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-basic <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/4.0.9/u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-basic>`_
+       - 0556b53f8f9ecff54af89f7fa1f32aec97549aef1a54a1723d3561677804317b
      * - U-Boot (512 MB)
-       - `u-boot-stm32mp157c-bytedevkit-v1-3-basic.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/u-boot-stm32mp157c-bytedevkit-v1-3-basic.img>`_
-       - cca79887a1a777f084c074b7cb7fde8acff65d91a6374845c89bdf7a800cb2f9
+       - `u-boot-stm32mp157c-bytedevkit-v1-3-basic.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/4.0.9/u-boot-stm32mp157c-bytedevkit-v1-3-basic.img>`_
+       - 24fbb4bf87bc4a459d7dd9aeb5c906bceb47a3df8a9954e0f3e860e0a085abd6
      * - MLO (1 GB)
-       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-1g_ram <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-1g_ram>`_
-       - ce1c0680c1a49c426d37c54752006c79cf1b54c6cf7274abebd92e33cbcba8cc
+       - `u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-1g_ram <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/4.0.9/u-boot-spl.stm32-stm32mp157c-bytedevkit-v1-3-1g_ram>`_
+       - 1cc7589cd4f39a6782d0276c890521c53a4ef6099fde35c4edbad5370f090d2e
      * - U-Boot (1 GB)
-       - `u-boot-stm32mp157c-bytedevkit-v1-3-1g_ram.img <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/u-boot-stm32mp157c-bytedevkit-v1-3-1g_ram.img>`_
-       - c1ba5af090cc0bfdca01af3ebcf89fc7242871232a2b78a1004e81a63402a98f
+       - `u-boot-stm32mp157c-bytedevkit-v1-3-1g_ram.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/4.0.9/u-boot-stm32mp157c-bytedevkit-v1-3-1g_ram.img>`_
+       - aebe97b9be2c0862d4a9c9b156278325d70fe33fded7eb0b4bd51377835a3b64
 
 
 
@@ -140,7 +140,7 @@ The output is found in:
    ~/workdir/bytedevkit-stm32mp1/4.0/build/tmp/deploy/images/bytedevkit-stm32mp1
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/4.0.2/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/4.0.9/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -213,7 +213,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/4.0.2/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   source /opt/poky-bytesatwork/4.0.9/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 Check if Cross-compiler is available in environment:
 
@@ -225,7 +225,7 @@ You should see the following output:
 
 ::
 
-   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/4.0.2/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/4.0.9/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 Crosscompile the source code, e.g. by:
 
@@ -320,7 +320,7 @@ The newly generated toolchain will be available under:
 ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/4.0.2/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/4.0.9/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -374,7 +374,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/4.0.2/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+      source /opt/poky-bytesatwork/4.0.9/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 #. Create defconfig
 
@@ -485,7 +485,7 @@ toolchain (e.g. from your distribution)
 
    ::
 
-        source /opt/poky-bytesatwork/4.0.2/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+        source /opt/poky-bytesatwork/4.0.9/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 #. Create defconfig
 
