@@ -165,9 +165,9 @@ If you want to rename or copy an image, simply rename or copy the image recipe b
 Troubleshooting
 ---------------
 
--  **Image size is to small**
+-  **Image size is too small**
 
-   If you encounter that your image size is to small to install additional software,
+   If you encounter that your image size is too small to install additional software,
    please have a look at the ``IMAGE_ROOTFS_SIZE`` variable under
    ``~/workdir/bytedevkit-am62x/4.0/sources/meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb``.
    Increase the size if necessary.

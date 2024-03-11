@@ -16,9 +16,9 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz>`_
-        (`wic.bmap
-        <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`__)
       - 96fb3204504c09275102ed86231c21cfcbc0c0aa569153035864883bb9cb2e53
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/m5/4.0.2/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap>`_
+      - 4781628f736c3219bc1b86a62722d6eaf845c0bf9911f33f95bad433bc8d7352
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -99,7 +99,7 @@ Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fdatasync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
@@ -115,7 +115,7 @@ Use ``repo`` to download all necessary repositories:
 ::
 
    $ mkdir -p ~/workdir/bytedevkit-stm32mp1/4.0; cd ~/workdir/bytedevkit-stm32mp1/4.0
-   $ repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b kirkstone
+   $ repo init -b kirkstone -u https://github.com/bytesatwork/bsp-platform-st.git
    $ repo sync
 
 If those commands are completed successfully, the following command
@@ -274,7 +274,7 @@ How do you build a toolchain?
 ::
 
    $ cd ~/workdir/bytedevkit-stm32mp1/4.0
-   $ repo init -u https://github.com/bytesatwork/bsp-platform-st.git -b kirkstone
+   $ repo init -b kirkstone -u https://github.com/bytesatwork/bsp-platform-st.git
    $ repo sync
 
 If those commands are completed successfully, the following command
@@ -523,7 +523,7 @@ Install SPL and U-Boot
         * - ``u-boot.img``
           - ``/dev/mmcblk0p3``
 
-   You need to write the to the respective "raw" partition, either on the host
+   You need to write the files to the respective "raw" partition, either on the host
    system or the target system:
 
    ::

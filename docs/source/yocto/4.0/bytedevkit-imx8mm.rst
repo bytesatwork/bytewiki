@@ -16,9 +16,9 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `bytesatwork-minimal-image-bytedevkit-imx8mm.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/4.0.9/bytesatwork-minimal-image-bytedevkit-imx8mm.wic.gz>`_
-        (`wic.bmap
-        <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/4.0.9/bytesatwork-minimal-image-bytedevkit-imx8mm.wic.bmap>`__)
       - 99ce54bf379fc97c11157bc48fa0a4fb91ac5f1776968e3bfe2a45471b878427
+    * - `bytesatwork-minimal-image-bytedevkit-imx8mm.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/4.0.9/bytesatwork-minimal-image-bytedevkit-imx8mm.wic.bmap>`_
+      - c94c9177bf80a56fb493acd79df8d677cc7b11d70ea6b7b97256647c161872b4
 
 .. Hint:: Updating from an older image?
    You can update your older image by using: ``apt-get update`` and ``apt-get upgrade``.
@@ -159,9 +159,9 @@ If you want to rename or copy an image, simply rename or copy the image recipe b
 Troubleshooting
 ---------------
 
--  **Image size is to small**
+-  **Image size is too small**
 
-   If you encounter that your image size is to small to install additional software,
+   If you encounter that your image size is too small to install additional software,
    please have a look at the ``IMAGE_ROOTFS_SIZE`` variable under
    ``~/workdir/bytedevkit-imx8mm/4.0/sources/meta-bytesatwork/recipes-core/images/bytesatwork-minimal-image.bb``.
    Increase the size if necessary.
@@ -457,7 +457,7 @@ Install SPL and U-Boot
           - ``/dev/mmcblk1``
           - 33 KiB
 
-   You need to write the to the respective "raw" partition, either on the host
+   You need to write the files to the respective "raw" partition, either on the host
    system or the target system:
 
    ::
