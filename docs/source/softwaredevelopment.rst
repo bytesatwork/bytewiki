@@ -3,9 +3,9 @@ Software Development
 ####################
 The entire development life cycle is done in-house with transparent project management and customer involvement. We have proven experience in a wide range of industries, including industrial automation and custom solutions for consumer electronics. This section helps you step by step initiating the software development process.
 
-Current software platforms and images are available directly under this navigation item. Older versions are found in the `Archive <https://bytewiki.readthedocs.io/en/latest/archive.html>`_.
-
-.. Hint:: ``bytePANEL`` has become outdated. Current software platforms will only support byteDEVKIT with am335x or stm32mp1 modules.
+.. Hint:: Current software platforms and images are available directly under this navigation item.
+          Older versions and EOL products can be found in the
+          `Archive <https://bytewiki.readthedocs.io/en/latest/archive.html>`_.
 
 .. toctree::
 
