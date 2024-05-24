@@ -78,3 +78,10 @@ byteENGINE STM32MP1x
 -  **Prepared project: step model STM32MP1x**: https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteengine-m5.step
 -  **Altium Library Neltron 2001S-100G-270-020**: https://download.bytesatwork.io/documentation/byteENGINE/ressources/2001s-100G-270-020.zip
 -  **Altium Library byteENGINE STM32MP1x (X1/X2 position mask on layer 21)**: https://download.bytesatwork.io/documentation/byteENGINE/ressources/Footprint-byteENGINE-M5.zip
+
+
+
+.. This is the footer, don't edit after this
+.. image:: images/wiki_footer.jpg
+   :align: center
+   :target: https://www.bytesatwork.io

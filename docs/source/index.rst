@@ -5,9 +5,10 @@ byteWIKI
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.49.20-e1587405063724.jpg
+.. image:: images/wiki_header.jpg
    :scale: 70%
    :align: center
+   :target: https://bytewiki.readthedocs.io
 
 
 
@@ -19,16 +20,17 @@ byteWIKI
 
 .. toctree::
    :caption: Documentation
-   :maxdepth: 5
+   :maxdepth: 2
 
 
-   unboxing
-   firststart
+   getstarted
+   som   
+   devkit
    softwaredevelopment
-   hardwaredevelopment
    errata
 
 
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
-   :scale: 100%
+.. This is the footer, don't edit after this
+.. image:: images/wiki_footer.jpg
    :align: center
+   :target: https://www.bytesatwork.io

@@ -8,6 +8,7 @@ The entire development life cycle is done in-house with transparent project mana
           `Archive <https://bytewiki.readthedocs.io/en/latest/archive.html>`_.
 
 .. toctree::
+   :maxdepth: 1
 
    yocto/5.0/bytedevkit-imx93
    yocto/4.0/bytedevkit-am62x
@@ -17,7 +18,7 @@ The entire development life cycle is done in-house with transparent project mana
    archive
 
 .. This is the footer, don't edit after this
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
-   :scale: 100%
+.. image:: images/wiki_footer.jpg
    :align: center
+   :target: https://www.bytesatwork.io
 

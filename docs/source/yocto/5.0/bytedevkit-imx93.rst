@@ -466,6 +466,6 @@ Install SPL and U-Boot
 
 
 .. This is the footer, don't edit after this
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
-   :scale: 100%
+.. image:: ../../images/wiki_footer.jpg
    :align: center
+   :target: https://www.bytesatwork.io

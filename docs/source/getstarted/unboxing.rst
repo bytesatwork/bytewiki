@@ -44,6 +44,8 @@ Unboxing byteDEVKIT STM32MP1
    :scale: 20%
    :align: center
 
+------------
+
 
 Technical overview byteDEVKIT STM32MP1
 --------------------------------------
@@ -80,13 +82,10 @@ Technical overview byteDEVKIT STM32MP1
 
 .. Note:: The micro-SD card is already slotted to the byteDEVKIT STM32MP1.
 
+
 ------------
 
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.41.44.jpg
-   :scale: 100%
-   :align: center
 
-   
 Unboxing Video Tutorial
 -----------------------
 
@@ -95,3 +94,10 @@ Unboxing Video Tutorial
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://player.vimeo.com/video/415845869" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
+
+
+
+.. This is the footer, don't edit after this
+.. image:: ../images/wiki_footer.jpg
+   :align: center
+   :target: https://www.bytesatwork.io

@@ -5,6 +5,7 @@ About the company
 .. image:: ../images/bytes.png
    :scale: 20%
    :align: right
+   :target: https://www.bytesatwork.io
 
 
 
@@ -22,8 +23,22 @@ Hardware and software for industrial computers have to fulfill an immense range 
 
 We from bytes at work are aware that the current persistent industrial development also has its darker side. This is our motivation to be exemplary in terms of use of resources. No wonder that unconditional reliability, long service life and low power consumption are main features of all our products.
 
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Bildschirmfoto-2020-04-20-um-19.46.24.jpg
-   :scale: 100%
+
+==========
+Trademarks
+==========
+Product names, logos, brands, and other trademarks featured, or referred to are the property of their respective trademark holders. 
+These include, but are not limited to uboot, Linux and ARM.
+
+
+==========
+Disclaimer
+==========
+Bytes at work AG does not guarantee that the information in this Wiki is up-to-date, correct, complete or of good quality. Nor does bytes at work AG assume guarantee for further usage of the information. Liability claims against bytes at work AG, referring to material or non-material related damages caused, due to usage or non-usage of the information given in the manual, or due to usage of erroneous or incomplete information, are exempted, as long as there is no proven intentional or negligent fault of bytes at work AG. Bytes at work AG explicitly reserves the rights to change or add to the contents of this manual or parts of it without special notification.
+
+.. This is the footer, don't edit after this
+.. image:: images/wiki_footer2.jpg
    :align: center
+   :target: https://www.bytesatwork.io
 
 
