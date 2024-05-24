@@ -1,0 +1,51 @@
+####################
+byteENGINE AM335x
+####################
+
+********************
+General Information
+********************
+
+
+-  **General Information**: The byteENGINE AM335x is a high performance
+   industrial oriented computing module. It allows a short
+   time-to-market, while reducing development costs and substantial
+   design risks. The system on module (SOM) uses the Texas Instruments
+   AM335x industrial applications processor family. The AM335x features
+   a PowerVRTM SGX Graphics Accelerator Subsystem for 3D graphics
+   acceleration. The Programmable Real-Time Unit and Industrial
+   Communication Subsystem (PRU-ICSS) allows independent operation from
+   the ARM processor. PRU-ICSS enables real-time protocols such as
+   EtherCAT, PROFINET, EtherNet/IP, PROFIBUS, Ethernet Powerlink and
+   Sercos.
+
+   **The byteENGINE AM335x** is a high performance industrial oriented
+   computing module. It allows a short time-to-market, while reducing
+   development costs and substantial design risks.
+
+   **The system on module (SOM)** uses the Texas Instruments AM335x
+   industrial applications processor family. The AM335x features a
+   PowerVRTM SGX Graphics Accelerator Subsystem for 3D graphics
+   acceleration. The Programmable Real-Time Unit and Industrial
+   Communication Subsystem (PRU-ICSS) allows independent operation from
+   the ARM processor. PRU-ICSS enables real-time protocols such as
+   EtherCAT, PROFINET, EtherNet/IP, PROFIBUS, Ethernet Powerlink and
+   Sercos.
+   
+*********
+Downloads
+*********
+-  `Datasheet byteENGINE AM335x <https://www.bytesatwork.io/wp-content/uploads/2019/03/Datasheet_byteENGINE_AM335x-12.pdf>`_
+-  `Prepared Pinmux file byteENGINE AM335x <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteEngineM2-20160922.pinmux>`_
+-  `Detailed pinout byteENGINE AM335x <https://download.bytesatwork.io/documentation/byteENGINE/ressources/PinmuxConfigSummary_byteEngineM2-20160922.xlsx>`_
+-  `Datasheet Connectors Neltron 2001S-100G-270-020 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/Neltron_2000P.pdf>`_
+-  `Schematic of the connectors X1 and X2 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/m2-connector.pdf>`_
+-  `Texas Instruments Sitara™ AM335x Processors <http://www.ti.com/processors/sitara-arm/am335x-cortex-a8/overview.html>`_
+-  `AM335x Technical Reference Manual <https://www.ti.com/lit/ug/spruh73q/spruh73q.pdf>`_
+-  `TPS65910x Integrated Power-Management Unit <http://www.ti.com/lit/ds/symlink/tps65910.pdf>`_
+   
+
+.. This is the footer, don't edit after this
+.. image:: ../images/wiki_footer.jpg
+   :align: center
+   :target: https://www.bytesatwork.io
