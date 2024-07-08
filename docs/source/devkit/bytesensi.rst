@@ -165,7 +165,7 @@ Using two byteSENSI-L, you can run the LoRa send and receive demo:
    $ west build -b bytesensi_l samples/drivers/soc_flash_nrf
    $ west flash
 
-8. Build a Bluetooth samples:
+8. Build the Bluetooth samples:
 
 Most of the bluetooth samples should work out of the box, for example, building the Bluetooth: Peripheral HIDs sample:
 
