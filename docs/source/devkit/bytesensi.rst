@@ -177,13 +177,18 @@ Most of the bluetooth samples should work out of the box, for example, building 
 Debugging
 ---------
 
-Debugging your application can be done with west debug
+Debugging your application can be done with west debug:
+
+::
+
+   $ west debug
+
 
 
 Serial console
 --------------
 
-The byteSENSI-L board only uses Seggers RTT console for providing serial console. There is no physical serial port available.
+The byteSENSI-L board only uses Segger RTT console for providing serial console. There is no physical serial port available.
 
 
 
