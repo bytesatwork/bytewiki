@@ -113,7 +113,7 @@ will set up a Yocto Project environment for byteDEVKIT-am62x:
 ::
 
    $ cd ~/workdir/bytedevkit-am62x/4.0
-   $ MACHINE=bytedevkit-am62x DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+   $ MACHINE=bytedevkit-am62x DISTRO=poky-bytesatwork EULA=1 ./setup-environment build
 
 The final command builds the development image:
 
