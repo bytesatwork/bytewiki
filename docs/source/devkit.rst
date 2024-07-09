@@ -7,8 +7,8 @@ We provide the development for a wide range of embedded systems, from small-scal
 .. toctree::
    :maxdepth: 1
 
-   devkit/bytedevkit1.rst
    devkit/bytedevkit2.rst
+   devkit/bytedevkit1.rst
    devkit/bytesensi.rst
 
 .. This is the footer, don't edit after this
