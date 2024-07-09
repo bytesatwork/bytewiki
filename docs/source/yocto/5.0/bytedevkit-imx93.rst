@@ -97,7 +97,7 @@ will set up a Yocto Project environment for byteDEVKIT-imx93:
 ::
 
    $ cd ~/workdir/bytedevkit-imx93/5.0
-   $ MACHINE=bytedevkit-imx93 DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+   $ MACHINE=bytedevkit-imx93 DISTRO=poky-bytesatwork EULA=1 ./setup-environment build
 
 The final command builds the development image:
 
