@@ -7,11 +7,11 @@ Our systems on modules reduce the complexity of industrial computing solutions, 
 .. toctree::
    :maxdepth: 1
 
-   som/am335x.rst
-   som/stm32mp1x.rst
-   som/imx8mm.rst
-   som/imx8mp.rst
    som/am62x.rst
+   som/imx8mp.rst
+   som/imx8mm.rst
+   som/stm32mp1x.rst
+   som/am335x.rst
 
 .. This is the footer, don't edit after this
 .. image:: images/wiki_footer.jpg
