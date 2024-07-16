@@ -10,10 +10,9 @@ byteENGINE IMX8M Plus
 General Information
 ********************
 
--  **General Information**: The byteENGINE IMX8MP is a high performance industrial oriented computing module. It allows you a short time-to-market, reducing development costs and substantial design risks. The system on module (SOM) uses the i.MX 8M Plus devices which are based on the high-performance dual- or quad-core ARM ® Cortex ® -A53 64-bit RISC core operating at up to 1.8 GHz. The devices of the i.MX 8M Plus family also embed a Cortex®-M7 32-bit RISC core operating at up to 800 MHz frequency. The Cortex ®-M7 core features a floating point unit (FPU) single precision which supports ARM® single-precision data-processing instructions and data types. Furthermore, the devices of the i.MX 8M Plus family embed a 3D graphic processing unit (Vivante ® - OpenGL® ES 3.0) running at up to 1 GHz, with performances up to 166 Mtriangle/s, 1 Gpixel/s
+   The **byteENGINE IMX8MP** is a high performance industrial oriented computing module. It allows you a short time-to-market, reducing development costs and substantial design risks. 
    
-   **The system on module (SOM)** Quad core Arm Cortex-A53 and Cortex-M4 cores. The Arm Cortex-A53 runs at 1.8GHz, delivering outstanding system performance. The core is optimized for fanless operation, low thermal system cost and long battery life. The Cortex-A cores can be powered off while the Cortex-M4 subsystem performs low power, real time system monitoring. 
-
+   The **System on Module (SOM)** uses the i.MX 8M Plus devices which are based on the high-performance quad-core ARM ® Cortex ® -A53 64-bit RISC core operating at up to 1.8 GHz. The devices of the i.MX 8M Plus family also embed a Cortex®-M7 32-bit RISC core operating at up to 800 MHz frequency. The Cortex ®-M7 core features a floating point unit (FPU) single precision which supports ARM® single-precision data-processing instructions and data types. Furthermore, the devices of the i.MX 8M Plus family embed a 3D graphic processing unit (Vivante ® - OpenGL® ES 3.0) running at up to 1 GHz, with performances up to 166 Mtriangle/s, 1 Gpixel/s
 
    
 *********
@@ -33,7 +32,7 @@ Downloads
 - `Datasheet NXP i.MX8M Plus <https://www.nxp.com/products/processors-and-microcontrollers/arm-processors/i-mx-applications-processors/i-mx-8-applications-processors/i-mx-8m-plus-arm-cortex-a53-machine-learning-vision-multimedia-and-industrial-iot:IMX8MPLUS#documentation>`_
 - `NXP Config Tools for i.MX Applications Processors <https://www.nxp.com/design/designs/config-tools-for-i-mx-applications-processors:CONFIG-TOOLS-IM>`_
 - `Prepared project: STEP model byteENGINE IMX8MP <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteengine-m7.step>`_
-- `Altium Library byteENGINE IMX8MP <hhttps://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_M7_IMX8Mplus.IntLib>`_
+- `Altium Library byteENGINE IMX8MP <https://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_M7_IMX8Mplus.IntLib>`_
 - `meta-bytesatwork on github <https://github.com/bytesatwork/meta-bytesatwork>`_
 
 

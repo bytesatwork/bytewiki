@@ -6,31 +6,9 @@ byteENGINE AM335x
 General Information
 ********************
 
+   The **byteENGINE AM335x** is a high performance industrial oriented computing module. It allows a short time-to-market, while reducing development costs and substantial design risks.
 
--  **General Information**: The byteENGINE AM335x is a high performance
-   industrial oriented computing module. It allows a short
-   time-to-market, while reducing development costs and substantial
-   design risks. The system on module (SOM) uses the Texas Instruments
-   AM335x industrial applications processor family. The AM335x features
-   a PowerVRTM SGX Graphics Accelerator Subsystem for 3D graphics
-   acceleration. The Programmable Real-Time Unit and Industrial
-   Communication Subsystem (PRU-ICSS) allows independent operation from
-   the ARM processor. PRU-ICSS enables real-time protocols such as
-   EtherCAT, PROFINET, EtherNet/IP, PROFIBUS, Ethernet Powerlink and
-   Sercos.
-
-   **The byteENGINE AM335x** is a high performance industrial oriented
-   computing module. It allows a short time-to-market, while reducing
-   development costs and substantial design risks.
-
-   **The system on module (SOM)** uses the Texas Instruments AM335x
-   industrial applications processor family. The AM335x features a
-   PowerVRTM SGX Graphics Accelerator Subsystem for 3D graphics
-   acceleration. The Programmable Real-Time Unit and Industrial
-   Communication Subsystem (PRU-ICSS) allows independent operation from
-   the ARM processor. PRU-ICSS enables real-time protocols such as
-   EtherCAT, PROFINET, EtherNet/IP, PROFIBUS, Ethernet Powerlink and
-   Sercos.
+   The **System on Module (SOM)** uses the Texas Instruments AM335x industrial applications processor family. The AM335x features a PowerVRTM SGX Graphics Accelerator Subsystem for 3D graphics acceleration. The Programmable Real-Time Unit and Industrial Communication Subsystem (PRU-ICSS) allows independent operation from the ARM processor. PRU-ICSS enables real-time protocols such as EtherCAT, PROFINET, EtherNet/IP, PROFIBUS, Ethernet Powerlink and Sercos.
    
 *********
 Downloads

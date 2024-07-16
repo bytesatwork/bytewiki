@@ -10,23 +10,11 @@ byteENGINE STM32MP1x
 General Information
 ********************
 
--  **General Information**: The byteENGINE STM32MP1x is a high
-   performance industrial oriented computing module. It allows you a
-   short time-to-market, reducing development costs and substantial
-   design risks.
+   The **byteENGINE STM32MP1x** is a high performance industrial oriented computing module. It allows you a short time-to-market, reducing development costs and substantial design risks.
 
-   **The system on module (SOM)** uses the STM32MP15xxAC devices which
-   are based on the high-performance dual-core ARM® Cortex®-A7 32-bit
-   RISC core operating at up to 650 MHz/800 MHz. The STM32MP15xxAC
-   devices also embed a Cortex®-M4 32-bit RISC core operating at up to
-   200 MHz frequency. The Cortex®-M4 core features a floating point unit
-   (FPU) single precision which supports ARM® single-precision
-   dataprocessing instructions and data types.
+   **The system on module (SOM)** uses the STM32MP15xxAC devices which are based on the high-performance dual-core ARM® Cortex®-A7 32-bit RISC core operating at up to 650 MHz/800 MHz. The STM32MP15xxAC devices also embed a Cortex®-M4 32-bit RISC core operating at up to 200 MHz frequency. The Cortex®-M4 core features a floating point unit (FPU) single precision which supports ARM® single-precision dataprocessing instructions and data types.
 
-   **Furthermore, the STM32MP15xxAC** devices embed a 3D graphic
-   processing unit (Vivante® - OpenGL® ES 2.0) running at up to 533 MHz,
-   with performances up to 26 Mtriangle/s, 133 Mpixel/s.
-
+   Furthermore, the **STM32MP15xxAC** devices embed a 3D graphic processing unit (Vivante® - OpenGL® ES 2.0) running at up to 533 MHz, with performances up to 26 Mtriangle/s, 133 Mpixel/s.
 
 
 
