@@ -10,11 +10,13 @@ byteENGINE IMX8M Mini
 General Information
 ********************
 
--  **General Information**: The i.MX 8M Mini applications processor represents NXPs latest video and audio experience combining state-of-the-art media-specific features with high-performance processing while optimized for lowest power consumption.
+   The **byteENGINE IMX8M Mini** is a high performance industrial oriented computing module. It allows you a short time-to-market, reducing development costs and substantial design risks.
+   
+   The **i.MX 8M Mini** applications processor represents NXPs latest video and audio experience combining state-of-the-art media-specific features with high-performance processing while optimized for lowest power consumption.
    The i.MX 8M Mini family of processors features advanced implementation of dual or quad Arm® Cortex®-A53 core, which operates at speeds of up to 1.8 GHz. A general purpose Cortex®-M4 400 MHz core processor is for low-power processing.
    The DRAM controller supports 32-bit/16-bit LPDDR4, DDR4, and DDR3L memory. A wide range of audio interfaces are available, including I2S, AC97, TDM, and S/PDIF. There are a number of other interfaces for connecting peripherals, such as USB, PCIe, and Ethernet.
 
-   **The system on module (SOM)** Dual or quad core Arm Cortex-A53 and Cortex-M4 cores. The Arm Cortex-A53 runs at 1.8GHz, delivering outstanding system performance. The core is optimized for fanless operation, low thermal system cost and long battery life. The Cortex-A cores can be powered off while the Cortex-M4 subsystem performs low power, real time system monitoring. 
+   **The system on module (SOM)** utilizes Dual or quad core Arm Cortex-A53 and Cortex-M4 cores. The Arm Cortex-A53 runs at 1.8GHz, delivering outstanding system performance. The core is optimized for fanless operation, low thermal system cost and long battery life. The Cortex-A cores can be powered off while the Cortex-M4 subsystem performs low power, real time system monitoring. 
 
 
 
