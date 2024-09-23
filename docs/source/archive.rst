@@ -8,6 +8,7 @@ Here you'll find informations on older images and platforms.
 
 .. toctree::
 
+    yocto/4.0/bytedevkit-stm32mp1
     yocto/3.2/bytedevkit-stm32mp1
     yocto/3.1/bytedevkit-am335x
     yocto/3.1/bytedevkit-stm32mp1
