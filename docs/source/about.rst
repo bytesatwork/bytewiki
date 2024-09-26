@@ -34,7 +34,7 @@ These include, but are not limited to uboot, Linux and ARM.
 ==========
 Disclaimer
 ==========
-Bytes at work AG does not guarantee that the information in this Wiki is up-to-date, correct, complete or of good quality. Nor does bytes at work AG assume guarantee for further usage of the information. Liability claims against bytes at work AG, referring to material or non-material related damages caused, due to usage or non-usage of the information given in the manual, or due to usage of erroneous or incomplete information, are exempted, as long as there is no proven intentional or negligent fault of bytes at work AG. Bytes at work AG explicitly reserves the rights to change or add to the contents of this manual or parts of it without special notification.
+Bytes at work AG does not guarantee that the information in this Wiki is up-to-date, correct, complete or of good quality. Nor does bytes at work AG assume guarantee for further usage of the information. Liability claims against bytes at work AG, referring to material or non-material related damages caused, due to usage or non-usage of the information given in the manual, or due to usage of erroneous or incomplete information, are exempted, as long as there is no proven intentional or negligent fault of bytes at work AG. The software provided is optimized for development convenience and is not suitable for use in production. Bytes at work AG explicitly reserves the rights to change or add to the contents of this manual or parts of it without special notification.
 
 .. This is the footer, don't edit after this
 .. image:: images/wiki_footer2.jpg
