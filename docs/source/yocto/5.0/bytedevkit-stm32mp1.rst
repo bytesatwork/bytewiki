@@ -405,7 +405,7 @@ from your distribution)
 U-Boot
 ******
 
-   .. _download-uboot-source-bytedevkit-stm32mp1-5.0:
+.. _download-uboot-source-bytedevkit-stm32mp1-5.0:
 
 Download U-Boot Source Code
 ===========================
@@ -420,8 +420,128 @@ Download U-Boot Source Code
           - baw-v2022.10-stm32mp
           - https://github.com/bytesatwork/u-boot-stm32mp
 
+----
+
+Build U-Boot
+============
+
+#. Download U-Boot sources
+
+   Download the appropriate U-Boot from :ref:`download-uboot-source-bytedevkit-stm32mp1-5.0`.
+
+#. Source toolchain
+
+   ::
+
+        source /opt/poky-bytesatwork/5.0.3/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+
+#. Create defconfig
+
+   ::
+
+        make stm32mp157_bytedevkit_defconfig
+
+#. Build U-Boot
+
+   ::
+
+        make -j `nproc`
+
+#. Download ATF sources
+
+   .. list-table::
+        :header-rows: 1
+
+        * - Name
+          - Branch
+          - git URL
+        * - Arm-Trusted-Firmware
+          - baw-v2.8-stm32mp
+          - https://github.com/bytesatwork/arm-trusted-firmware-stm32mp
+
+#. Build ATF
+
+   ::
+
+        unset CFLAGS
+        unset LDFLAGS
+        make -j $(nproc) ARM_ARCH_MAJOR=7 ARCH=aarch32 PLAT=stm32mp1 STM32MP_SDMMC=1 STM32MP15=1 DTB_FILE_NAME=stm32mp157c-bytedevkit.dtb
+        make -j $(nproc) ARM_ARCH_MAJOR=7 ARCH=aarch32 PLAT=stm32mp1 AARCH32_SP=optee DTB_FILE_NAME=stm32mp157c-bytedevkit.dtb dtbs
+
+#. Download OP-TEE sources
+
+   .. list-table::
+        :header-rows: 1
+
+        * - Name
+          - Branch
+          - git URL
+        * - Optee
+          - baw-3.19.9-stm32mp
+          - https://github.com/bytesatwork/optee-os-stm32mp
 
 
+#. Build OP-TEE
+
+   ::
+
+        unset LDFLAGS
+        unset CFLAGS
+        make -j $(nproc) PLATFORM=stm32mp1 CFG_EMBED_DTB_SOURCE_FILE=stm32mp157c-bytedevkit-v1-3.dts CFG_TEE_CORE_LOG_LEVEL=2 O=build all
+
+
+Install U-Boot on SD card
+=========================
+
+To use the newly created U-Boot, the following files need to be installed on the
+SD card:
+
+   * BL2: ``tf-a-stm32mp157c-bytedevkit.stm32``
+   * BL31: ``fip-stm32mp157c-bytedevkit-v1-3-optee.bin``
+
+
+   For detailed information about the boot and build process see:
+   `ST TF-A overview <https://wiki.stmicroelectronics.cn/stm32mpu/wiki/TF-A_overview>`_
+
+#. Copy ``tf-a-stm32mp157c-bytedevkit.stm32`` from ATF build
+
+   ::
+
+        cp arm-trusted-firmware-stm32mp/build/stm32mp1/release/tf-a-stm32mp157c-bytedevkit.stm32 .
+
+
+#. Create ``fip-stm32mp157c-bytedevkit-v1-3-optee.bin``
+
+   ::
+
+        fiptool create \
+           --tos-fw optee-os-stm32mp/build/core/tee-header_v2.bin \
+           --tos-fw-extra1 optee-os-stm32mp/build/core/tee-pager_v2.bin \
+           --tos-fw-extra2 optee-os-stm32mp/build/core/tee-pageable_v2.bin \
+           --hw-config u-boot-stm32mp/u-boot.dtb \
+           --fw-config arm-trusted-firmware-stm32mp/build/stm32mp1/release/fdts/stm32mp157c-bytedevkit-fw-config.dtb \
+           --nt-fw u-boot-stm32mp/u-boot-nodtb.bin \
+           fip-stm32mp157c-bytedevkit-v1-3-optee.bin
+
+   .. Important::
+           If an error occurs, check the paths used in the command. They need to point to
+           the u-boot, ATF and OP-TEE folder.
+
+   .. Note::
+           The program fiptool is installed in the toolchain:
+           ``/opt/poky-bytesatwork/5.0.3/sysroots/x86_64-pokysdk-linux/usr/bin/fiptool``
+
+#. Copy to SD card
+
+   ::
+
+        sudo dd if=tf-a-stm32mp157c-bytedevkit.stm32 of=/dev/sdX1 conv=fdatasync
+        sudo dd if=tf-a-stm32mp157c-bytedevkit.stm32 of=/dev/sdX2 conv=fdatasync
+        sudo dd if=fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/sdX5 conv=fdatasync
+        sudo dd if=fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/sdX6 conv=fdatasync
+
+   .. Note::
+           Replace ``/dev/sdX`` with correct target device.
 
 
 .. This is the footer, don't edit after this
