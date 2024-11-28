@@ -29,7 +29,7 @@ Downloads
 
 
 
-- `Datasheet byteENGINE IMX93 OSM-S <https://www.bytesatwork.io/wp-content/uploads/2024/07/Bytesatwork_datasheet_IMX93-OSM-S_Rev2.0-1.pdf>`_
+- `Datasheet byteENGINE IMX93 OSM-S <https://www.bytesatwork.io/wp-content/uploads/2024/11/Bytesatwork_datasheet_IMX93-OSM-S_rev2.0_v1.5.pdf>`_
 - `Detailed pinout byteENGINE IMX93 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE_IMX93_Rev_2.0_Pinout.xlsx>`_
 - `Schematic of the connector OSM-S Variant OSM-ext <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_baseboard_OSM-ext.pdf>`_
 - `Schematic of the connector OSM-S Variant LCD <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_baseboard_LCD.pdf>`_

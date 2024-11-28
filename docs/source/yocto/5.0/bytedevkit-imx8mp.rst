@@ -16,9 +16,9 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `bytesatwork-minimal-image-bytedevkit-imx8mp.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mp/5.0.3/bytesatwork-minimal-image-bytedevkit-imx8mp.rootfs.wic.gz>`_
-      - 414dcdf69117b1a6abb2654b3f313f9b8d6de9979760f5e5e593982e9658059c
+      - 1901447015740f5ef21d9f5c76e1288ba06072317ed9c4fdb6c62015f9197104
     * - `bytesatwork-minimal-image-bytedevkit-imx8mp.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mp/5.0.3/bytesatwork-minimal-image-bytedevkit-imx8mp.rootfs.wic.bmap>`_
-      - fb75cff830ec124d97b6f1569a0a2453e0a42aa76cb083ac1a8f4b5612c4432c
+      - c970143b61d61b57d9f7c7bcb260d4954f4ffa385331476ee2f502f440fab940
 
 
 .. _get-toolchain-bytedevkit-imx8mp-5.0:
@@ -32,7 +32,7 @@ Toolchain
     * - Download
       - Checksum (SHA256)
     * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mp-toolchain-5.0.3.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mp/5.0.3/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mp-toolchain-5.0.3.sh>`_
-      - 0af7b07599a7a2167247577acdb30c457f02090f4eccdf4fb7c8e397788c5609
+      - ecc4b79b80a3e74e0e71e7d466f6103e5910ba27f284e3dce4a569a41f596205
 
 
 U-Boot
@@ -46,7 +46,7 @@ U-Boot
        - Checksum (SHA256)
      * - U-Boot (SD-card)
        - `imx-boot-bytedevkit-imx8mp-sd.bin-flash_evk <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mp/5.0.3/imx-boot-bytedevkit-imx8mp-sd.bin-flash_evk>`_
-       - 4bdd0dfa66ae52267d397cd28f8a26481fee8e4ef7ba62dd4a121ae3cc919f71
+       - 42efc4f4176cd53b9dbfb57199716df19445d0b1dfae263b796d1b7c1045a61c
 
 
 

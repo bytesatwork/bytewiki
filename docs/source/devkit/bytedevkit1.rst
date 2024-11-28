@@ -2,6 +2,10 @@
 byteDEVKIT 1
 ####################
 
+.. image:: https://www.bytesatwork.io/wp-content/uploads/2024/09/byteDEVKIT1_IMX8M_back_perspective-3.jpg
+   :height: 250px
+   :align: right
+
 ********************
 General Information
 ********************
