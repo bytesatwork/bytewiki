@@ -2,6 +2,10 @@
 byteDEVKIT 2
 ####################
 
+.. image:: https://www.bytesatwork.io/wp-content/uploads/2024/09/byteDEVKIT2main-3.jpg
+   :height: 250px
+   :align: right
+
 ********************
 General Information
 ********************
@@ -15,7 +19,6 @@ Downloads
 *********
 
 -  `Datasheet byteDEVKIT 2 <https://www.bytesatwork.io/wp-content/uploads/2023/09/Datasheet_byteDEVKIT_2_v1.0.pdf>`_
-
 
 .. This is the footer, don't edit after this
 .. image:: ../images/wiki_footer.jpg
