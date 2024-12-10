@@ -248,7 +248,7 @@ How do you build a toolchain?
 ::
 
    $ cd ~/workdir/bytedevkit-imx8mp/5.0
-   $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-nxp.git
+   $ repo init -b scarthgap-imx8mp -u https://github.com/bytesatwork/bsp-platform-nxp.git
    $ repo sync
 
 If those commands are completed successfully, the following command
