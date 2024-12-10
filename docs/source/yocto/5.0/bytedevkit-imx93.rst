@@ -88,7 +88,7 @@ Use ``repo`` to download all necessary repositories:
 ::
 
    $ mkdir -p ~/workdir/bytedevkit-imx93/5.0; cd ~/workdir/bytedevkit-imx93/5.0
-   $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-nxp.git
+   $ repo init -b scarthgap-imx93 -u https://github.com/bytesatwork/bsp-platform-nxp.git
    $ repo sync
 
 If those commands are completed successfully, the following command
@@ -248,7 +248,7 @@ How do you build a toolchain?
 ::
 
    $ cd ~/workdir/bytedevkit-imx93/5.0
-   $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-nxp.git
+   $ repo init -b scarthgap-imx93 -u https://github.com/bytesatwork/bsp-platform-nxp.git
    $ repo sync
 
 If those commands are completed successfully, the following command
