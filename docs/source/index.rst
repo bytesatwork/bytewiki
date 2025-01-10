@@ -17,6 +17,7 @@ byteWIKI
    :maxdepth: 1
 
    about
+   support
 
 .. toctree::
    :caption: Documentation
@@ -28,7 +29,6 @@ byteWIKI
    devkit
    softwaredevelopment
    errata
-
 
 .. This is the footer, don't edit after this
 .. image:: images/wiki_footer.jpg
