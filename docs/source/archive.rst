@@ -8,6 +8,7 @@ Here you'll find informations on older images and platforms.
 
 .. toctree::
 
+    yocto/4.0/bytedevkit-am62x
     yocto/4.0/bytedevkit-imx8mp
     yocto/4.0/bytedevkit-imx8mm
     yocto/4.0/bytedevkit-stm32mp1
