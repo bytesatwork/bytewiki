@@ -544,6 +544,43 @@ SD card:
            Replace ``/dev/sdX`` with correct target device.
 
 
+Install U-Boot on SPI-NOR flash
+===============================
+
+The following files need to be installed on the SPI-NOR flash:
+
+   * BL2: ``tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32``
+   * metadata: ``metadata.bin``
+   * BL31: ``fip-stm32mp157c-bytedevkit-v1-3-optee.bin``
+
+In your yocto environment, go to ``build/tmp/deploy/images/bytedevkit-stm32mp1``.
+
+
+#. Copy the artifacts to the target:
+
+   ::
+
+        export TARGET_IP=192.168.0.1
+        scp arm-trusted-firmware/tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32 root@$TARGET_IP:
+        scp arm-trusted-firmware/metadata.bin root@$TARGET_IP:
+        scp fip/fip-stm32mp157c-bytedevkit-v1-3-optee.bin root@$TARGET_IP:
+
+
+#. On the target, write the artifacts to the SPI-NOR flash:
+
+   ::
+
+        dd if=/root/tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32 of=/dev/mtdblock0
+        dd if=/root/tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32 of=/dev/mtdblock0 seek=256k oflag=seek_bytes
+        dd if=/root/metadata.bin of=/dev/mtdblock0 seek=512k oflag=seek_bytes
+        dd if=/root/metadata.bin of=/dev/mtdblock0 seek=768k oflag=seek_bytes
+        dd if=/root/fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/mtdblock0 seek=1024k oflag=seek_bytes
+        dd if=/root/fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/mtdblock0 seek=5120k oflag=seek_bytes
+
+
+#. Set the boot select switch to ``NOR``.
+
+
 .. This is the footer, don't edit after this
 .. image:: ../../images/wiki_footer.jpg
    :align: center
