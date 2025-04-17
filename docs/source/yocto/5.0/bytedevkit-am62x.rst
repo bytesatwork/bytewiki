@@ -117,7 +117,7 @@ The output is found in:
 
 ::
 
-   ~/workdir/bytedevkit-am62x/5.0/build/tmp/deploy/images/bytedevkit-am62x
+   ~/workdir/bytedevkit-am62x/5.0/build/deploy-ti/images/bytedevkit-am62x
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
           https://docs.yoctoproject.org/5.0.6/brief-yoctoprojectqs/index.html#building-your-image.
