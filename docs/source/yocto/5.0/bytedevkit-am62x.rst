@@ -276,7 +276,7 @@ The toolchain is located under:
 
 ::
 
-   ~/workdir/bytedevkit-am62x/5.0/build/tmp/deploy/sdk
+   ~/workdir/bytedevkit-am62x/5.0/build/deploy-ti/sdk
 
 How to modify your toolchain
 ----------------------------
@@ -297,7 +297,7 @@ The newly generated toolchain will be available under:
 
 ::
 
-~/workdir/bytedevkit-am62x/5.0/build/tmp/deploy/sdk
+~/workdir/bytedevkit-am62x/5.0/build/deploy-ti/sdk
 
 For additional information, please visit:
 https://docs.yoctoproject.org/5.0.6/overview-manual/concepts.html#cross-development-toolchain-generation.
