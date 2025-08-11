@@ -16,10 +16,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.5/bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.gz>`_
-      - 6ac5c8ff619a1425afb1c9bf1f85c4067fb90473a895448df5eb7d30e0495c9d
-    * - `bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.5/bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.bmap>`_
-      - 78d9bb5dbdbb7abdb7f0d2444c47401d2dea229e88ee1e794b8e728a88a5ea85
+    * - `bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.11/bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.gz>`_
+      - fc401b61586c1ef1b7adc5f5fe86528b3c6b093c0133fc3ed1fbb60960edfb47
+    * - `bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.11/bytesatwork-minimal-image-bytedevkit-imx8mm.rootfs.wic.bmap>`_
+      - 4e0cffed28a67cc2c3ebe9fc15583e7ba8a88a47bc9aab9df5cfd27248586706
 
 
 .. _get-toolchain-bytedevkit-imx8mm-5.0:
@@ -32,8 +32,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-5.0.5.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.5/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-5.0.5.sh>`_
-      - 793bada77eb0a3fb43fcc1c3148e883621bfcb3bcbadac43e3646cf6a5d7047f
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-5.0.11.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.11/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa53-crypto-bytedevkit-imx8mm-toolchain-5.0.11.sh>`_
+      - f387b24b70efd8e95603825d8b87ba4064616633da2be24978251b8a4b1b0e3f
 
 
 U-Boot
@@ -46,8 +46,8 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - U-Boot (SD-card)
-       - `imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.5/imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk>`_
-       - 47b228b3df345ec47aff9e4eb3b9611e43d041fe2aa0557fd11fccca8b9c5e82
+       - `imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx8mm/5.0.11/imx-boot-bytedevkit-imx8mm-sd.bin-flash_evk>`_
+       - 4a444b51f799e5453db5c7d5fc69e6d4041842409fe1c57dc6699bff9d6e110e
 
 
 
@@ -89,7 +89,7 @@ Use ``repo`` to download all necessary repositories:
 ::
 
    $ mkdir -p ~/workdir/bytedevkit-imx8mm/5.0; cd ~/workdir/bytedevkit-imx8mm/5.0
-   $ repo init -b scarthgap-imx8mm -u https://github.com/bytesatwork/bsp-platform-nxp.git
+   $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-nxp.git
    $ repo sync
 
 If those commands are completed successfully, the following command
@@ -114,7 +114,7 @@ The output is found in:
    ~/workdir/bytedevkit-imx8mm/5.0/build/tmp/deploy/images/bytedevkit-imx8mm
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/5.0.5/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/5.0.11/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -187,7 +187,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.5/environment-setup-cortexa53-crypto-poky-linux
+   source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa53-crypto-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -199,7 +199,7 @@ You should see the following output:
 
 ::
 
-      aarch64-poky-linux-gcc -mcpu=cortex-a53+crc+crypto -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.5/sysroots/cortexa53-crypto-poky-linux
+      aarch64-poky-linux-gcc -mcpu=cortex-a53+crc+crypto -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.11/sysroots/cortexa53-crypto-poky-linux
 
 
 Crosscompile the source code, e.g. by:
@@ -295,7 +295,7 @@ The newly generated toolchain will be available under:
 ~/workdir/bytedevkit-imx8mm/5.0/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/5.0.5/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/5.0.11/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -314,7 +314,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-imx8mm
-      - baw-lf-6.1.55-2.2.1-imx8mm
+      - baw-lf-6.6.52-2.2.0
       - https://github.com/bytesatwork/linux-imx.git
 
 ----
@@ -349,7 +349,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.5/environment-setup-cortexa53-crypto-poky-linux
+      source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa53-crypto-poky-linux
 
 #. Create defconfig
 
@@ -434,7 +434,7 @@ Download U-Boot Source Code
           - Branch
           - git URL
         * - bytedevkit-imx8mm
-          - baw-lf_v2024.04-imx8mm
+          - baw-lf_v2024.04
           - https://github.com/bytesatwork/u-boot-imx
 
 ----
