@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.5/bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.gz>`_
-      - fb38df11e8165706e38efb7c2e042b7d6e4d272475e6011a177c07e5664028c8
-    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.5/bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.bmap>`_
-      - 8dd5615db6a47b2781c51d4c06691057d65bf35c4dd3f22ecd643b466d3a0d49
+    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.gz>`_
+      - 395c2119eb48ff9d4a1d50ec91f7cbe02eccdb2690bdb2e47809cea073e3ba3e
+    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.bmap>`_
+      - 60348771a88ff6b0b961bba6f4018baa3668572c2a50c98669cbe27589ec0696
 
 
 .. _get-toolchain-bytedevkit-imx93-5.0:
@@ -31,8 +31,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.5.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.5/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.5.sh>`_
-      - 751315046e7201ca7c596ee97cbd759d76518cd27b5c18308c0d4808c2253ec6
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.11.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.11.sh>`_
+      - 5138c79b1e40429fa71b179ad5f5e374624ecaef42bbba70404d420fdd15b0a7
 
 
 U-Boot
@@ -45,8 +45,8 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - U-Boot (SD-card)
-       - `imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.5/imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot>`_
-       - 7cd277b3fa98e0b4c8a705a8234f1c4609dd66f0034a4e5c2d7a7668b6d34df9
+       - `imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot>`_
+       - 0eccf200c51e7b15efb87f34f69db7dc8426c06c51296e0374f51cf10f4271c6
 
 
 
@@ -88,7 +88,7 @@ Use ``repo`` to download all necessary repositories:
 ::
 
    $ mkdir -p ~/workdir/bytedevkit-imx93/5.0; cd ~/workdir/bytedevkit-imx93/5.0
-   $ repo init -b scarthgap-imx93 -u https://github.com/bytesatwork/bsp-platform-nxp.git
+   $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-nxp.git
    $ repo sync
 
 If those commands are completed successfully, the following command
@@ -113,7 +113,7 @@ The output is found in:
    ~/workdir/bytedevkit-imx93/5.0/build/tmp/deploy/images/bytedevkit-imx93
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/5.0.5/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/5.0.11/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -186,7 +186,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.5/environment-setup-cortexa55-poky-linux
+   source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa55-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -198,7 +198,7 @@ You should see the following output:
 
 ::
 
-      aarch64-poky-linux-gcc -mcpu=cortex-a55+crypto -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.5/sysroots/cortexa55-poky-linux
+      aarch64-poky-linux-gcc -mcpu=cortex-a55+crypto -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.11/sysroots/cortexa55-poky-linux
 
 
 Crosscompile the source code, e.g. by:
@@ -248,7 +248,7 @@ How do you build a toolchain?
 ::
 
    $ cd ~/workdir/bytedevkit-imx93/5.0
-   $ repo init -b scarthgap-imx93 -u https://github.com/bytesatwork/bsp-platform-nxp.git
+   $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-nxp.git
    $ repo sync
 
 If those commands are completed successfully, the following command
@@ -294,7 +294,7 @@ The newly generated toolchain will be available under:
 ~/workdir/bytedevkit-imx93/5.0/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/5.0.5/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/5.0.11/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -313,7 +313,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-imx93
-      - baw-lf-6.6.y
+      - baw-lf-6.6.52-2.2.0
       - https://github.com/bytesatwork/linux-imx.git
 
 ----
@@ -348,7 +348,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.5/environment-setup-cortexa55-poky-linux
+      source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa55-poky-linux
 
 #. Create defconfig
 
