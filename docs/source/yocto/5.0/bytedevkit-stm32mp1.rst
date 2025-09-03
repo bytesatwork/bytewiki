@@ -1,5 +1,5 @@
 ###############################
-byteDEVKIT-stm32mp1 (Yocto 5.0)
+byteDEVKIT-stm32mp1 (Yocto 5.0.11)
 ###############################
 
 *********
@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.3/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.gz>`_
-      - 6956ec4fadc9d1168019c40d85bc4838140647d1f452b54c95596a59158d16de
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.3/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.bmap>`_
-      - 5a63717c31002634f2348c78dd9be141da4a90f4361b3369a6feba14fae47836
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.11/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.gz>`_
+      - d2707e8dc38588bdd574a35c3be0317d2e7095a500e577f06efbf856a88e29f5
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.11/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.bmap>`_
+      - f9e97c3d0960f0cc5b6fbc90d663acbb4c3319151f54376f5337eb7552d5028d
 
 
 .. _get-toolchain-bytedevkit-stm32mp1-5.0:
@@ -31,8 +31,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.3.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.3/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.3.sh>`_
-      - f2376fc463bdbd92c40fce5ce788732f0486e780cb11013f88dea74c96372a99
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.11.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.11/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.11.sh>`_
+      - 41233ffe7019beac2f1b12bc0d684bd92b66cd3241a0728dd02d00cd6c22c99b
 
 
 
@@ -100,7 +100,7 @@ The output is found in:
    ~/workdir/bytedevkit-stm32mp1/5.0/build/tmp/deploy/images/bytedevkit-stm32mp1
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/5.0.3/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/5.0.11/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -173,7 +173,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.3/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 Check if Cross-compiler is available in environment:
 
@@ -185,7 +185,8 @@ You should see the following output:
 
 ::
 
-   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 --sysroot=/opt/poky-bytesatwork/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 --sysroot=/opt/poky-bytesatwork/5.0.11/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+
 
 
 Crosscompile the source code, e.g. by:
@@ -281,7 +282,7 @@ The newly generated toolchain will be available under:
 ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/5.0.3/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/5.0.11/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -300,7 +301,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-stm32mp1
-      - baw-v6.1-stm32mp
+      - baw-v6.6-stm32mp
       - https://github.com/bytesatwork/linux-stm32mp.git
 
 ----
@@ -335,7 +336,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.3/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+      source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 #. Create defconfig
 
@@ -417,7 +418,7 @@ Download U-Boot Source Code
           - Branch
           - git URL
         * - bytedevkit-stm32mp1
-          - baw-v2022.10-stm32mp
+          - baw-v2023.10-stm32mp
           - https://github.com/bytesatwork/u-boot-stm32mp
 
 ----
@@ -433,7 +434,7 @@ Build U-Boot
 
    ::
 
-        source /opt/poky-bytesatwork/5.0.3/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+        source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
 
 #. Create defconfig
 
@@ -529,7 +530,7 @@ SD card:
 
    .. Note::
            The program fiptool is installed in the toolchain:
-           ``/opt/poky-bytesatwork/5.0.3/sysroots/x86_64-pokysdk-linux/usr/bin/fiptool``
+           ``/opt/poky-bytesatwork/5.0.11/sysroots/x86_64-pokysdk-linux/usr/bin/fiptool``
 
 #. Copy to SD card
 
