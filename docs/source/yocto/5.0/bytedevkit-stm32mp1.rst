@@ -350,7 +350,7 @@ from your distribution)
 
    ::
 
-      make LOADADDR=0xC2000040 -j `nproc` uImage stm32mp157c-bytedevkit-v1-3.dtb modules
+      make LOADADDR=0xC2000040 -j `nproc` uImage st/stm32mp157c-bytedevkit-v1-3.dtb modules
 
 #. Install kernel and device tree
 

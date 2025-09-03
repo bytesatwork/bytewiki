@@ -1,5 +1,5 @@
 ###############################
-byteDEVKIT-am62x (Yocto 5.0)
+byteDEVKIT-am62x (Yocto 5.0.11)
 ###############################
 
 *********
@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.6/bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz>`_
-      - 2051e01d919f179edc828a1da6834ea941b22e63be0c086bd53c8d64dae008cc
-    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.6/bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.bmap>`_
-      - 5ae7fc9481f12d312310a9d07d85f4218691f4279399f3e321f162b3fde857f1
+    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz>`_
+      - 2af364645e97cd57b42cd079a3ccc116597f69e33cd403b98ae9286d8d5d1b02
+    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.bmap>`_
+      - ca399c52fd846eff93f9a0235d1931417ac96e9e8c581a2490e558fd866fa44e
 
 
 .. _get-toolchain-bytedevkit-am62x-5.0:
@@ -31,8 +31,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.6.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.6/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.6.sh>`_
-      - 6e38725820478e87ffaabc26ad6a104b12bb6e2ac4998025864563b3f5ce1f89
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.11.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.11.sh>`_
+      - d6932a500cfe07a607e8f0559596c93dab5c9b82a09bada4fe73e794f17db7ab
 
 
 U-Boot
@@ -45,14 +45,14 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - SPL R5F
-       - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.6/tiboot3.bin>`_
-       - 377952876362f1bc94b162805ddd2554b52103212fdcbe5e130c509e4b9ea147
+       - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/tiboot3.bin>`_
+       - 0306b6bea65472cdbb85d7462dea38ac0f19e95a5eae114c7adfb9eb5c5d8f5b
      * - SPL A53
-       - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.6/tispl.bin>`_
-       - fc9bf9d1882e426d4bd70d7ae9c94a00b8e9e9391ce788a7034d2ff429e2096c
+       - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/tispl.bin>`_
+       - f3162bc35ecb9571e66496c74bd17e62dccb63bd45d30567e3330e7f5b8a63cd
      * - U-Boot A53
-       - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.6/u-boot.img>`_
-       - dfb40b040ab24e82410500ccbad36b8730bb6c591f952d79c2286a0e26715afc
+       - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/u-boot.img>`_
+       - c9e1787fb4f0087c404292109aa81ced8ff7d71356ede3c6b1c36206b1ccb786
 
 
 
@@ -120,7 +120,7 @@ The output is found in:
    ~/workdir/bytedevkit-am62x/5.0/build/deploy-ti/images/bytedevkit-am62x
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/5.0.6/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/5.0.11/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -193,7 +193,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.6/environment-setup-aarch64-poky-linux
+   source /opt/poky-bytesatwork/5.0.11/environment-setup-aarch64-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -205,7 +205,7 @@ You should see the following output:
 
 ::
 
-      aarch64-poky-linux-gcc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.6/sysroots/aarch64-poky-linux
+      aarch64-poky-linux-gcc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.11/sysroots/aarch64-poky-linux
 
 Crosscompile the source code, e.g. by:
 
@@ -300,7 +300,7 @@ The newly generated toolchain will be available under:
 ~/workdir/bytedevkit-am62x/5.0/build/deploy-ti/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/5.0.6/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/5.0.11/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -319,7 +319,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-am62x
-      - baw-ti-linux-6.6.y
+      - baw-ti-linux-6.12.y
       - https://github.com/bytesatwork/ti-linux-kernel
 
 ----
@@ -354,7 +354,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.6/environment-setup-aarch64-poky-linux
+      source /opt/poky-bytesatwork/5.0.11/environment-setup-aarch64-poky-linux
 
 #. Create defconfig
 
@@ -387,7 +387,7 @@ from your distribution)
          - ``/boot/Image``
          - ``/dev/mmcblk1p2``
        * - ``arch/arm64/boot/dts/ti/k3-am625-bytedevkit.dtb``
-         - ``/boot/k3-am62x-bytedevkit.dtb``
+         - ``/boot/k3-am625-bytedevkit.dtb``
          - ``/dev/mmcblk1p2``
 
    .. Note::
@@ -430,7 +430,7 @@ Download U-Boot Source Code
           - Branch
           - git URL
         * - bytedevkit-am62x
-          - baw-ti-u-boot-2024.04
+          - baw-ti-u-boot-2025.01
           - https://github.com/bytesatwork/u-boot-ti
 
 ----
