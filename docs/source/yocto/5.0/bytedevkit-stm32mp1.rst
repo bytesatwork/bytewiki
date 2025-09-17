@@ -370,7 +370,7 @@ from your distribution)
        * - ``arch/arm/boot/uImage``
          - ``/boot/uImage``
          - ``/dev/mmcblk0p7``
-       * - ``arch/arm/boot/dts/stm32mp157c-bytedevkit-v1-3.dtb``
+       * - ``arch/arm/boot/dts/st/stm32mp157c-bytedevkit-v1-3.dtb``
          - ``/boot/stm32mp157c-bytedevkit-v1-3.dtb``
          - ``/dev/mmcblk0p7``
 
