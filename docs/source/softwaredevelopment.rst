@@ -7,6 +7,17 @@ The entire development life cycle is done in-house with transparent project mana
           Older versions and EOL products can be found in the
           `Archive <https://bytewiki.readthedocs.io/en/latest/archive.html>`_.
 
+
+.. Important:: 
+               The images available on this page are development builds and are provided without production guarantees.
+               They may contain debug features, experimental components, incomplete security hardening, and unvalidated configurations.
+
+               These images are not certified, qualified, or approved for production use.
+               bytesatwork AG assumes no liability for use in production environments.
+
+               For production-ready images, please contact bytesatwork.
+
+
 .. toctree::
    :maxdepth: 1
 
@@ -15,6 +26,9 @@ The entire development life cycle is done in-house with transparent project mana
    yocto/5.0/bytedevkit-imx8mp
    yocto/5.0/bytedevkit-imx8mm
    yocto/5.0/bytedevkit-stm32mp1
+   debian/bytedevkit-imx93
+   debian/bytedevkit-am62x
+   debian/bytedevkit-imx8mp
    
    archive
 
