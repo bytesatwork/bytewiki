@@ -1,5 +1,5 @@
 ###############################
-byteDEVKIT-am62x (Yocto 5.0.11)
+byteDEVKIT-am62x (Yocto 5.0.15)
 ###############################
 
 *********
@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz>`_
-      - 2af364645e97cd57b42cd079a3ccc116597f69e33cd403b98ae9286d8d5d1b02
-    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.bmap>`_
-      - ca399c52fd846eff93f9a0235d1931417ac96e9e8c581a2490e558fd866fa44e
+    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs-20260130140026.wic.gz.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.15/bytesatwork-minimal-image-bytedevkit-am62x.rootfs-20260130140026.wic.gz>`_
+      - 0d5103ef5666fce5b902ac06da2e7fb4a64dba9d23e19363013fbcb7d08b5fb5
+    * - `bytesatwork-minimal-image-bytedevkit-am62x.rootfs-20260130140026.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.15/bytesatwork-minimal-image-bytedevkit-am62x.rootfs-20260130140026.wic.bmap>`_
+      - d5dc684cc123d30dcedcf6621785e02115c9b604004725a41797b0cd3d5ba9e9
 
 
 .. _get-toolchain-bytedevkit-am62x-5.0:
@@ -31,8 +31,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.11.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.11.sh>`_
-      - d6932a500cfe07a607e8f0559596c93dab5c9b82a09bada4fe73e794f17db7ab
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.15.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.15/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-aarch64-bytedevkit-am62x-toolchain-5.0.15.sh>`_
+      - 7304fa998e65595c509f217cf869739ed53b5e4cf11d1dcf4c77d6dcc90a8959
 
 
 U-Boot
@@ -45,14 +45,14 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - SPL R5F
-       - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/tiboot3.bin>`_
-       - 0306b6bea65472cdbb85d7462dea38ac0f19e95a5eae114c7adfb9eb5c5d8f5b
+       - `tiboot3.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.15/tiboot3.bin>`_
+       - 035290b85805894bfa68bbda4dc08d4bc19e1cb54fd5da4b3d22621cd0371eca
      * - SPL A53
-       - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/tispl.bin>`_
-       - f3162bc35ecb9571e66496c74bd17e62dccb63bd45d30567e3330e7f5b8a63cd
+       - `tispl.bin <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.15/tispl.bin>`_
+       - 025cced035b478857b992cfefcbc5039d4a8a8f829f41b88fa7d4882017d82cd
      * - U-Boot A53
-       - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.11/u-boot.img>`_
-       - c9e1787fb4f0087c404292109aa81ced8ff7d71356ede3c6b1c36206b1ccb786
+       - `u-boot.img <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62x/5.0.15/u-boot.img>`_
+       - a31f7bb58612ef860367528e34c881f47db304b25d33b87959e3f9d846ddba1a
 
 
 
@@ -72,18 +72,18 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz`` (e.g. with 7-zip)
+   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-am62x.rootfs-20260130140026.wic.gz`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-am62x.rootfs-20260130140026.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-am62x.rootfs.wic.gz /dev/mmcblk<X>``
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-am62x.rootfs-20260130140026.wic.gz /dev/mmcblk<X>``
 
 ----
 
@@ -120,7 +120,7 @@ The output is found in:
    ~/workdir/bytedevkit-am62x/5.0/build/deploy-ti/images/bytedevkit-am62x
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/5.0.11/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/5.0.15/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -193,7 +193,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.11/environment-setup-aarch64-poky-linux
+   source /opt/poky-bytesatwork/5.0.15/environment-setup-aarch64-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -205,7 +205,7 @@ You should see the following output:
 
 ::
 
-      aarch64-poky-linux-gcc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.11/sysroots/aarch64-poky-linux
+      aarch64-poky-linux-gcc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.15/sysroots/aarch64-poky-linux
 
 Crosscompile the source code, e.g. by:
 
@@ -300,7 +300,7 @@ The newly generated toolchain will be available under:
 ~/workdir/bytedevkit-am62x/5.0/build/deploy-ti/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/5.0.11/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/5.0.15/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -319,7 +319,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-am62x
-      - baw-ti-linux-6.12.y
+      - baw-ti-linux-6.12.y-11.01.05
       - https://github.com/bytesatwork/ti-linux-kernel
 
 ----
@@ -354,7 +354,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.11/environment-setup-aarch64-poky-linux
+      source /opt/poky-bytesatwork/5.0.15/environment-setup-aarch64-poky-linux
 
 #. Create defconfig
 
@@ -430,7 +430,7 @@ Download U-Boot Source Code
           - Branch
           - git URL
         * - bytedevkit-am62x
-          - baw-ti-u-boot-2025.01
+          - baw-ti-u-boot-2025.01_11.01.05
           - https://github.com/bytesatwork/u-boot-ti
 
 ----

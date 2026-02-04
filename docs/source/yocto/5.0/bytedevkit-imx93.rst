@@ -1,5 +1,5 @@
 ###############################
-byteDEVKIT-imx93 (Yocto 5.0.11)
+byteDEVKIT-imx93 (Yocto 5.0.15)
 ###############################
 
 *********
@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.gz>`_
-      - 395c2119eb48ff9d4a1d50ec91f7cbe02eccdb2690bdb2e47809cea073e3ba3e
-    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/bytesatwork-minimal-image-bytedevkit-imx93.rootfs.wic.bmap>`_
-      - 60348771a88ff6b0b961bba6f4018baa3668572c2a50c98669cbe27589ec0696
+    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260130095017.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.15/bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260130095017.wic.gz>`_
+      - 00a5408f6d76d3bf666f15014ee6d8d06a8fbce5a03a9d1f1e232e79347e93bf
+    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260130095017.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.15/bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260130095017.wic.bmap>`_
+      - 2f79b6205ce83f90a8b75ff476b2f01676296eb49ec236b16209ef6a984e6bc4
 
 
 .. _get-toolchain-bytedevkit-imx93-5.0:
@@ -31,8 +31,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.11.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.11.sh>`_
-      - 5138c79b1e40429fa71b179ad5f5e374624ecaef42bbba70404d420fdd15b0a7
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.15.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.15/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa55-bytedevkit-imx93-toolchain-5.0.15.sh>`_
+      - e03ce40095fad781a89e0cf40ed28b6bb063a7f42c0d6eac153a23e400c22104
 
 
 U-Boot
@@ -45,8 +45,8 @@ U-Boot
        - Download
        - Checksum (SHA256)
      * - U-Boot (SD-card)
-       - `imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.11/imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot>`_
-       - 0eccf200c51e7b15efb87f34f69db7dc8426c06c51296e0374f51cf10f4271c6
+       - `imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/5.0.15/imx-boot-bytedevkit-imx93-sd.bin-flash_singleboot>`_
+       - f4ba453a1afc2ae714102445befdb2d50bde019ea785b3c2f4fd89709160b49e
 
 
 
@@ -113,7 +113,7 @@ The output is found in:
    ~/workdir/bytedevkit-imx93/5.0/build/tmp/deploy/images/bytedevkit-imx93
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/5.0.11/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/5.0.15/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -186,7 +186,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa55-poky-linux
+   source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa55-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -198,7 +198,7 @@ You should see the following output:
 
 ::
 
-      aarch64-poky-linux-gcc -mcpu=cortex-a55+crypto -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.11/sysroots/cortexa55-poky-linux
+      aarch64-poky-linux-gcc -mcpu=cortex-a55+crypto -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.15/sysroots/cortexa55-poky-linux
 
 
 Crosscompile the source code, e.g. by:
@@ -294,7 +294,7 @@ The newly generated toolchain will be available under:
 ~/workdir/bytedevkit-imx93/5.0/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/5.0.11/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/5.0.15/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -313,7 +313,7 @@ Download the Linux Kernel
       - Branch
       - git URL
     * - bytedevkit-imx93
-      - baw-lf-6.6.52-2.2.0
+      - baw-lf-6.6.52-2.2.1
       - https://github.com/bytesatwork/linux-imx.git
 
 ----
@@ -348,7 +348,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.11/environment-setup-cortexa55-poky-linux
+      source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa55-poky-linux
 
 #. Create defconfig
 
@@ -432,7 +432,7 @@ Download U-Boot Source Code
           - Branch
           - git URL
         * - bytedevkit-imx93
-          - baw-lf_v2023.04
+          - baw-v2024.04_6.6.52_2.2.1
           - https://github.com/bytesatwork/u-boot-imx
 
 ----

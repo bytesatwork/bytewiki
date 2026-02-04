@@ -1,6 +1,6 @@
-##################################
-byteDEVKIT-stm32mp1 (Yocto 5.0.15)
-##################################
+######################################
+byteDEVKIT-stm32mp2 OSM (Yocto 5.0.15)
+######################################
 
 *********
 Downloads
@@ -15,13 +15,13 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260130112848.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260130112848.wic.gz>`_
-      - 60953fde731421d9e4e493ec6d8c78a1db2eed07133ee0644aed82635beb8b87
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260130112848.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260130112848.wic.bmap>`_
-      - ce4c30a2fa43564d06e995d1392bef30f35aeb4c462a736c485bee956171e7a0
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.gz>`_
+      - b616b5a64ce0fd9e264067f06494ff76aeb8cc8027901427a3695259da148e36
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.bmap>`_
+      - ff2cb15e33ec1e6f8370a5fc9b7374410e1c12c6043e8545152675f4d3c1a1a6
 
 
-.. _get-toolchain-bytedevkit-stm32mp1-5.0:
+.. _get-toolchain-bytedevkit-stm32mp2-5.0:
 
 Toolchain
 =========
@@ -31,8 +31,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.15.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.15/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.15.sh>`_
-      - 153a7cc21484a5cce5ad64a83943991364f5a10352c9b662f9c82987ff5f80bf
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa35-bytedevkit-stm32mp2-toolchain-5.0.15.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa35-bytedevkit-stm32mp2-toolchain-5.0.15.sh>`_
+      - 286a3395dee2d1ed64469fef01bb07b00b19a11db7ec4133692dfc9ead7935e5
 
 
 
@@ -52,18 +52,18 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.gz`` (e.g. with 7-zip)
+   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs.wic.gz`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs.wic.gz /dev/mmcblk<X>``
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs.wic.gz /dev/mmcblk<X>``
 
 ----
 
@@ -74,17 +74,17 @@ Use ``repo`` to download all necessary repositories:
 
 ::
 
-   $ mkdir -p ~/workdir/bytedevkit-stm32mp1/5.0; cd ~/workdir/bytedevkit-stm32mp1/5.0
+   $ mkdir -p ~/workdir/bytedevkit-stm32mp2/5.0; cd ~/workdir/bytedevkit-stm32mp2/5.0
    $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-st.git
    $ repo sync
 
 If those commands are completed successfully, the following command
-will set up a Yocto Project environment for byteDEVKIT-stm32mp1:
+will set up a Yocto Project environment for byteDEVKIT-stm32mp2:
 
 ::
 
-   $ cd ~/workdir/bytedevkit-stm32mp1/5.0
-   $ MACHINE=bytedevkit-stm32mp1 DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+   $ cd ~/workdir/bytedevkit-stm32mp2/5.0
+   $ MACHINE=bytedevkit-stm32mp2 DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
 The final command builds the development image:
 
@@ -97,7 +97,7 @@ The output is found in:
 
 ::
 
-   ~/workdir/bytedevkit-stm32mp1/5.0/build/tmp/deploy/images/bytedevkit-stm32mp1
+   ~/workdir/bytedevkit-stm32mp2/5.0/build/tmp/deploy/images/bytedevkit-stm32mp2
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
           https://docs.yoctoproject.org/5.0.15/brief-yoctoprojectqs/index.html#building-your-image.
@@ -173,7 +173,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa35-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -185,7 +185,7 @@ You should see the following output:
 
 ::
 
-   arm-poky-linux-gnueabi-gcc -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 --sysroot=/opt/poky-bytesatwork/5.0.15/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+   aarch64-poky-linux-gcc -mcpu=cortex-a35+crc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.15/sysroots/cortexa35-poky-linux
 
 
 
@@ -235,7 +235,7 @@ How do you build a toolchain?
 
 ::
 
-   $ cd ~/workdir/bytedevkit-stm32mp1/5.0
+   $ cd ~/workdir/bytedevkit-stm32mp2/5.0
    $ repo init -b scarthgap -u https://github.com/bytesatwork/bsp-platform-st.git
    $ repo sync
 
@@ -244,8 +244,8 @@ will set up a Yocto Project environment for byteDEVKIT-stm32mp1:
 
 ::
 
-   $ cd ~/workdir/bytedevkit-stm32mp1/5.0
-   $ MACHINE=bytedevkit-stm32mp1 DISTRO=poky-bytesatwork EULA=1 . setup-environment build
+   $ cd ~/workdir/bytedevkit-stm32mp2/5.0
+   $ MACHINE=bytedevkit-stm32mp2 DISTRO=poky-bytesatwork EULA=1 . setup-environment build
 
 The final command builds an installable toolchain:
 
@@ -258,7 +258,7 @@ The toolchain is located under:
 
 ::
 
-   ~/workdir/bytedevkit-stm32mp1/5.0/build/tmp/deploy/sdk
+   ~/workdir/bytedevkit-stm32mp2/5.0/build/tmp/deploy/sdk
 
 How to modify your toolchain
 ----------------------------
@@ -289,7 +289,7 @@ https://docs.yoctoproject.org/5.0.15/overview-manual/concepts.html#cross-develop
 Kernel
 ******
 
-.. _download-kernel-bytedevkit-stm32mp1-5.0:
+.. _download-kernel-bytedevkit-stm32mp2-5.0:
 
 Download the Linux Kernel
 =========================
@@ -300,7 +300,7 @@ Download the Linux Kernel
     * - Device
       - Branch
       - git URL
-    * - bytedevkit-stm32mp1
+    * - bytedevkit-stm32mp2
       - baw-v6.6-stm32mp-r2
       - https://github.com/bytesatwork/linux-stm32mp.git
 
@@ -310,7 +310,7 @@ Build the Linux Kernel
 ======================
 
 For both targets, an ARM toolchain is necessary. You can use the
-provided toolchain from :ref:`get-toolchain-bytedevkit-stm32mp1-5.0` or any compatible toolchain (e.g.
+provided toolchain from :ref:`get-toolchain-bytedevkit-stm32mp2-5.0` or any compatible toolchain (e.g.
 from your distribution)
 
 .. Important::
@@ -330,27 +330,25 @@ from your distribution)
 
 #. Download kernel sources
 
-   Download the appropriate kernel from :ref:`download-kernel-bytedevkit-stm32mp1-5.0`.
+   Download the appropriate kernel from :ref:`download-kernel-bytedevkit-stm32mp2-5.0`.
 
 #. Source toolchain
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+      source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa35-poky-linux
 
 #. Create defconfig
 
    ::
 
-      make multi_v7_defconfig
-      scripts/kconfig/merge_config.sh -m -r .config arch/arm/configs/fragment-*
-      make olddefconfig
+      make bytedevkit_stm32mp2_defconfig
 
 #. Build Linux kernel
 
    ::
 
-      make LOADADDR=0xC2000040 -j `nproc` uImage st/stm32mp157c-bytedevkit-v1-3.dtb modules
+      make -j `nproc` Image st/stm32mp257f-bytedevkit.dtb modules
 
 #. Install kernel and device tree
 
@@ -367,11 +365,11 @@ from your distribution)
        * - File
          - Target path
          - Target partition
-       * - ``arch/arm/boot/uImage``
-         - ``/boot/uImage``
+       * - ``arch/arm64/boot/Image``
+         - ``/boot/Image``
          - ``/dev/mmcblk0p7``
-       * - ``arch/arm/boot/dts/st/stm32mp157c-bytedevkit-v1-3.dtb``
-         - ``/boot/stm32mp157c-bytedevkit-v1-3.dtb``
+       * - ``arch/arm64/boot/dts/st/stm32mp257f-bytedevkit.dtb``
+         - ``/boot/stm32mp257f-bytedevkit.dtb``
          - ``/dev/mmcblk0p7``
 
    .. Note::
@@ -385,8 +383,7 @@ from your distribution)
 
      Otherwise, please follow the instructions to copy the kernel modules
 
-   .. Hint::
-      If you have a byteDEVKIT V1.1, replace ``v1-3`` with ``v1-1`` in the file names above.
+   
 
 #.  Install kernel modules
 
@@ -395,10 +392,10 @@ from your distribution)
 
     ::
 
-       mkdir /tmp/bytedevkit-stm32mp1
-       make INSTALL_MOD_PATH=/tmp/bytedevkit-stm32mp1 modules_install
+       mkdir /tmp/bytedevkit-stm32mp2
+       make INSTALL_MOD_PATH=/tmp/bytedevkit-stm32mp2 modules_install
 
-   Now you can copy the content of the folder ``/tmp/bytedevkit-stm32mp1`` into the
+   Now you can copy the content of the folder ``/tmp/bytedevkit-stm32mp2`` into the
    target's root folder (``/``) which is partition ``/dev/mmcblk0p7``.
 
 
@@ -406,7 +403,7 @@ from your distribution)
 U-Boot
 ******
 
-.. _download-uboot-source-bytedevkit-stm32mp1-5.0:
+.. _download-uboot-source-bytedevkit-stm32mp2-5.0:
 
 Download U-Boot Source Code
 ===========================
@@ -417,7 +414,7 @@ Download U-Boot Source Code
         * - Device
           - Branch
           - git URL
-        * - bytedevkit-stm32mp1
+        * - bytedevkit-stm32mp2
           - baw-v2023.10-stm32mp-r2
           - https://github.com/bytesatwork/u-boot-stm32mp
 
@@ -428,25 +425,25 @@ Build U-Boot
 
 #. Download U-Boot sources
 
-   Download the appropriate U-Boot from :ref:`download-uboot-source-bytedevkit-stm32mp1-5.0`.
+   Download the appropriate U-Boot from :ref:`download-uboot-source-bytedevkit-stm32mp2-5.0`.
 
 #. Source toolchain
 
    ::
 
-        source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi
+        source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa35-poky-linux
 
 #. Create defconfig
 
    ::
 
-        make stm32mp157_bytedevkit_defconfig
+        make stm32mp257_bytedevkit_defconfig
 
 #. Build U-Boot
 
    ::
 
-        make -j `nproc`
+        make -j `nproc` DEVICE_TREE=stm32mp257f-bytedevkit all
 
 #. Download ATF sources
 
@@ -457,7 +454,7 @@ Build U-Boot
           - Branch
           - git URL
         * - Arm-Trusted-Firmware
-          - baw-v2.8-stm32mp
+          - baw-v2.10-stm32mp-r2
           - https://github.com/bytesatwork/arm-trusted-firmware-stm32mp
 
 #. Build ATF
@@ -466,8 +463,7 @@ Build U-Boot
 
         unset CFLAGS
         unset LDFLAGS
-        make -j $(nproc) ARM_ARCH_MAJOR=7 ARCH=aarch32 PLAT=stm32mp1 STM32MP_SDMMC=1 STM32MP15=1 DTB_FILE_NAME=stm32mp157c-bytedevkit.dtb
-        make -j $(nproc) ARM_ARCH_MAJOR=7 ARCH=aarch32 PLAT=stm32mp1 AARCH32_SP=optee DTB_FILE_NAME=stm32mp157c-bytedevkit.dtb dtbs
+        make CROSS_COMPILE=aarch64-linux-gnu- PLAT=stm32mp2 SPD=opteed DTB_FILE_NAME=stm32mp257f-bytedevkit.dtb STM32MP_SDMMC=1 STM32MP_LPDDR4_TYPE=1 ST_TF_A_DEBUG_TRACE=1
 
 #. Download OP-TEE sources
 
@@ -478,7 +474,7 @@ Build U-Boot
           - Branch
           - git URL
         * - Optee
-          - baw-3.19.9-stm32mp
+          - baw-4.0.0-stm32mp-r2
           - https://github.com/bytesatwork/optee-os-stm32mp
 
 
@@ -488,7 +484,8 @@ Build U-Boot
 
         unset LDFLAGS
         unset CFLAGS
-        make -j $(nproc) PLATFORM=stm32mp1 CFG_EMBED_DTB_SOURCE_FILE=stm32mp157c-bytedevkit-v1-3.dts CFG_TEE_CORE_LOG_LEVEL=2 O=build all
+
+        make CROSS_COMPILE64=aarch64-linux-gnu- CROSS_COMPILE32=arm-linux-gnu- ARCH=arm PLATFORM=stm32mp2 CFG_EMBED_DTB_SOURCE_FILE=stm32mp257f-bytedevkit.dts CFG_TEE_CORE_DEBUG=y CFG_TEE_CORE_LOG_LEVEL=1 all
 
 
 Install U-Boot on SD card
@@ -497,89 +494,60 @@ Install U-Boot on SD card
 To use the newly created U-Boot, the following files need to be installed on the
 SD card:
 
-   * BL2: ``tf-a-stm32mp157c-bytedevkit.stm32``
-   * BL31: ``fip-stm32mp157c-bytedevkit-v1-3-optee.bin``
+   * BL2: ``tf-a-stm32mp257f-bytedevkit.stm32``
+   * BL31: ``fip.bin``
 
 
    For detailed information about the boot and build process see:
    `ST TF-A overview <https://wiki.stmicroelectronics.cn/stm32mpu/wiki/TF-A_overview>`_
 
-#. Copy ``tf-a-stm32mp157c-bytedevkit.stm32`` from ATF build
+#. Copy ``tf-a-stm32mp257f-bytedevkit.stm32`` from ATF build
 
    ::
 
-        cp arm-trusted-firmware-stm32mp/build/stm32mp1/release/tf-a-stm32mp157c-bytedevkit.stm32 .
+        cp arm-trusted-firmware-stm32mp/build/stm32mp2/release/tf-a-stm32mp257f-bytedevkit.stm32 .
 
 
-#. Create ``fip-stm32mp157c-bytedevkit-v1-3-optee.bin``
+#. Create ``fip.bin``
 
    ::
 
-        fiptool create \
-           --tos-fw optee-os-stm32mp/build/core/tee-header_v2.bin \
-           --tos-fw-extra1 optee-os-stm32mp/build/core/tee-pager_v2.bin \
-           --tos-fw-extra2 optee-os-stm32mp/build/core/tee-pageable_v2.bin \
-           --hw-config u-boot-stm32mp/u-boot.dtb \
-           --fw-config arm-trusted-firmware-stm32mp/build/stm32mp1/release/fdts/stm32mp157c-bytedevkit-fw-config.dtb \
-           --nt-fw u-boot-stm32mp/u-boot-nodtb.bin \
-           fip-stm32mp157c-bytedevkit-v1-3-optee.bin
+         make CROSS_COMPILE=aarch64-linux-gnu- PLAT=stm32mp2 SPD=opteed \
+            DTB_FILE_NAME=stm32mp257f-bytedevkit.dtb \
+            STM32MP_USB_PROGRAMMER=1 \
+            STM32MP_LPDDR4_TYPE=1 \
+            BL33=../u-boot-stm32mp-internal/u-boot-nodtb.bin \
+            BL33_CFG=../u-boot-stm32mp-internal/u-boot.dtb  \
+            BL32=../optee-os-stm32mp-internal/out/arm-plat-stm32mp2/core/tee-header_v2.bin \
+            BL32_EXTRA1=../optee-os-stm32mp-internal/out/arm-plat-stm32mp2/core/tee-pager_v2.bin \
+            BL32_EXTRA2=../optee-os-stm32mp-internal/out/arm-plat-stm32mp2/core/tee-pageable_v2.bin \
+            ST_TF_A_DEBUG_TRACE=1 \
+            bl31 fip
 
    .. Important::
            If an error occurs, check the paths used in the command. They need to point to
            the u-boot, ATF and OP-TEE folder.
 
-   .. Note::
-           The program fiptool is installed in the toolchain:
-           ``/opt/poky-bytesatwork/5.0.15/sysroots/x86_64-pokysdk-linux/usr/bin/fiptool``
 
-#. Copy to SD card
-
+#. Copy ``fip.bin`` from ATF build
    ::
 
-        sudo dd if=tf-a-stm32mp157c-bytedevkit.stm32 of=/dev/sdX1 conv=fdatasync
-        sudo dd if=tf-a-stm32mp157c-bytedevkit.stm32 of=/dev/sdX2 conv=fdatasync
-        sudo dd if=fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/sdX5 conv=fdatasync
-        sudo dd if=fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/sdX6 conv=fdatasync
+        cp arm-trusted-firmware-stm32mp/build/stm32mp2/release/fip.bin .
+
+
+#. Copy to SD card
+   ::
+
+        sudo dd if=tf-a-stm32mp257f-bytedevkit.stm32 of=/dev/sdX1 bs=1M conv=fdatasync status=progress
+        sudo dd if=tf-a-stm32mp257f-bytedevkit.stm32 of=/dev/sdX2 bs=1M conv=fdatasync status=progress
+        
+      
+        sudo dd if=fip.bin of=/dev/sdX5 conv=fdatasync
+        sudo dd if=fip.bin of=/dev/sdX6 conv=fdatasync
 
    .. Note::
            Replace ``/dev/sdX`` with correct target device.
 
-
-Install U-Boot on SPI-NOR flash
-===============================
-
-The following files need to be installed on the SPI-NOR flash:
-
-   * BL2: ``tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32``
-   * metadata: ``metadata.bin``
-   * BL31: ``fip-stm32mp157c-bytedevkit-v1-3-optee.bin``
-
-In your yocto environment, go to ``build/tmp/deploy/images/bytedevkit-stm32mp1``.
-
-
-#. Copy the artifacts to the target:
-
-   ::
-
-        export TARGET_IP=192.168.0.1
-        scp arm-trusted-firmware/tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32 root@$TARGET_IP:
-        scp arm-trusted-firmware/metadata.bin root@$TARGET_IP:
-        scp fip/fip-stm32mp157c-bytedevkit-v1-3-optee.bin root@$TARGET_IP:
-
-
-#. On the target, write the artifacts to the SPI-NOR flash:
-
-   ::
-
-        dd if=/root/tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32 of=/dev/mtdblock0
-        dd if=/root/tf-a-stm32mp157c-bytedevkit-v1-3-nor.stm32 of=/dev/mtdblock0 seek=256k oflag=seek_bytes
-        dd if=/root/metadata.bin of=/dev/mtdblock0 seek=512k oflag=seek_bytes
-        dd if=/root/metadata.bin of=/dev/mtdblock0 seek=768k oflag=seek_bytes
-        dd if=/root/fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/mtdblock0 seek=1024k oflag=seek_bytes
-        dd if=/root/fip-stm32mp157c-bytedevkit-v1-3-optee.bin of=/dev/mtdblock0 seek=5120k oflag=seek_bytes
-
-
-#. Set the boot select switch to ``NOR``.
 
 
 .. This is the footer, don't edit after this
