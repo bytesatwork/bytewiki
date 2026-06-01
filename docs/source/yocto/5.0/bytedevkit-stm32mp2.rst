@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.gz>`_
-      - b616b5a64ce0fd9e264067f06494ff76aeb8cc8027901427a3695259da148e36
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260130120705.wic.bmap>`_
-      - ff2cb15e33ec1e6f8370a5fc9b7374410e1c12c6043e8545152675f4d3c1a1a6
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.gz>`_
+      - 6f9bf96350a2bb7150501c4299fc6f55360ee3c510129f31d51a6327e900c46c
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.bmap>`_
+      - 13503b393eae55329c3c14ec604fab784cb22291a63144f0489abc1d4ce4bfe0
 
 
 .. _get-toolchain-bytedevkit-stm32mp2-5.0:
