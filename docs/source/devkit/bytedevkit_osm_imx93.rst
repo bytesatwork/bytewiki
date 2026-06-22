@@ -2,7 +2,7 @@
 byteDEVKIT OSM IMX93
 ####################
 
-.. image:: https://www.bytesatwork.io/wp-content/uploads/2024/09/BaW_DEV1_persp_bottom_1-1.png
+.. image:: https://bytesatwork.io/wAssets/img/produkte/1025806-byteDEVKIT-OSM-AM62L/weblication/wThumbnails/1025808-ISO%20Ansicht%20STM32MP2-51dd1f74-6c98ac18@0ll.jpg
    :height: 250px
    :align: right
 
@@ -18,7 +18,7 @@ General Information
 Downloads
 *********
 
--  `Datasheet byteDEVKIT OSM IMX93 <https://www.bytesatwork.io/wp-content/uploads/2024/07/Datasheet_byteDEVKIT_OSM-S-V0.1.pdf>`_
+-  `Datasheet byteDEVKIT OSM IMX93 <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-bytedevkit-osm-s-v1.2.pdf>`_
 
 
 .. This is the footer, don't edit after this

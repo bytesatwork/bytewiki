@@ -7,7 +7,9 @@ We provide the development for a wide range of embedded systems, from small-scal
 .. toctree::
    :maxdepth: 1
 
-   devkit/bytedevkit_osm.rst
+   devkit/bytedevkit_osm_am62l.rst
+   devkit/bytedevkit_osm_stm32mp2.rst
+   devkit/bytedevkit_osm_imx93.rst
    devkit/bytedevkit3.rst
    devkit/bytedevkit2.rst
    devkit/bytedevkit1.rst
