@@ -1,6 +1,6 @@
-####################
+#######################
 byteDEVKIT OSM STM32MP2
-####################
+#######################
 
 .. image:: https://bytesatwork.io/wAssets/img/produkte/1025806-byteDEVKIT-OSM-AM62L/weblication/wThumbnails/1025808-ISO%20Ansicht%20STM32MP2-51dd1f74-6c98ac18@0ll.jpg
    :height: 250px
@@ -19,7 +19,7 @@ Downloads
 *********
 
 -  `Datasheet byteDEVKIT OSM STM32MP2 <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-bytedevkit-osm-s-v1.2.pdf>`_
-
+-  `Factsheet byteDEVKIT OSM <https://bytesatwork.io/wAssets/docs/factsheets/factsheet-bytedevkit-osm-rev.-1.2.pdf>`_
 
 .. This is the footer, don't edit after this
 .. image:: ../images/wiki_footer.jpg

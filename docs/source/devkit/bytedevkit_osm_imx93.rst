@@ -19,7 +19,7 @@ Downloads
 *********
 
 -  `Datasheet byteDEVKIT OSM IMX93 <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-bytedevkit-osm-s-v1.2.pdf>`_
-
+-  `Factsheet byteDEVKIT OSM <https://bytesatwork.io/wAssets/docs/factsheets/factsheet-bytedevkit-osm-rev.-1.2.pdf>`_
 
 .. This is the footer, don't edit after this
 .. image:: ../images/wiki_footer.jpg
