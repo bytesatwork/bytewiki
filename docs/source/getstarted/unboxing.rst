@@ -7,7 +7,6 @@ Unboxing byteDEVKIT STM32MP1
 -  The byteDEVKIT STM32MP1 with a 5-inch touchscreen display
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_2kl.jpg
-   :scale: 50%
    :align: center
 
 ------------
@@ -17,7 +16,6 @@ Unboxing byteDEVKIT STM32MP1
 .. Note:: The SOM STM32MP1x is already connected with the byteDEVKIT STM32MP1.   
    
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_4kl.jpg
-   :scale: 30%
    :align: center
 
 ------------
@@ -25,7 +23,6 @@ Unboxing byteDEVKIT STM32MP1
 -  The power supply for the byteDEVKIT STM32MP1
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_8kl.jpg
-   :scale: 20%
    :align: center
 
 ------------
@@ -33,7 +30,6 @@ Unboxing byteDEVKIT STM32MP1
 -  The USB serial cable for the byteDEVKIT STM32MP1
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_9kl.jpg
-   :scale: 20%
    :align: center
    
 ------------
@@ -41,7 +37,6 @@ Unboxing byteDEVKIT STM32MP1
 -  micro-SD card with preinstalled Linux
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_10kl.jpg
-   :scale: 20%
    :align: center
 
 ------------
@@ -58,7 +53,6 @@ Technical overview byteDEVKIT STM32MP1
    + Power connector
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_7kl.jpg
-   :scale: 20%
    :align: center
 
 ------------
@@ -69,7 +63,6 @@ Technical overview byteDEVKIT STM32MP1
    + 60 pin header with all the needed signals: **I2C, SPI, CAN, UART, I2S, LDC, GPIO and PWM**
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_5kl.jpg
-   :scale: 20%
    :align: center
 
 ------------
@@ -77,7 +70,6 @@ Technical overview byteDEVKIT STM32MP1
 -  The micro-SD card slot contains a micro-SD card with preinstalled Linux OS:
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/unboxing_11kl.jpg
-   :scale: 20%
    :align: center
 
 .. Note:: The micro-SD card is already slotted to the byteDEVKIT STM32MP1.

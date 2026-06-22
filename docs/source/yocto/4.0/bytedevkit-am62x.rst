@@ -243,13 +243,11 @@ How to bring your binary to the target?
 2. Determine the embedded target IP address by ``ip addr show``
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/ip_addr_show_28.png
-   :scale: 100%
    :align: center
 
 3. Copy your binary, e.g. ``helloworld`` to the target by ``scp helloworld root@<ip address of target>:/tmp``
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/scp2.png
-   :scale: 100%
    :align: center
 
 4. Run ``chmod +x`` on the target to make your binary executable: ``chmod +x /<path>/<binary name>``

@@ -10,7 +10,6 @@ Connecting the Hardware and first Booting
 -  Locate the black cable of the serial connector.
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/wiring_2kl.jpg
-   :scale: 20%
    :align: center
 
 ------------
@@ -18,7 +17,6 @@ Connecting the Hardware and first Booting
 .. Caution:: Connect the serial cable to the byteDEVKIT STM32MP1 as shown. The **black cable** must point towards the USB OTG connector.
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/wiring_3kl.jpg
-   :scale: 20%
    :align: center
    
 ------------
@@ -27,7 +25,6 @@ Connecting the Hardware and first Booting
 -  Connect the ethernet RJ45 with the byteDEVKIT STM32MP1.
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/wiring_5kl.jpg
-   :scale: 20%
    :align: center
    
 ------------
@@ -36,7 +33,6 @@ Connecting the Hardware and first Booting
 -  Connect the power supply cable to the power slot of the byteDEVKIT STM32MP1.
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/wiring_7kl.jpg
-   :scale: 20%
    :align: center
    
 ------------
@@ -46,7 +42,6 @@ Connecting the Hardware and first Booting
 .. Attention:: Your byteDEVKIT STM32MP1 is powered up, when the green LED lights up. If the LED doesn´t light up, check the connection of the power socket.
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/wiring_8kl.jpg
-   :scale: 20%
    :align: center
    
 ------------
@@ -56,7 +51,6 @@ Connecting the Hardware and first Booting
 .. Hint:: The booting procedure will take a few seconds.
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/wiring_9kl.jpg
-   :scale: 20%
    :align: center
    
 ------------
@@ -68,7 +62,6 @@ Connecting the Hardware and first Booting
 .. _Bring-up_byteDEVKIT_STM32MP1: https://jf-bytewiki.readthedocs.io/en/latest/firststart.html#id1
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/wiring_10kl.jpg
-   :scale: 20%
    :align: center
    
 ------------
@@ -94,7 +87,6 @@ LINUX
 • Start PuTTY
   
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Putty_1.png
-   :scale: 100%
    :align: center
 
 ------------  
@@ -113,7 +105,6 @@ LINUX
   • Power up the byteDEVKIT STM32MP1
   
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Putty_2.png
-   :scale: 100%
    :align: center
 
 ------------
@@ -121,7 +112,6 @@ LINUX
   • Once the login prompt appears, login with user "root" and password "rootme"
   
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Putty_3.png
-   :scale: 100%
    :align: center
 
 .. Note::  You are now succesfully connected to the byteDEVKIT STM32MP1
@@ -142,7 +132,6 @@ WINDOWS
   • Start PuTTY
   
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Putty_4.png
-   :scale: 100%
    :align: center
 
 ------------  
@@ -161,7 +150,6 @@ WINDOWS
   Power up the byteDEVKIT STM32MP1
   
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Putty_5.png
-   :scale: 100%
    :align: center
 
 ------------
@@ -169,7 +157,6 @@ WINDOWS
   Once the login prompt appears, login with user "root" and password "rootme"
   
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/04/Putty_6.png
-   :scale: 100%
    :align: center
 
 .. Note::  You are now successfully connected to the byteDEVKIT STM32MP1
@@ -191,7 +178,6 @@ How to install additional software using apt
    e.g.: :guilabel:`apt-cache search nodejs`
 
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/apt-cache_nodejs.png
-   :scale: 100%
    :align: center
    
 ------------
@@ -200,7 +186,6 @@ How to install additional software using apt
    e.g.: :guilabel:`apt-get install nodejs`
    
 .. image:: https://www.bytesatwork.io/wp-content/uploads/2020/05/apt-get_install_wide.png
-   :scale: 100%
    :align: center
 
 
