@@ -7,6 +7,8 @@ Our systems on modules reduce the complexity of industrial computing solutions, 
 .. toctree::
    :maxdepth: 1
 
+   som/am62l_osm.rst
+   som/stm32mp2x_osm.rst
    som/imx93_osm.rst
    som/am62x.rst
    som/imx8mp.rst
