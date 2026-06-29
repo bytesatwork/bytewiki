@@ -1,6 +1,6 @@
-#################################
-byteDEVKIT-imx8mp (Debian Trixie)
-#################################
+####################################
+byteDEVKIT-STM32MP1x (Debian Trixie)
+####################################
 
 *********
 Downloads
@@ -15,8 +15,8 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `debian13_imx8mp.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_imx8mp.img.zst>`_
-      - a8ca2bd6ce125ad935b63053827c9fd436b1a893dd79ea47e77fded0d45e8ece
+    * - `debian13_stm32mp1.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_stm32mp1.img.zst>`_
+      - 956de80bbc3e413463533ed0bd705c78c99d500605f11bc8956b09a488e6ecf9
 
 
 
@@ -35,14 +35,14 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``debian13_imx8mp.img.zst`` (e.g. with 7-zip)
+   #. Unzip the file ``debian13_stm32mp1.img.zst`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  zstd -dc debian13_imx8mp.img.zst | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  zstdcat -dc debian13_stm32mp1.img.zst | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 
 ----
@@ -52,7 +52,7 @@ Default Credentials
 
 .. Note::
    The default user is baw with password baw
-   
+
 
 
 .. This is the footer, don't edit after this

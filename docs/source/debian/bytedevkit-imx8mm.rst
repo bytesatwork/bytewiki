@@ -1,5 +1,5 @@
 #################################
-byteDEVKIT-imx8mp (Debian Trixie)
+byteDEVKIT-imx8mm (Debian Trixie)
 #################################
 
 *********
@@ -15,8 +15,8 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `debian13_imx8mp.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_imx8mp.img.zst>`_
-      - a8ca2bd6ce125ad935b63053827c9fd436b1a893dd79ea47e77fded0d45e8ece
+    * - `debian13_imx8mm.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_imx8mm.img.zst>`_
+      - fa785ac842cc0c03e8fbf56444b2b8a1454f96fd81709c88f2daac435898376a
 
 
 
@@ -35,14 +35,14 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``debian13_imx8mp.img.zst`` (e.g. with 7-zip)
+   #. Unzip the file ``debian13_imx8mm.img.zst`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  zstd -dc debian13_imx8mp.img.zst | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  zstd -dc debian13_imx8mm.img.zst | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 
 ----

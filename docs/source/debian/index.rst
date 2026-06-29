@@ -8,3 +8,5 @@ Debian Linux
    bytedevkit-imx93
    bytedevkit-am62x
    bytedevkit-imx8mp
+   bytedevkit-imx8mm
+   bytedevkit-stm32mp1

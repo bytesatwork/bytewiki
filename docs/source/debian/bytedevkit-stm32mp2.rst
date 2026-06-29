@@ -15,8 +15,8 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `debian13_m10.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_m10.img.zst>`_
-      - 66b20f4105c462d417a599df12628dc87c60ebe44b7a848f65b9f0cf86bfd9df
+    * - `debian13_stm32mp2.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_stm32mp2.img.zst>`_
+      - 671d66e3e7e7458a03ae11712451bf0b5fd108ed0da9668e65e40361f9fb696e
 
 
 
@@ -35,14 +35,14 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``debian13_m10.img.zst`` (e.g. with 7-zip)
+   #. Unzip the file ``debian13_stm32mp2.img.zst`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  zstdcat -d debian13_m10.img.zst | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  zstdcat -dc debian13_stm32mp2.img.zst | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 
 ----

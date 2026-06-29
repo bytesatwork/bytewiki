@@ -46,6 +46,9 @@ The entire development life cycle is done in-house with transparent project mana
 * :doc:`byteDEVKIT-imx93 (Debian Trixie) <debian/bytedevkit-imx93>`
 * :doc:`byteDEVKIT-am62x (Debian Trixie) <debian/bytedevkit-am62x>`
 * :doc:`byteDEVKIT-imx8mp (Debian Trixie) <debian/bytedevkit-imx8mp>`
+* :doc:`byteDEVKIT-imx8mm (Debian Trixie) <debian/bytedevkit-imx8mm>`
+* :doc:`byteDEVKIT-stm32mp1 (Debian Trixie) <debian/bytedevkit-stm32mp1>`
+
 
 
 **Archive**
