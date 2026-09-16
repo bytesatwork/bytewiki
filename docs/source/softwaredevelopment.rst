@@ -31,12 +31,13 @@ The entire development life cycle is done in-house with transparent project mana
 
 **Yocto Linux**
 
-* :doc:`byteDEVKIT-stm32mp2 (Yocto 5.0.15) <yocto/5.0/bytedevkit-stm32mp2>`
-* :doc:`byteDEVKIT-imx93 (Yocto 5.0.15) <yocto/5.0/bytedevkit-imx93>`
-* :doc:`byteDEVKIT-am62x (Yocto 5.0.15) <yocto/5.0/bytedevkit-am62x>`
-* :doc:`byteDEVKIT-imx8mp (Yocto 5.0.15) <yocto/5.0/bytedevkit-imx8mp>`
-* :doc:`byteDEVKIT-imx8mm (Yocto 5.0.15) <yocto/5.0/bytedevkit-imx8mm>`
-* :doc:`byteDEVKIT-stm32mp1 (Yocto 5.0.15) <yocto/5.0/bytedevkit-stm32mp1>`
+* :doc:`byteDEVKIT-am62lx (Yocto 6.0.3) <yocto/6.0/bytedevkit-am62lx>`
+* :doc:`byteDEVKIT-stm32mp2 (Yocto 5.0.19) <yocto/5.0/bytedevkit-stm32mp2>`
+* :doc:`byteDEVKIT-imx93 (Yocto 6.0.3) <yocto/6.0/bytedevkit-imx93>`
+* :doc:`byteDEVKIT-am62x (Yocto 6.0.3) <yocto/6.0/bytedevkit-am62x>`
+* :doc:`byteDEVKIT-imx8mp (Yocto 6.0.3) <yocto/6.0/bytedevkit-imx8mp>`
+* :doc:`byteDEVKIT-imx8mm (Yocto 6.0.3) <yocto/6.0/bytedevkit-imx8mm>`
+* :doc:`byteDEVKIT-stm32mp1 (Yocto 5.0.19) <yocto/5.0/bytedevkit-stm32mp1>`
 
 
 

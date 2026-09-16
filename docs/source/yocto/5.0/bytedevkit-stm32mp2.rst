@@ -1,5 +1,5 @@
 ######################################
-byteDEVKIT-stm32mp2 OSM (Yocto 5.0.15)
+byteDEVKIT-stm32mp2 OSM (Yocto 5.0.19)
 ######################################
 
 *********
@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.gz>`_
-      - 6f9bf96350a2bb7150501c4299fc6f55360ee3c510129f31d51a6327e900c46c
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260528145037.wic.bmap>`_
-      - 13503b393eae55329c3c14ec604fab784cb22291a63144f0489abc1d4ce4bfe0
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260915122603.wic.gz  <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260915122603.wic.gz>`_
+      - 4497450e66311384ace90d70bdbfcb7d5799de3a0251cedd6b1de97dae5689e1
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260915122603.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260915122603.wic.bmap>`_
+      - d01530b0440717ad092febe87287932639f7f412910e30eaad6dd9e3ae8bb310
 
 
 .. _get-toolchain-bytedevkit-stm32mp2-5.0:
@@ -31,8 +31,8 @@ Toolchain
 
     * - Download
       - Checksum (SHA256)
-    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa35-bytedevkit-stm32mp2-toolchain-5.0.15.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.15/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa35-bytedevkit-stm32mp2-toolchain-5.0.15.sh>`_
-      - 286a3395dee2d1ed64469fef01bb07b00b19a11db7ec4133692dfc9ead7935e5
+    * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa35-bytedevkit-stm32mp2-toolchain-5.0.19.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.19/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa35-bytedevkit-stm32mp2-toolchain-5.0.19.sh>`_
+      - ff099dacc59673a4411804264d84117d561918a05d78a522ba310ec2652bd20b
 
 
 
@@ -52,18 +52,18 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs.wic.gz`` (e.g. with 7-zip)
+   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260915122603.wic.gz`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260915122603.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs.wic.gz /dev/mmcblk<X>``
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260915122603.wic.gz /dev/mmcblk<X>``
 
 ----
 
@@ -100,7 +100,7 @@ The output is found in:
    ~/workdir/bytedevkit-stm32mp2/5.0/build/tmp/deploy/images/bytedevkit-stm32mp2
 
 .. Hint:: For additional information about yocto images and how to build them, please visit:
-          https://docs.yoctoproject.org/5.0.15/brief-yoctoprojectqs/index.html#building-your-image.
+          https://docs.yoctoproject.org/5.0.19/brief-yoctoprojectqs/index.html#building-your-image.
 
 How to modify the image
 -----------------------
@@ -173,7 +173,7 @@ Source the installed toolchain:
 
 ::
 
-   source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa35-poky-linux
+   source /opt/poky-bytesatwork/5.0.19/environment-setup-cortexa35-poky-linux
 
 Check if Cross-compiler is available in environment:
 
@@ -185,7 +185,7 @@ You should see the following output:
 
 ::
 
-   aarch64-poky-linux-gcc -mcpu=cortex-a35+crc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.15/sysroots/cortexa35-poky-linux
+   aarch64-poky-linux-gcc -mcpu=cortex-a35+crc -mbranch-protection=standard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/opt/poky-bytesatwork/5.0.19/sysroots/cortexa35-poky-linux
 
 
 
@@ -280,7 +280,7 @@ The newly generated toolchain will be available under:
 ~/workdir/<machine name>/<yocto version>/build/tmp/deploy/sdk
 
 For additional information, please visit:
-https://docs.yoctoproject.org/5.0.15/overview-manual/concepts.html#cross-development-toolchain-generation.
+https://docs.yoctoproject.org/5.0.19/overview-manual/concepts.html#cross-development-toolchain-generation.
 
 
 ******
@@ -334,7 +334,7 @@ from your distribution)
 
    ::
 
-      source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa35-poky-linux
+      source /opt/poky-bytesatwork/5.0.19/environment-setup-cortexa35-poky-linux
 
 #. Create defconfig
 
@@ -429,7 +429,7 @@ Build U-Boot
 
    ::
 
-        source /opt/poky-bytesatwork/5.0.15/environment-setup-cortexa35-poky-linux
+        source /opt/poky-bytesatwork/5.0.19/environment-setup-cortexa35-poky-linux
 
 #. Create defconfig
 
