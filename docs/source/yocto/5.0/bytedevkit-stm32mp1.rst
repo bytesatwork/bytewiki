@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260915121107.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260915121107.wic.gz>`_
-      - cbf948139299b653113a7b20e708f8f94da6c0ac6cef83a7ca41e9d05ec815b9
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260915121107.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260915121107.wic.bmap>`_
-      - b444ad57a7ee3cf1c2a8e8481db79115825ffb6149f9781ec36242e64a721091
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260929110057.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260929110057.wic.gz>`_
+      - 71d2038b0f78da4c8831a2c79859439b15b53f9e0827d94d72048d83a4a6e718
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260929110057.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260929110057.wic.bmap>`_
+      - 6eb59d6b116a6563affe4d35223bfae663faf0863a6af96ede98e605413bcae6
 
 
 .. _get-toolchain-bytedevkit-stm32mp1-5.0:
@@ -32,7 +32,7 @@ Toolchain
     * - Download
       - Checksum (SHA256)
     * - `poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.19.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp1/5.0.19/poky-bytesatwork-glibc-x86_64-bytesatwork-minimal-image-cortexa7t2hf-neon-vfpv4-bytedevkit-stm32mp1-toolchain-5.0.19.sh>`_
-      - f9187f6683f9bd4b43c42d737128bfe7d8d9b2f1c0a1756fb7bf13457e8b7f7d
+      - 80ebcd83b0204cb81495dfc88231fb71933a3bc54d42fa751ce0d679cae9bd08
 
 
 
@@ -52,18 +52,18 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260915121107.wic.gz`` (e.g. with 7-zip)
+   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260929110057.wic.gz`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260915121107.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260929110057.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260915121107.wic.gz /dev/mmcblk<X>``
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp1.rootfs-20260929110057.wic.gz /dev/mmcblk<X>``
 
 ----
 
