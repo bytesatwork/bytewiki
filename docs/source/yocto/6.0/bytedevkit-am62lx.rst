@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260914093401.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62lx/6.0.3/bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260914093401.wic.gz>`_
-      - 4d1247ea2717886d7ded47d050fc356943caf1c233623f8dd56643ac4079c049
-    * - `bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260914093401.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62lx/6.0.3/bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260914093401.wic.bmap>`_
-      - 93eca686c3a05809e52ae701bd9b4951861499b7652e6c709bce6be6af8c9bf9
+    * - `bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260930074218.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62lx/6.0.3/bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260930074218.wic.gz>`_
+      - 7a5a5df2042bf2d9e2bd93d31030b792422a09602cde36eefcbaa80e9ac273b6
+    * - `bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260930074218.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62lx/6.0.3/bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260930074218.wic.bmap>`_
+      - b55f730b244c1808863eadb28e8d393964d3dfe2a21a75f0c126a5c68d113486
 
 
 .. _get-toolchain-bytedevkit-am62lx-6.0:
@@ -32,7 +32,7 @@ Toolchain
     * - Download
       - Checksum (SHA256)
     * - `poky-bytesatwork-glibc-x86_64-bytesatwork-sdk-image-aarch64-bytedevkit-am62lx-toolchain-6.0.3.sh <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-am62lx/6.0.3/poky-bytesatwork-glibc-x86_64-bytesatwork-sdk-image-aarch64-bytedevkit-am62lx-toolchain-6.0.3.sh>`_
-      - 7e8086635d0442f45e386d19c1e7d9bab69a14bbd4096d2f0fdd41ce98d24dff
+      - 86b5298d225d9375aa037782c860f2d1f91bb4a40c28a2f949010b0ffad4aa70
 
 
 U-Boot
@@ -72,18 +72,18 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260914093401.wic.gz`` (e.g. with 7-zip)
+   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260930074218.wic.gz`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260914093401.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260930074218.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260914093401.wic.gz /dev/mmcblk<X>``
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-am62lx.rootfs-20260930074218.wic.gz /dev/mmcblk<X>``
 
 ----
 
