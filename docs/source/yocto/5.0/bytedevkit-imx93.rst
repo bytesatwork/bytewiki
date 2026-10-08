@@ -54,6 +54,9 @@ U-Boot
 Image
 *****
 
+.. Hint::
+  - The provided image is only compatible with the byteDEVKIT OSM-S Rev up to v1.1.
+  - For support or images for other revisions, please contact us.
 
 How do you flash the image?
 ===========================
