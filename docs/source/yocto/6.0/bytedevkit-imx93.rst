@@ -1,6 +1,6 @@
-###############################
-byteDEVKIT-imx93 (Yocto 6.0.3)
-###############################
+##################################
+byteDEVKIT-imx93 OSM (Yocto 6.0.3)
+##################################
 
 *********
 Downloads
@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260915105628.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/6.0.3/bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260915105628.wic.gz>`_
-      - 52a13f761d715901eb66808fd042de04ab515bfb4dc95c5f2bcf6cab908496f4
-    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260915105628.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/6.0.3/bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260915105628.wic.bmap>`_
-      - 023acab9bb0ebe256b8b066c5ae6f1c817073c53bd847966cf82dc10eaa50f94
+    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20261020153606.wic.gz <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/6.0.3/bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20261020153606.wic.gz>`_
+      - 4ae505198cd86bbe8a5e6c1f78799c1e1bb4ef2273332756e0d8da063886e206
+    * - `bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20261020153606.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-imx93/6.0.3/bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20261020153606.wic.bmap>`_
+      - b3c9bffed6bcbe9ad36c50795a67db5a1009b40fdb6b95c7aa04ac4c81c9fefe
 
 
 .. _get-toolchain-bytedevkit-imx93-6.0:
@@ -55,8 +55,9 @@ Image
 *****
 
 .. Hint::
-  - The provided image is only compatible with the byteDEVKIT OSM-S Rev up to v1.1.
-  - For support or images for other revisions, please contact us.
+  - The provided image is only compatible with the byteDEVKIT OSM-S Rev 2.0 or higher.
+  - If you have a different byteDEVKIT OSM-S Revision, the devicetree symlink in the bootpartition needs to be modified.
+  - See :ref:`switch_devicetree` for detailed description.
 
 
 How do you flash the image?
@@ -69,18 +70,18 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260915105628.wic.gz`` (e.g. with 7-zip)
+   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20261020153606.wic.gz`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260915105628.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20261020153606.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20260915105628.wic.gz /dev/mmcblk<X>``
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-imx93.rootfs-20261020153606.wic.gz /dev/mmcblk<X>``
 
 ----
 
@@ -148,6 +149,29 @@ If you want to rename or copy an image, simply rename or copy the image recipe b
 
     $ cd ~/workdir/bytedevkit-imx93/6.0/sources/meta-bytesatwork/recipes-core/images
     $ cp bytesatwork-minimal-image.bb customer-example-image.bb
+
+
+.. _switch_devicetree:
+
+How to enable different devicetree
+----------------------------------
+
+If you need to change the active devicetree to enable full functionality of the SoM on older devkit revisions, perform the following steps after login:
+
+   ::
+
+    $ cd /boot
+    $ ln -s imx93-bytedevkit-v1-0.dtb imx93-bytedevkit.dtb
+    $ reboot
+
+If you want to activate the devicetree for byteDEVKIT OSM-S Rev 2.0 or higher again, perform the following steps after login:
+
+   ::
+
+    $ cd /boot
+    $ ln -s imx93-bytedevkit-v2-0.dtb imx93-bytedevkit.dtb
+    $ reboot   
+
 
 
 Troubleshooting
@@ -346,11 +370,12 @@ from your distribution)
 
    Download the appropriate kernel from :ref:`download-kernel-bytedevkit-imx93-6.0`.
 
-#. Source toolchain
-
+#. Activate the SDK
    ::
 
-      source /opt/poky-bytesatwork/6.0.3/environment-setup-cortexa55-poky-linux
+      export SDK=/opt/poky-bytesatwork/6.0.3
+      export ARCH=arm64
+      export CROSS_COMPILE=$SDK/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-
 
 #. Create defconfig
 

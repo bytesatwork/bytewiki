@@ -16,7 +16,7 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `debian13_stm32mp1.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_stm32mp1.img.zst>`_
-      - 956de80bbc3e413463533ed0bd705c78c99d500605f11bc8956b09a488e6ecf9
+      - 6e144cd297be48f3d243da22c79b66b04401e3a0b52e05c4614a43758af07b0a
 
 
 

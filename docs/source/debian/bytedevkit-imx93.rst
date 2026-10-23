@@ -1,6 +1,6 @@
-################################
-byteDEVKIT-imx93 (Debian Trixie)
-################################
+####################################
+byteDEVKIT-imx93 OSM (Debian Trixie)
+####################################
 
 *********
 Downloads
@@ -16,13 +16,17 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `debian13_imx93.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_imx93.img.zst>`_
-      - 0fe2678298ff021ae85556a4859cc63e71dc708773578e08579f5475b899e3c7
+      - 44f233087a17828449dacdf7cb7f37d8d0c764c13ddaf624d797e5888b8c9c2f
 
 
 
 *****
 Image
 *****
+
+.. Hint::
+  - The provided image is only compatible with the byteDEVKIT OSM-S Rev 2.0 or higher.
+  - If you have a different byteDEVKIT OSM-S Revision, contact us for support via `support@bytesatwork.ch <mailto:support@bytesatwork.ch>`_
 
 
 How do you flash the image?

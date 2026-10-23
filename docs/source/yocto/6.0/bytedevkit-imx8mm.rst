@@ -343,11 +343,12 @@ from your distribution)
 
    Download the appropriate kernel from :ref:`download-kernel-bytedevkit-imx8mm-6.0`.
 
-#. Source toolchain
-
+#. Activate the SDK
    ::
 
-      source /opt/poky-bytesatwork/6.0.3/environment-setup-cortexa53-crypto-poky-linux
+      export SDK=/opt/poky-bytesatwork/6.0.3
+      export ARCH=arm64
+      export CROSS_COMPILE=$SDK/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-
 
 #. Create defconfig
 

@@ -15,10 +15,10 @@ SD card image
 
     * - Download
       - Checksum (SHA256)
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260929111545.wic.gz  <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260929111545.wic.gz>`_
-      - e7a7ea523487052acdbc64679632b559eb31be2b8ea008876b4bbd10de2ab0c1
-    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260929111545.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260929111545.wic.bmap>`_
-      - cbf081752dca9311bdeab02d28123db71806e3cb6c415e9a06d23cfdd1a85088
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20261020145116.wic.gz  <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20261020145116.wic.gz>`_
+      - 566325ece718f7651dafa3a9b8f4f5812b40f3fe529f4669a2733323b05e6983
+    * - `bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20261020145116.wic.bmap <https://download.bytesatwork.io/transfer/bytesatwork/bytedevkit-stm32mp2/5.0.19/bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20261020145116.wic.bmap>`_
+      - 01b4b5d4ee1eab6b91b29c97f3b9b189be4e860333b7af5a54e581650d6eb299
 
 
 .. _get-toolchain-bytedevkit-stm32mp2-5.0:
@@ -42,9 +42,8 @@ Image
 *****
 
 .. Hint::
-  - The provided image is only compatible with the latest byteDEVKIT OSM-S Rev 2.0.
-  - If you have a different byteDEVKIT OSM-S Revision, the devicetree symlink in the bootpartition needs to be modified.
-  - See :ref:`switch_devicetree` for detailed description.
+  - The provided image is only compatible with the byteDEVKIT OSM-S Rev 2.0 or higher.
+  - If you have a different byteDEVKIT OSM-S Revision, contact us for support via `support@bytesatwork.ch <mailto:support@bytesatwork.ch>`_
 
 How do you flash the image?
 ===========================
@@ -56,18 +55,18 @@ How do you flash the image?
 
 Windows
 
-   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260929111545.wic.gz`` (e.g. with 7-zip)
+   #. Unzip the file ``bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20261020145116.wic.gz`` (e.g. with 7-zip)
    #. Write the resulting file to the microSD card with a tool like `Roadkils Disk Image <https://www.roadkil.net/program.php?ProgramID=12>`_
 
 Linux
 
 ::
 
-  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260929111545.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
+  gunzip -c bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20261020145116.wic.gz | dd of=/dev/mmcblk<X> bs=8M conv=fsync status=progress
 
 .. Hint:: To improve write performance, you could use bmap-tools under Linux:
 
-  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20260929111545.wic.gz /dev/mmcblk<X>``
+  ``bmaptool copy bytesatwork-minimal-image-bytedevkit-stm32mp2.rootfs-20261020145116.wic.gz /dev/mmcblk<X>``
 
 ----
 
@@ -135,28 +134,6 @@ If you want to rename or copy an image, simply rename or copy the image recipe b
 
     $ cd ~/workdir/<machine name>/<yocto version>/sources/meta-bytesatwork/recipes-core/images
     $ cp bytesatwork-minimal-image.bb customer-example-image.bb
-
-
-.. _switch_devicetree:
-
-How to enable different devicetree
-----------------------------------
-
-If you need to change the active devicetree to enable full functionality of the SoM on older devkit revisions, perform the following steps after login:
-
-   ::
-
-    $ cd /boot
-    $ ln -s stm32mp257f-bytedevkit-v1.dtb stm32mp257f-bytedevkit.dtb
-    $ reboot
-
-If you want to activate the devicetree for byteDEVKIT OSM-S Rev 2.0 again, perform the following steps after login:
-
-   ::
-
-    $ cd /boot
-    $ ln -s stm32mp257f-bytedevkit-v2.dtb stm32mp257f-bytedevkit.dtb
-    $ reboot   
 
 
 Troubleshooting

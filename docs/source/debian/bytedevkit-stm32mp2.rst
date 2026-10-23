@@ -1,6 +1,6 @@
-####################################
-byteDEVKIT-STM32MP2x (Debian Trixie)
-####################################
+########################################
+byteDEVKIT-STM32MP2x OSM (Debian Trixie)
+########################################
 
 *********
 Downloads
@@ -16,7 +16,7 @@ SD card image
     * - Download
       - Checksum (SHA256)
     * - `debian13_stm32mp2.img.zst <https://download.bytesatwork.io/transfer/bytesatwork/debian/debian13_stm32mp2.img.zst>`_
-      - 671d66e3e7e7458a03ae11712451bf0b5fd108ed0da9668e65e40361f9fb696e
+      - 4a03f6aadfe308167894c3f04cc7e121b0f445889a36a777e033ec86a95c195b
 
 
 
@@ -24,6 +24,9 @@ SD card image
 Image
 *****
 
+.. Hint::
+  - The provided image is only compatible with the byteDEVKIT OSM-S Rev 2.0 or higher.
+  - If you have a different byteDEVKIT OSM-S Revision, contact us for support via `support@bytesatwork.ch <mailto:support@bytesatwork.ch>`_
 
 How do you flash the image?
 ===========================
