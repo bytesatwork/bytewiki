@@ -136,6 +136,28 @@ If you want to rename or copy an image, simply rename or copy the image recipe b
     $ cp bytesatwork-minimal-image.bb customer-example-image.bb
 
 
+.. _switch_devicetree:
+
+How to enable different devicetree
+----------------------------------
+
+If you need to change the active devicetree to enable full functionality of the SoM on older devkit revisions, perform the following steps after login:
+
+   ::
+
+    $ cd /boot
+    $ ln -s stm32mp257f-bytedevkit-v1.dtb stm32mp257f-bytedevkit.dtb
+    $ reboot
+
+If you want to activate the devicetree for byteDEVKIT OSM-S Rev 2.0 again, perform the following steps after login:
+
+   ::
+
+    $ cd /boot
+    $ ln -s stm32mp257f-bytedevkit-v2.dtb stm32mp257f-bytedevkit.dtb
+    $ reboot   
+
+
 Troubleshooting
 ---------------
 
