@@ -21,16 +21,17 @@ Downloads
 
 
 
-
-- `Datasheet byteENGINE IMX8MP <https://www.bytesatwork.io/wp-content/uploads/2024/06/Datasheet_byteENGINE_IMX8MP_v1.2.pdf>`_
+- `Factsheet byteENGINE IMX8MP <https://bytesatwork.io/wAssets/docs/factsheets/factsheet-byteengine-imx8mp-rev.1.1.pdf>`_
+- `Datasheet byteENGINE IMX8MP <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-imx8mp.pdf>`_
 - `Detailed pinout byteENGINE IMX8MP <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-M7-pinout.xlsx>`_
-- `Datasheet of Hirose DF-40-Series connectors <https://www.hirose.com/de/product/document?clcode=&productname=&series=DF40&documenttype=Guideline&lang=de&documentid=D80_en>`_
+- `Signal propagation delay table byteENGINE IMX8MP <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-IMX8MP_Rev.1.1_Signal_Propagation_Delay.xlsx>`_
+- `Datasheet of Hirose DF40-Series connectors <https://www.hirose.com/de/product/document?clcode=&productname=&series=DF40&documenttype=Guideline&lang=de&documentid=D80_en>`_
 - `Schematic of the connectors X1, X2, X3 and X4 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/m7-connector-pinout.pdf>`_
 - `Altium Schematic of connectors X1, X2, X3 and X4 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/m7connector-doc.SchDoc>`_
 - `NXP i.MX8M Plus Family <https://www.nxp.com/products/processors-and-microcontrollers/arm-processors/i-mx-applications-processors/i-mx-8-applications-processors/i-mx-8m-plus-arm-cortex-a53-machine-learning-vision-multimedia-and-industrial-iot:IMX8MPLUS>`_
 - `PCA9450CHN Power Manage IC (PMIC) for i.MX8M Plus <https://www.nxp.com/part/PCA9450CHN#/>`_
 - `Datasheet NXP i.MX8M Plus <https://www.nxp.com/products/processors-and-microcontrollers/arm-processors/i-mx-applications-processors/i-mx-8-applications-processors/i-mx-8m-plus-arm-cortex-a53-machine-learning-vision-multimedia-and-industrial-iot:IMX8MPLUS#documentation>`_
-- `NXP Config Tools for i.MX Applications Processors <https://www.nxp.com/design/designs/config-tools-for-i-mx-applications-processors:CONFIG-TOOLS-IM>`_
+- `NXP Config Tools for i.MX Applications Processors <https://www.nxp.com/design/design-center/development-boards-and-designs/i-mx-evaluation-and-development-boards/config-tools-for-i-mx-applications-processors:CONFIG-TOOLS-IMX>`_
 - `Prepared project: STEP model byteENGINE IMX8MP <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteengine-m7.step>`_
 - `Altium Library byteENGINE IMX8MP <https://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_M7_IMX8Mplus.IntLib>`_
 - `meta-bytesatwork on github <https://github.com/bytesatwork/meta-bytesatwork>`_

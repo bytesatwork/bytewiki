@@ -29,19 +29,20 @@ Downloads
 
 
 
-- `Datasheet byteENGINE IMX93 OSM-S <https://www.bytesatwork.io/wp-content/uploads/2024/11/Bytesatwork_datasheet_IMX93-OSM-S_rev2.0_v1.5.pdf>`_
-- `Detailed pinout byteENGINE IMX93 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE_IMX93_Rev_2.0_Pinout.xlsx>`_
-- `Schematic of the connector OSM-S Variant OSM-ext <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_baseboard_OSM-ext.pdf>`_
-- `Schematic of the connector OSM-S Variant LCD <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_baseboard_LCD.pdf>`_
-- `Altium Sheet of the connector OSM-S Variant OSM-ext <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_baseboard_OSM-ext.SchDoc>`_
-- `Altium Sheet of the connector OSM-S Variant LCD <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_baseboard_LCD.SchDoc>`_
+- `Datasheet byteENGINE IMX93 OSM-S <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-imx9x.pdf>`_
+- `OSM Production Manual <https://bytesatwork.io/wAssets/docs/datasheets/production-manual-osm-s.pdf>`_
+- `Detailed pinout byteENGINE IMX93 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE_IMX93_Rev_2.1_Pinout.xlsx>`_
+- `Signal propagation delay table byteENGINE IMX93 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-IMX9x_Rev.2.1_Signal_Propagation_Delay.xlsx>`_
+- `Schematic of the connector OSM-S Variant OSM-ext <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_v1.2_baseboard_OSM-ext.pdf>`_
+- `Schematic of the connector OSM-S Variant LCD <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_v1.2_baseboard_LCD.pdf>`_
+- `Altium Sheet of the connector OSM-S Variant OSM-ext <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_v1.2_baseboard_OSM-ext.SchDoc>`_
+- `Altium Sheet of the connector OSM-S Variant LCD <https://download.bytesatwork.io/documentation/byteENGINE/ressources/imx9x_osm_v1.2_baseboard_LCD.SchDoc>`_
 - `NXP i.MX93 Family <https://www.nxp.com/products/processors-and-microcontrollers/arm-processors/i-mx-applications-processors/i-mx-9-processors/i-mx-93-applications-processor-family-arm-cortex-a55-ml-acceleration-power-efficient-mpu:i.MX93>`_
 - `Datasheet NXP i.MX93 <https://www.nxp.com/docs/en/data-sheet/IMX93AEC.pdf>`_
-- `NXP Config Tools for i.MX Applications Processors <https://www.nxp.com/design/designs/config-tools-for-i-mx-applications-processors:CONFIG-TOOLS-IM>`_
+- `NXP Config Tools for i.MX Applications Processors <https://www.nxp.com/design/design-center/development-boards-and-designs/i-mx-evaluation-and-development-boards/config-tools-for-i-mx-applications-processors:CONFIG-TOOLS-IMX>`_
 - `Prepared project: STEP model byteENGINE IMX93 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteengine-m9.step>`_
-- `Altium Library byteENGINE IMX93 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_M9_IMX9x.IntLib>`_
+- `Altium Library byteENGINE IMX93 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_M9_IMX9x_2.1.0.IntLib>`_
 - `meta-bytesatwork on github <https://github.com/bytesatwork/meta-bytesatwork>`_
-
 
 .. This is the footer, don't edit after this
 .. image:: ../images/wiki_footer.jpg

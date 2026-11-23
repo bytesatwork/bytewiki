@@ -29,10 +29,10 @@ Downloads
 *********
 
 
-
-
-- `Datasheet byteENGINE STM32MP2 OSM-S <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-stm32mp2-rev.-0.1.pdf>`_
-- `Detailed pinout byteENGINE STM32MP2 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE_STM32MP2_Rev_0.1_Pinout.xlsx>`_
+- `Datasheet byteENGINE STM32MP2 OSM-S <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-stm32mp2.pdf>`_
+- `OSM Production Manual <https://bytesatwork.io/wAssets/docs/datasheets/production-manual-osm-s.pdf>`_
+- `Detailed pinout byteENGINE STM32MP2 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE_STM32MP2_Rev_1.0_Pinout.xlsx>`_
+- `Signal propagation delay table byteENGINE STM32MP2 OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-STM32MP2_Rev.1.0_Signal_Propagation_Delay.xlsx>`_
 - `Schematic of the connector OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/stm32mp2_osm_v1.2_baseboard.pdf>`_
 - `Altium Sheet of the connector OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/stm32mp2_osm_v1.2_baseboard.SchDoc>`_
 - `STM32MP2 Family <https://www.st.com/en/microcontrollers-microprocessors/stm32mp2-series.html>`_

@@ -18,7 +18,8 @@ General Information
 Downloads
 *********
 
--  `Datasheet byteDEVKIT 2 <https://www.bytesatwork.io/wp-content/uploads/2023/09/Datasheet_byteDEVKIT_2_v1.0.pdf>`_
+-  `Datasheet byteDEVKIT 2 <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-bytedevkit-2.pdf>`_
+-  `Factsheet byteDEVKIT 2 <https://bytesatwork.io/wAssets/docs/factsheets/factsheet-bytedevkit-2.pdf>`_
 
 .. This is the footer, don't edit after this
 .. image:: ../images/wiki_footer.jpg

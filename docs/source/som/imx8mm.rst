@@ -26,21 +26,22 @@ General Information
 Downloads
 *********
 
-- `Factsheet byteENGINE IMX8MM <https://www.bytesatwork.io/wp-content/uploads/2021/11/DE_Fact_Sheet_IMX8MM-2.pdf>`_
-- `Datasheet byteENGINE IMX8MM <https://www.bytesatwork.io/wp-content/uploads/2023/09/Datasheet_byteENGINE_IMX8MM_v1.2-1.pdf>`_
-- `Detailed byteENGINE IMX8MM <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-M6-pinout.xlsx>`_
+- `Factsheet byteENGINE IMX8MM <https://bytesatwork.io/wAssets/docs/factsheets/factsheet-byteengine-imx8mm-rev.2.1.pdf>`_
+- `Datasheet byteENGINE IMX8MM <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-imx8mm.pdf>`_
+- `Detailed pinout byteENGINE IMX8MM <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-M6-pinout.xlsx>`_
+- `Signal propagation delay table byteENGINE IMX8MM <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-IMX8MM_Rev.1.1_Signal_Propagation_Delay.xlsx>`_
 - `Datasheet Connectors Neltron 2001S-100G-270-020 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/Neltron_2000P.pdf>`_
 - `Schematic of the connectors X1 and X2 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/m6-connector-pinout.pdf>`_
 - `Altium Schematic of connectors X1 and X2 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/m6connector-doc.SchDoc>`_
-- `NXP i.MX8M Mini <https://www.nxp.com/products/processors-and-microcontrollers/arm-processors/i-mx-applications-processors/i-mx-8-processors/i-mx-8m-mini-arm-cortex-a53-cortex-m4-audio-voice-video:i.MX8MMINI?&tab=Documentation_Tab&linkline=Data-Sheet>`_
-- `PCA9450AAHN Power Manage IC (PMIC) for i.MX8M Min <https://www.nxp.com/part/PCA9450AAHN#/>`_
+- `NXP i.MX8M Mini <https://www.nxp.com/products/i.MX8MMINI>`_
+- `PCA9450AAHN Power Manage IC (PMIC) for i.MX8M Mini <https://www.nxp.com/part/PCA9450AAHN#/>`_
 - `Datasheet NXP i.MX8M Mini <https://www.nxp.com/products/processors-and-microcontrollers/arm-processors/i-mx-applications-processors/i-mx-8-processors/i-mx-8m-mini-arm-cortex-a53-cortex-m4-audio-voice-video:i.MX8MMINI?&tab=Documentation_Tab&linkline=Data-Sheet>`_
-- `NXP Config Tools for i.MX Applications Processors <https://www.nxp.com/design/designs/config-tools-for-i-mx-applications-processors:CONFIG-TOOLS-IM>`_
+- `NXP Config Tools for i.MX Applications Processors <https://www.nxp.com/design/design-center/development-boards-and-designs/i-mx-evaluation-and-development-boards/config-tools-for-i-mx-applications-processors:CONFIG-TOOLS-IMX>`_
+- `byteENGINE IMX8MM Config File for Config Tools <https://download.bytesatwork.io/documentation/byteENGINE/ressources/M6-Module-only.mex>`_
 - `Prepared project: STEP model byteENGINE IMX8MM <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteengine-m6.step>`_
 - `Altium Library Neltron 2001S-100G-270-020 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/2001s-100G-270-020.zip>`_
 - `Altium Library byteENGINE IMX8MM <https://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_M6_IMX8MM.IntLib>`_
 - `meta-bytesatwork on github <https://github.com/bytesatwork/meta-bytesatwork>`_
-
 
 .. This is the footer, don't edit after this
 .. image:: ../images/wiki_footer.jpg

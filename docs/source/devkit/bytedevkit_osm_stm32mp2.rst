@@ -18,7 +18,7 @@ General Information
 Downloads
 *********
 
--  `Datasheet byteDEVKIT OSM STM32MP2 <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-bytedevkit-osm-s-v1.2.pdf>`_
+-  `Datasheet byteDEVKIT OSM STM32MP2 <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-bytedevkit-osm-s.pdf>`_
 -  `Factsheet byteDEVKIT OSM <https://bytesatwork.io/wAssets/docs/factsheets/factsheet-bytedevkit-osm-rev.-1.2.pdf>`_
 
 .. This is the footer, don't edit after this

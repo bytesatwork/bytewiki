@@ -21,13 +21,14 @@ General Information
 Downloads 
 *********
 
--  `Factsheet byteENGINE AM62xx <https://www.bytesatwork.io/wp-content/uploads/2022/06/DE_Fact_Sheet_AM62xx-1.pdf>`_
--  `Datasheet byteENGINE AM62xx <https://www.bytesatwork.io/wp-content/uploads/2023/09/Datasheet_byteENGINE_AM62xx_v1.2.pdf>`_
+-  `Factsheet byteENGINE AM62xx <https://bytesatwork.io/wAssets/docs/factsheets/factsheet-byteengine-am62x-rev.2.1.pdf>`_
+-  `Datasheet byteENGINE AM62xx <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-am62x.pdf>`_
 -  `Schematic of the connectors X1, X2, X3 and X4 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/m8-connector-pinout.pdf>`_
 -  `Altium schematic of connectors X1, X2, X3 and X4 <https://download.bytesatwork.io/documentation/byteENGINE/ressources/m8connector-doc.SchDoc>`_
 -  `Altium Library byteENGINE AM62xx <https://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_M8_AM62xx.IntLib>`_
 -  `STEP Model byteENGINE AM62xx <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteengine-m8.step>`_
 -  `Detailed pinout for byteENGINE AM62xx <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-M8-pinout.xlsx>`_
+-  `Signal propagation delay table byteENGINE AM62xx <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-AM62_Rev.1.1_Signal_Propagation_Delay.xlsx>`_
 -  `Datasheet of Hirose DF40-Series Connectors <https://www.hirose.com/de/product/document?clcode=&productname=&series=DF40&documenttype=Guideline&lang=de&documentid=D80_en>`_
 -  `Texas Instruments AM62xx Family <https://www.ti.com/product/AM625>`_
 -  `AM62xx Technical Reference Manual <https://www.ti.com/lit/ug/spruiv7/spruiv7.pdf>`_

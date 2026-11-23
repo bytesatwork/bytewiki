@@ -29,12 +29,15 @@ Downloads
 
 
 
-- `Datasheet byteENGINE AM62L OSM-S <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-am62l-rev.-0.1.pdf>`_
-- `Detailed pinout byteENGINE AM62L OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE_AM62Lx_Rev_0.1_Pinout.xlsx>`_
+- `Datasheet byteENGINE AM62L OSM-S <https://bytesatwork.io/wAssets/docs/datasheets/datasheet-byteengine-am62l.pdf>`_
+- `OSM Production Manual <https://bytesatwork.io/wAssets/docs/datasheets/production-manual-osm-s.pdf>`_
+- `Detailed pinout byteENGINE AM62L OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE_AM62Lx_Rev_1.0_Pinout.xlsx>`_
+- `Signal propagation delay table byteENGINE AM62L OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteENGINE-AM62L_Rev.1.0_Signal_Propagation_Delay.xlsx>`_
 - `Schematic of the connector OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/am62lx_osm_v1.2_baseboard.pdf>`_
 - `Altium Sheet of the connector OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/am62lx_osm_v1.2_baseboard.SchDoc>`_
 - `TI AM62L Series <https://www.ti.com/product/AM62L>`_
 - `Datasheet TI AM62L <https://www.ti.com/lit/gpn/am62l>`_
+- `TI SysConfig Tool <https://www.ti.com/tool/SYSCONFIG>`_
 - `Prepared project: STEP model byteENGINE AM62L OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/byteengine-AM62Lx.step>`_
 - `Altium Library byteENGINE AM62L OSM-S <https://download.bytesatwork.io/documentation/byteENGINE/ressources/bE_AM62Lx.IntLib>`_
 - `meta-bytesatwork on github <https://github.com/bytesatwork/meta-bytesatwork>`_
